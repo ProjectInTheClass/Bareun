@@ -8,8 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="NanumMyeongjo.ttf">
-            <string>NanumMyeongjo</string>
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -24,7 +24,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmb-Om-aW1">
                                 <rect key="frame" x="434" y="376" width="245" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="59"/>
+                                <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="59"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -38,6 +38,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHi-c0-7nN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="327.51798561151082" y="58.992805755395686"/>
+        </scene>
+        <!--Note-->
+        <scene sceneID="b0N-z3-t7g">
+            <objects>
+                <viewController storyboardIdentifier="Note" id="1Iy-6u-foy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EN0-rw-7oS">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="MVu-HR-kHd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Note" image="note" catalog="system" selectedImage="note.text" id="ymY-kj-KYu"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSt-Jy-efb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="739"/>
         </scene>
         <!--Settings-->
         <scene sceneID="FUv-Gp-RGP">
@@ -62,6 +79,8 @@
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="note" catalog="system" width="128" height="106"/>
+        <image name="note.text" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
