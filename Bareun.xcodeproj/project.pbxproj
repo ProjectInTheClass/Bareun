@@ -14,6 +14,9 @@
 		398950CF259DB3AD00C36434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 398950CE259DB3AD00C36434 /* Assets.xcassets */; };
 		398950D2259DB3AD00C36434 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 398950D0259DB3AD00C36434 /* LaunchScreen.storyboard */; };
 		398950DC259DB50900C36434 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 398950DB259DB50900C36434 /* Home.storyboard */; };
+		9ABB343C259DC58300EF2201 /* NanumMyeongjoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9ABB343A259DC58300EF2201 /* NanumMyeongjoBold.ttf */; };
+		9ABB343D259DC58300EF2201 /* NanumMyeongjoExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9ABB343B259DC58300EF2201 /* NanumMyeongjoExtraBold.ttf */; };
+		9ABB3440259DC58F00EF2201 /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9ABB343F259DC58F00EF2201 /* NanumMyeongjo.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		398950D1259DB3AD00C36434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		398950D3259DB3AD00C36434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		398950DB259DB50900C36434 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		9ABB343A259DC58300EF2201 /* NanumMyeongjoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoBold.ttf; sourceTree = "<group>"; };
+		9ABB343B259DC58300EF2201 /* NanumMyeongjoExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoExtraBold.ttf; sourceTree = "<group>"; };
+		9ABB343F259DC58F00EF2201 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 		398950C4259DB3AA00C36434 /* Bareun */ = {
 			isa = PBXGroup;
 			children = (
+				9ABB343F259DC58F00EF2201 /* NanumMyeongjo.ttf */,
+				9ABB343A259DC58300EF2201 /* NanumMyeongjoBold.ttf */,
+				9ABB343B259DC58300EF2201 /* NanumMyeongjoExtraBold.ttf */,
 				398950C5259DB3AA00C36434 /* AppDelegate.swift */,
 				398950C7259DB3AA00C36434 /* SceneDelegate.swift */,
 				398950DB259DB50900C36434 /* Home.storyboard */,
@@ -127,9 +136,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ABB3440259DC58F00EF2201 /* NanumMyeongjo.ttf in Resources */,
 				398950D2259DB3AD00C36434 /* LaunchScreen.storyboard in Resources */,
 				398950CF259DB3AD00C36434 /* Assets.xcassets in Resources */,
+				9ABB343D259DC58300EF2201 /* NanumMyeongjoExtraBold.ttf in Resources */,
 				398950CD259DB3AA00C36434 /* Main.storyboard in Resources */,
+				9ABB343C259DC58300EF2201 /* NanumMyeongjoBold.ttf in Resources */,
 				398950DC259DB50900C36434 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
