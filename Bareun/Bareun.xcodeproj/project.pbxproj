@@ -15,9 +15,9 @@
 		3963E55625A3081E0028F8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3963E55425A3081E0028F8B8 /* LaunchScreen.storyboard */; };
 		3963E59125A44B640028F8B8 /* CustomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963E59025A44B640028F8B8 /* CustomItem.swift */; };
 		3963E59425A44C6A0028F8B8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963E59325A44C6A0028F8B8 /* API.swift */; };
-		9A75D15325A45C6200D4EFF0 /* NanumMyeongjoExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A75D15025A45C6200D4EFF0 /* NanumMyeongjoExtraBold.ttf */; };
-		9A75D15425A45C6200D4EFF0 /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A75D15125A45C6200D4EFF0 /* NanumMyeongjo.ttf */; };
-		9A75D15525A45C6200D4EFF0 /* NanumMyeongjoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A75D15225A45C6200D4EFF0 /* NanumMyeongjoBold.ttf */; };
+		3963E5B025A45D780028F8B8 /* NanumMyeongjoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3963E5AD25A45D780028F8B8 /* NanumMyeongjoBold.ttf */; };
+		3963E5B125A45D780028F8B8 /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */; };
+		3963E5B225A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3963E5AF25A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		3963E55725A3081E0028F8B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3963E59025A44B640028F8B8 /* CustomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomItem.swift; sourceTree = "<group>"; };
 		3963E59325A44C6A0028F8B8 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		9A75D15025A45C6200D4EFF0 /* NanumMyeongjoExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumMyeongjoExtraBold.ttf; path = "../../../../../../../Volumes/NanumFontSetup_Myungjo_TTF Ver3.01/NanumMyeongjoExtraBold.ttf"; sourceTree = "<group>"; };
-		9A75D15125A45C6200D4EFF0 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumMyeongjo.ttf; path = "../../../../../../../Volumes/NanumFontSetup_Myungjo_TTF Ver3.01/NanumMyeongjo.ttf"; sourceTree = "<group>"; };
-		9A75D15225A45C6200D4EFF0 /* NanumMyeongjoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NanumMyeongjoBold.ttf; path = "../../../../../../../Volumes/NanumFontSetup_Myungjo_TTF Ver3.01/NanumMyeongjoBold.ttf"; sourceTree = "<group>"; };
+		3963E5AD25A45D780028F8B8 /* NanumMyeongjoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoBold.ttf; sourceTree = "<group>"; };
+		3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
+		3963E5AF25A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoExtraBold.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +66,9 @@
 		3963E54825A3081C0028F8B8 /* Bareun */ = {
 			isa = PBXGroup;
 			children = (
-				9A75D15125A45C6200D4EFF0 /* NanumMyeongjo.ttf */,
-				9A75D15225A45C6200D4EFF0 /* NanumMyeongjoBold.ttf */,
-				9A75D15025A45C6200D4EFF0 /* NanumMyeongjoExtraBold.ttf */,
+				3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */,
+				3963E5AD25A45D780028F8B8 /* NanumMyeongjoBold.ttf */,
+				3963E5AF25A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf */,
 				3963E54925A3081C0028F8B8 /* AppDelegate.swift */,
 				3963E54B25A3081C0028F8B8 /* SceneDelegate.swift */,
 				3963E54D25A3081C0028F8B8 /* ViewController.swift */,
@@ -140,10 +140,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3963E55625A3081E0028F8B8 /* LaunchScreen.storyboard in Resources */,
-				9A75D15525A45C6200D4EFF0 /* NanumMyeongjoBold.ttf in Resources */,
+				3963E5B225A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf in Resources */,
+				3963E5B025A45D780028F8B8 /* NanumMyeongjoBold.ttf in Resources */,
 				3963E55325A3081E0028F8B8 /* Assets.xcassets in Resources */,
-				9A75D15325A45C6200D4EFF0 /* NanumMyeongjoExtraBold.ttf in Resources */,
-				9A75D15425A45C6200D4EFF0 /* NanumMyeongjo.ttf in Resources */,
+				3963E5B125A45D780028F8B8 /* NanumMyeongjo.ttf in Resources */,
 				3963E55125A3081C0028F8B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
