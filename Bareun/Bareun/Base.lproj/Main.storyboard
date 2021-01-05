@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumMyeongjo.ttf">
+            <string>NanumMyeongjo</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bareun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fSt-uL-oRv">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1004"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItem" textLabel="7kN-hU-lLF" style="IBUITableViewCellStyleDefault" id="6Am-a5-aWp">
+                                        <rect key="frame" x="0.0" y="28" width="1366" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Am-a5-aWp" id="Nyi-Ft-ZGa">
+                                            <rect key="frame" x="0.0" y="0.0" width="1366" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7kN-hU-lLF">
+                                                    <rect key="frame" x="16" y="0.0" width="1334" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CustomItem" rowHeight="349" id="6af-51-dYy" customClass="CustomItem" customModule="Bareun" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="80" width="1366" height="349"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6af-51-dYy" id="08M-hH-9nP">
+                                            <rect key="frame" x="0.0" y="0.0" width="1366" height="349"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="52X-oK-wlW">
+                                                    <rect key="frame" x="16" y="15" width="1334" height="319"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ii1-OM-Azy">
+                                                    <rect key="frame" x="647" y="157" width="72" height="35"/>
+                                                    <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="30"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="52X-oK-wlW" firstAttribute="top" secondItem="08M-hH-9nP" secondAttribute="topMargin" id="3a9-YK-rrS"/>
+                                                <constraint firstItem="Ii1-OM-Azy" firstAttribute="centerY" secondItem="08M-hH-9nP" secondAttribute="centerY" id="Qnd-Ht-FyP"/>
+                                                <constraint firstItem="Ii1-OM-Azy" firstAttribute="centerX" secondItem="08M-hH-9nP" secondAttribute="centerX" id="U1F-fQ-odx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="52X-oK-wlW" secondAttribute="trailing" id="a0t-B8-bra"/>
+                                                <constraint firstItem="52X-oK-wlW" firstAttribute="leading" secondItem="08M-hH-9nP" secondAttribute="leadingMargin" id="ehl-JQ-CyH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="52X-oK-wlW" secondAttribute="bottom" id="m7X-ej-Ti0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageLabel" destination="52X-oK-wlW" id="khq-Sm-1Bt"/>
+                                            <outlet property="textLabel" destination="Ii1-OM-Azy" id="Jo4-1f-rVv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fSt-uL-oRv" secondAttribute="trailing" id="1vN-f9-nEN"/>
+                            <constraint firstItem="fSt-uL-oRv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N1a-c6-4cr"/>
+                            <constraint firstItem="fSt-uL-oRv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="enz-f1-8Ry"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fSt-uL-oRv" secondAttribute="bottom" id="qa6-ng-P4i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fSt-uL-oRv" id="Dsn-6B-zcR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.868228404099558" y="72.65625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
