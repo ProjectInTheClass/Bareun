@@ -41,7 +41,7 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CS2-ax-ouz">
-                                                <rect key="frame" x="1227" y="39" width="49" height="42"/>
+                                                <rect key="frame" x="1234" y="39" width="42" height="42"/>
                                                 <state key="normal" title="Button" image="settingImage"/>
                                                 <connections>
                                                     <segue destination="Xgo-dc-8Ve" kind="presentation" id="wxC-2g-zbH"/>
@@ -54,7 +54,7 @@
                                             <constraint firstItem="Kdv-cx-DPd" firstAttribute="centerY" secondItem="CS2-ax-ouz" secondAttribute="centerY" constant="-7" id="J2C-IH-2yI"/>
                                             <constraint firstItem="Kdv-cx-DPd" firstAttribute="leading" secondItem="AJR-hq-G7U" secondAttribute="trailing" constant="10" id="KRb-ZJ-u2I"/>
                                             <constraint firstItem="CS2-ax-ouz" firstAttribute="top" secondItem="aGR-wC-xuT" secondAttribute="top" constant="39" id="Ldh-Qn-Ziq"/>
-                                            <constraint firstItem="CS2-ax-ouz" firstAttribute="leading" secondItem="Kdv-cx-DPd" secondAttribute="trailing" constant="418" id="S1K-5n-dpN"/>
+                                            <constraint firstItem="CS2-ax-ouz" firstAttribute="leading" secondItem="Kdv-cx-DPd" secondAttribute="trailing" constant="425" id="S1K-5n-dpN"/>
                                             <constraint firstItem="CS2-ax-ouz" firstAttribute="top" secondItem="aGR-wC-xuT" secondAttribute="top" constant="39" id="hIx-vz-AwU"/>
                                             <constraint firstAttribute="trailing" secondItem="CS2-ax-ouz" secondAttribute="trailing" constant="90" id="nI1-jS-P0L"/>
                                             <constraint firstItem="AJR-hq-G7U" firstAttribute="centerY" secondItem="aGR-wC-xuT" secondAttribute="centerY" id="reC-TR-Pks"/>
@@ -102,7 +102,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="52X-oK-wlW" firstAttribute="top" secondItem="08M-hH-9nP" secondAttribute="topMargin" id="3a9-YK-rrS"/>
                                                         <constraint firstItem="Ii1-OM-Azy" firstAttribute="centerY" secondItem="08M-hH-9nP" secondAttribute="centerY" id="Qnd-Ht-FyP"/>
