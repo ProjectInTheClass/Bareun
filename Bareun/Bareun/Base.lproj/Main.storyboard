@@ -83,6 +83,7 @@
                                                         <constraint firstAttribute="bottomMargin" secondItem="52X-oK-wlW" secondAttribute="bottom" id="m7X-ej-Ti0"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <outlet property="imageLabel" destination="52X-oK-wlW" id="khq-Sm-1Bt"/>
                                                     <outlet property="textLabel" destination="Ii1-OM-Azy" id="Jo4-1f-rVv"/>
