@@ -66,6 +66,7 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fSt-uL-oRv">
                                         <rect key="frame" x="0.0" y="120" width="1366" height="904"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="sectionIndexBackgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItem" textLabel="7kN-hU-lLF" style="IBUITableViewCellStyleDefault" id="6Am-a5-aWp">
                                                 <rect key="frame" x="0.0" y="28" width="1366" height="44"/>
@@ -101,6 +102,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="52X-oK-wlW" firstAttribute="top" secondItem="08M-hH-9nP" secondAttribute="topMargin" id="3a9-YK-rrS"/>
                                                         <constraint firstItem="Ii1-OM-Azy" firstAttribute="centerY" secondItem="08M-hH-9nP" secondAttribute="centerY" id="Qnd-Ht-FyP"/>
@@ -119,10 +121,11 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4pV-f3-Hjb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2pX-og-u74"/>
                             <constraint firstAttribute="bottom" secondItem="4pV-f3-Hjb" secondAttribute="bottom" id="QqP-tp-RyE"/>
