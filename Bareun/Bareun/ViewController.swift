@@ -41,6 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.dataSource = self
+        tableView.delegate = self
     }
     override func viewDidAppear(_ animated: Bool) {
         MENU.shared.getMenuItems(completion: { menu in
@@ -48,7 +49,20 @@ class ViewController: UIViewController, UITableViewDataSource {
             self.tableView.reloadData()
         })
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "itemDetail" {
+            let vc = segue.destination as! DetailViewController
+            vc.menu = sender as! MenuItem
+        }
+    }
 
 
 }
 
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(self.items[indexPath.row])
+        performSegue(withIdentifier: "itemDetail", sender: self.items[indexPath.row])
+    }
+}

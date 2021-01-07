@@ -18,6 +18,7 @@
 		3963E5B025A45D780028F8B8 /* NanumMyeongjoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3963E5AD25A45D780028F8B8 /* NanumMyeongjoBold.ttf */; };
 		3963E5B125A45D780028F8B8 /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */; };
 		3963E5B225A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3963E5AF25A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf */; };
+		3995851E25A6ECAB008E720F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995851D25A6ECAB008E720F /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3963E5AD25A45D780028F8B8 /* NanumMyeongjoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoBold.ttf; sourceTree = "<group>"; };
 		3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
 		3963E5AF25A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoExtraBold.ttf; sourceTree = "<group>"; };
+		3995851D25A6ECAB008E720F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				3963E54D25A3081C0028F8B8 /* ViewController.swift */,
 				3963E59325A44C6A0028F8B8 /* API.swift */,
 				3963E54F25A3081C0028F8B8 /* Main.storyboard */,
+				3995851D25A6ECAB008E720F /* DetailViewController.swift */,
 				3963E59025A44B640028F8B8 /* CustomItem.swift */,
 				3963E55225A3081E0028F8B8 /* Assets.xcassets */,
 				3963E55425A3081E0028F8B8 /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 				3963E54E25A3081C0028F8B8 /* ViewController.swift in Sources */,
 				3963E59125A44B640028F8B8 /* CustomItem.swift in Sources */,
 				3963E54A25A3081C0028F8B8 /* AppDelegate.swift in Sources */,
+				3995851E25A6ECAB008E720F /* DetailViewController.swift in Sources */,
 				3963E54C25A3081C0028F8B8 /* SceneDelegate.swift in Sources */,
 				3963E59425A44C6A0028F8B8 /* API.swift in Sources */,
 			);
