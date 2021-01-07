@@ -213,16 +213,25 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundkorChangedSize" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-Fs-8lt">
                                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="786"/>
                                             </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15_바른히피" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-ny-tf9">
+                                                <rect key="frame" x="0.0" y="0.0" width="1366" height="786"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="Rmg-ny-tf9" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="2is-AN-hQZ"/>
+                                            <constraint firstItem="Rmg-ny-tf9" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="2o6-jv-SRX"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rmg-ny-tf9" secondAttribute="trailing" id="5co-tT-G0t"/>
                                             <constraint firstAttribute="bottom" secondItem="1Kl-Fs-8lt" secondAttribute="bottom" constant="60" id="9kZ-f0-37E"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="centerX" secondItem="86U-aZ-ALz" secondAttribute="centerX" id="Esz-BD-Dqh"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="MVp-GQ-inD"/>
                                             <constraint firstAttribute="trailing" secondItem="1Kl-Fs-8lt" secondAttribute="trailing" id="NFd-Nm-j4k"/>
                                             <constraint firstAttribute="trailing" secondItem="1Kl-Fs-8lt" secondAttribute="trailing" id="QJp-96-NEC"/>
+                                            <constraint firstItem="Rmg-ny-tf9" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="Wue-lg-HXW"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="YYF-SE-ljD"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rmg-ny-tf9" secondAttribute="bottom" constant="60" id="eDF-dc-nEm"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="ehs-8h-syl"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rmg-ny-tf9" secondAttribute="trailing" id="ipW-8N-zvv"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="lik-qv-fVt"/>
                                         </constraints>
                                     </view>
@@ -282,6 +291,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="15_바른히피" width="2732" height="1547"/>
         <image name="backgroundkorChangedSize" width="2732" height="1547"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="pen" width="980" height="981"/>
