@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3995851725A6D0F7008E720F /* CoffeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995851625A6D0F7008E720F /* CoffeeDetailViewController.swift */; };
 		4955B56E25A2FA750080B4B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955B56D25A2FA750080B4B7 /* AppDelegate.swift */; };
 		4955B57025A2FA750080B4B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955B56F25A2FA750080B4B7 /* SceneDelegate.swift */; };
 		4955B57225A2FA750080B4B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955B57125A2FA750080B4B7 /* ViewController.swift */; };
@@ -16,10 +15,11 @@
 		4955B57A25A2FA780080B4B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4955B57825A2FA780080B4B7 /* LaunchScreen.storyboard */; };
 		4955B58625A433000080B4B7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955B58525A433000080B4B7 /* API.swift */; };
 		4955B58925A4410F0080B4B7 /* CoffeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955B58825A4410F0080B4B7 /* CoffeeCell.swift */; };
+		6A77CACB25A6EFA500335412 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A77CACA25A6EFA500335412 /* ModalViewController.swift */; };
+		6AD4181B25A6D0E400B8EEBC /* CoffeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4181A25A6D0E400B8EEBC /* CoffeeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3995851625A6D0F7008E720F /* CoffeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailViewController.swift; sourceTree = "<group>"; };
 		4955B56A25A2FA750080B4B7 /* DynamicTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4955B56D25A2FA750080B4B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4955B56F25A2FA750080B4B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +30,8 @@
 		4955B57B25A2FA780080B4B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4955B58525A433000080B4B7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4955B58825A4410F0080B4B7 /* CoffeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCell.swift; sourceTree = "<group>"; };
+		6A77CACA25A6EFA500335412 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		6AD4181A25A6D0E400B8EEBC /* CoffeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +68,13 @@
 				4955B56F25A2FA750080B4B7 /* SceneDelegate.swift */,
 				4955B57125A2FA750080B4B7 /* ViewController.swift */,
 				4955B57325A2FA750080B4B7 /* Main.storyboard */,
-				3995851625A6D0F7008E720F /* CoffeeDetailViewController.swift */,
 				4955B57625A2FA780080B4B7 /* Assets.xcassets */,
 				4955B57825A2FA780080B4B7 /* LaunchScreen.storyboard */,
 				4955B57B25A2FA780080B4B7 /* Info.plist */,
 				4955B58525A433000080B4B7 /* API.swift */,
 				4955B58825A4410F0080B4B7 /* CoffeeCell.swift */,
+				6AD4181A25A6D0E400B8EEBC /* CoffeeDetailViewController.swift */,
+				6A77CACA25A6EFA500335412 /* ModalViewController.swift */,
 			);
 			path = DynamicTableView;
 			sourceTree = "<group>";
@@ -150,8 +153,9 @@
 				4955B57225A2FA750080B4B7 /* ViewController.swift in Sources */,
 				4955B56E25A2FA750080B4B7 /* AppDelegate.swift in Sources */,
 				4955B58625A433000080B4B7 /* API.swift in Sources */,
-				3995851725A6D0F7008E720F /* CoffeeDetailViewController.swift in Sources */,
+				6AD4181B25A6D0E400B8EEBC /* CoffeeDetailViewController.swift in Sources */,
 				4955B57025A2FA750080B4B7 /* SceneDelegate.swift in Sources */,
+				6A77CACB25A6EFA500335412 /* ModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
