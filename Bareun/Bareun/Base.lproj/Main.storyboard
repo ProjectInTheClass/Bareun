@@ -136,7 +136,6 @@
                             <constraint firstAttribute="bottom" secondItem="4pV-f3-Hjb" secondAttribute="bottom" id="aol-cm-eAB"/>
                             <constraint firstItem="4pV-f3-Hjb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bQU-Vh-g7U"/>
                             <constraint firstItem="4pV-f3-Hjb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dtc-EM-Q0A"/>
-                            <constraint firstItem="4pV-f3-Hjb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nO0-LG-HnP"/>
                             <constraint firstItem="4pV-f3-Hjb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ojt-gT-cWT"/>
                             <constraint firstItem="4pV-f3-Hjb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qjo-Ep-HRp"/>
                             <constraint firstItem="4pV-f3-Hjb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="soE-tl-HSG"/>
@@ -184,6 +183,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyj-Vy-P6z">
+                                <rect key="frame" x="64" y="69" width="47" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="homekit" catalog="system"/>
+                                <connections>
+                                    <segue destination="mwU-s2-wRj" kind="unwind" unwindAction="unwindFromVC3WithSegue:" id="shd-oQ-9fC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mdN-Hx-d4D"/>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -202,8 +209,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SE0-Qc-gjb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mwU-s2-wRj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1511" y="572"/>
+            <point key="canvasLocation" x="1510.9809663250364" y="571.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="foA-Zu-Wlz">
@@ -225,6 +233,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="pen" width="980" height="981"/>
         <image name="settingImage" width="2000" height="2000"/>
         <image name="tempbackground" width="2732" height="2048"/>
