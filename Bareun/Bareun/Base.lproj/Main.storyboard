@@ -174,7 +174,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempbackground" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-Fs-8lt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundkor_2_5x2_5" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-Fs-8lt">
                                 <rect key="frame" x="0.0" y="50" width="1366" height="954"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ry-Rz-p9T">
@@ -233,10 +233,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backgroundkor_2_5x2_5" width="2732" height="2048"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="pen" width="980" height="981"/>
         <image name="settingImage" width="2000" height="2000"/>
-        <image name="tempbackground" width="2732" height="2048"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
