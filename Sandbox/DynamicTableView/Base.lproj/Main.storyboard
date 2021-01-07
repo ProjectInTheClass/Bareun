@@ -131,16 +131,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HE-wr-6BV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HE-wr-6BV">
                                 <rect key="frame" x="186" y="178" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryf-fs-52A">
-                                <rect key="frame" x="186" y="250" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryf-fs-52A">
+                                <rect key="frame" x="186" y="229" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -148,6 +146,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1SU-MJ-Zih"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6HE-wr-6BV" firstAttribute="centerX" secondItem="KZn-dQ-YCw" secondAttribute="centerX" id="YGA-ub-uY8"/>
+                            <constraint firstItem="Ryf-fs-52A" firstAttribute="top" secondItem="6HE-wr-6BV" secondAttribute="bottom" constant="30" id="gK8-95-TF4"/>
+                            <constraint firstItem="Ryf-fs-52A" firstAttribute="centerX" secondItem="KZn-dQ-YCw" secondAttribute="centerX" id="h20-aP-Wuf"/>
+                            <constraint firstItem="6HE-wr-6BV" firstAttribute="top" secondItem="1SU-MJ-Zih" secondAttribute="top" constant="90" id="uRl-3w-qSJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tIn-El-oiP"/>
                     <connections>

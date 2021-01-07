@@ -55,7 +55,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "menuDetail" {
-            print("Menu Detail")
+            let vc = segue.destination as! CoffeeDetailViewController
+            vc.menu = sender as! MenuItem
         }
     }
 }
@@ -63,5 +64,6 @@ class ViewController: UIViewController, UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(self.items[indexPath.row])
+        performSegue(withIdentifier: "menuDetail", sender: self.items[indexPath.row])
     }
 }
