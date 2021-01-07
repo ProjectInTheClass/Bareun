@@ -7,6 +7,8 @@ struct MenuItem {
 
 class ViewController: UIViewController, UITableViewDataSource {
     
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -33,14 +35,17 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBOutlet weak var tableView: UITableView!
-    
+    // 다른 뷰컨트롤러로 바로 이동 가능하게 하는 함수 목적지가 되는 뷰컨트롤러에 해줘야하는 작업
+    @IBAction func unwindFromVC3(segue:UIStoryboardSegue) {}
     var items:[MenuItem] = []
+    
+    var test: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.dataSource = self
-        tableView.delegate = self
+        tableView.delegate = self //
         
         API.shared.hello()
         
@@ -51,12 +56,13 @@ class ViewController: UIViewController, UITableViewDataSource {
             self.items = menu
             self.tableView.reloadData()
         })
+        
+        print("현재 TEST: \(test)")
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "menuDetail" {
+        if segue.identifier == "menuDetail"{
             let vc = segue.destination as! CoffeeDetailViewController
-            vc.menu = sender as! MenuItem
+            vc.menu = sender as? MenuItem
         }
     }
 }
@@ -67,3 +73,5 @@ extension ViewController: UITableViewDelegate {
         performSegue(withIdentifier: "menuDetail", sender: self.items[indexPath.row])
     }
 }
+
+// po segue.identifier
