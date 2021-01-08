@@ -213,7 +213,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundkorChangedSize" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-Fs-8lt">
                                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="786"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15_바른히피" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-ny-tf9">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_나눔바른펜" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-ny-tf9">
                                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="786"/>
                                             </imageView>
                                         </subviews>
@@ -291,7 +291,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="15_바른히피" width="2732" height="1547"/>
+        <image name="01_나눔바른펜" width="2732" height="1547"/>
         <image name="backgroundkorChangedSize" width="2732" height="1547"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="pen" width="980" height="981"/>
