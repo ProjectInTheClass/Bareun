@@ -214,8 +214,8 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundkorChangedSize" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-Fs-8lt">
                                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="786"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xDJ-Ql-rhu">
-                                                <rect key="frame" x="0.0" y="0.0" width="1366" height="846"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xDJ-Ql-rhu">
+                                                <rect key="frame" x="0.0" y="0.0" width="1366" height="786"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcp-s8-CCA" customClass="PKCanvasView">
                                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="846"/>
@@ -239,7 +239,7 @@
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="lik-qv-fVt"/>
                                             <constraint firstAttribute="trailing" secondItem="xDJ-Ql-rhu" secondAttribute="trailing" id="ohE-vF-haj"/>
                                             <constraint firstItem="lcp-s8-CCA" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="pBW-fB-jvY"/>
-                                            <constraint firstAttribute="bottom" secondItem="xDJ-Ql-rhu" secondAttribute="bottom" id="t2n-PP-eyl"/>
+                                            <constraint firstAttribute="bottom" secondItem="xDJ-Ql-rhu" secondAttribute="bottom" constant="60" id="t2n-PP-eyl"/>
                                             <constraint firstAttribute="bottom" secondItem="lcp-s8-CCA" secondAttribute="bottom" id="yVY-u9-Zxy"/>
                                         </constraints>
                                     </view>
@@ -258,7 +258,7 @@
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="cmd-kD-8qo"/>
                                             <barButtonItem title="Item" image="chevron.compact.right" catalog="system" id="yib-h4-AYB">
                                                 <connections>
-                                                    <action selector="goToNextPage:" destination="LzM-zu-zYZ" id="kxh-PP-eyQ"/>
+                                                    <action selector="goToNextPage:" destination="LzM-zu-zYZ" id="Ob8-7y-hLS"/>
                                                 </connections>
                                             </barButtonItem>
                                         </items>

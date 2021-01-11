@@ -23,16 +23,17 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     var drawing = PKDrawing()
     var toolPicker: PKToolPicker!
     
+    var imageIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         titleLabel.text = menu?.name
+        
         if titleLabel.text == "쓸모있는 영어 문장" {
             backgroundImg.image = UIImage(named: "backgroundeng.png")
         }
-        
-        textImage.image = UIImage(named: category1_myeongjo[0])
+        textImage.image = UIImage(named: category1_myeongjo[imageIndex])
         
         canvasView.delegate = self
         canvasView.drawing = drawing
@@ -94,6 +95,14 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     }
 
     
+    @IBAction func goToNextPage(_ sender: Any) {
+        if imageIndex >= (category1_myeongjo.count - 1) {
+            imageIndex = 0
+        } else {
+            imageIndex += 1
+        }
+        textImage.image = UIImage(named: category1_myeongjo[imageIndex])
+    }
     /*
     // MARK: - Navigation
 
