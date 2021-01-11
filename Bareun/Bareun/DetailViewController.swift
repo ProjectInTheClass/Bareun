@@ -12,6 +12,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 
     @IBOutlet weak var canvasView: PKCanvasView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
     
     @IBOutlet weak var backgroundImg: UIImageView!
     @IBOutlet weak var textImage: UIImageView!
@@ -29,7 +30,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         super.viewDidLoad()
 
         titleLabel.text = menu?.name
-        
+        countLabel.text = "1/\(category1_myeongjo.count)"
         if titleLabel.text == "쓸모있는 영어 문장" {
             backgroundImg.image = UIImage(named: "backgroundeng.png")
         }
@@ -98,8 +99,20 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     @IBAction func goToNextPage(_ sender: Any) {
         if imageIndex >= (category1_myeongjo.count - 1) {
             imageIndex = 0
+            countLabel.text = "\(1)/\(category1_myeongjo.count)"
         } else {
             imageIndex += 1
+            countLabel.text = "\(imageIndex+1)/\(category1_myeongjo.count)"
+        }
+        textImage.image = UIImage(named: category1_myeongjo[imageIndex])
+    }
+    @IBAction func goToPreviousPage(_ sender: Any) {
+        if imageIndex <= 0 {
+            countLabel.text = "\(1)/\(category1_myeongjo.count)"
+            imageIndex = 0
+        } else {
+            imageIndex -= 1
+            countLabel.text = "\(imageIndex-1)/\(category1_myeongjo.count)"
         }
         textImage.image = UIImage(named: category1_myeongjo[imageIndex])
     }
