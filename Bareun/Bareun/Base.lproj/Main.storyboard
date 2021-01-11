@@ -213,18 +213,26 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundkorChangedSize" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-Fs-8lt">
                                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="786"/>
                                             </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcp-s8-CCA" customClass="PKCanvasView">
+                                                <rect key="frame" x="0.0" y="0.0" width="1366" height="846"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.98425012830000003" green="0.98448854679999998" blue="0.97254878280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="lcp-s8-CCA" secondAttribute="trailing" id="7fW-mD-YoK"/>
                                             <constraint firstAttribute="bottom" secondItem="1Kl-Fs-8lt" secondAttribute="bottom" constant="60" id="9kZ-f0-37E"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="centerX" secondItem="86U-aZ-ALz" secondAttribute="centerX" id="Esz-BD-Dqh"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="MVp-GQ-inD"/>
                                             <constraint firstAttribute="trailing" secondItem="1Kl-Fs-8lt" secondAttribute="trailing" id="NFd-Nm-j4k"/>
                                             <constraint firstAttribute="trailing" secondItem="1Kl-Fs-8lt" secondAttribute="trailing" id="QJp-96-NEC"/>
+                                            <constraint firstItem="lcp-s8-CCA" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="Uxr-aG-SyH"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="YYF-SE-ljD"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="ehs-8h-syl"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="centerX" secondItem="86U-aZ-ALz" secondAttribute="centerX" id="hXT-O9-BSU"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="lik-qv-fVt"/>
+                                            <constraint firstItem="lcp-s8-CCA" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="pBW-fB-jvY"/>
+                                            <constraint firstAttribute="bottom" secondItem="lcp-s8-CCA" secondAttribute="bottom" id="yVY-u9-Zxy"/>
                                         </constraints>
                                     </view>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPu-aY-DCv">
@@ -256,6 +264,7 @@
                     <navigationItem key="navigationItem" id="MoP-eH-SMh"/>
                     <connections>
                         <outlet property="backgroundImg" destination="1Kl-Fs-8lt" id="mn3-xp-RU9"/>
+                        <outlet property="canvasView" destination="lcp-s8-CCA" id="0wr-xK-W3y"/>
                         <outlet property="titleLabel" destination="4ry-Rz-p9T" id="hQw-xF-a4g"/>
                     </connections>
                 </viewController>
