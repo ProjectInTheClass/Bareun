@@ -21,3 +21,9 @@ class MENU {
         completion(self.items)
     }
 }
+
+var category1_myeongjo:[String] = [
+    "01_나눔명조.png", "02_나눔명조.png", "03_나눔명조.png", "04_나눔명조.png", "05_나눔명조.png",
+    "06_나눔명조.png", "07_나눔명조.png", "08_나눔명조.png", "09_나눔명조.png", "10_나눔명조.png",
+    "11_나눔명조.png", "12_나눔명조.png", "13_나눔명조.png", "14_나눔명조.png", "15_나눔명조.png"
+]

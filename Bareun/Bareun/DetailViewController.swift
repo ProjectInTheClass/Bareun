@@ -12,7 +12,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 
     @IBOutlet weak var canvasView: PKCanvasView!
     @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var backgroundImg: UIImageView!
+    @IBOutlet weak var textImage: UIImageView!
     var menu:MenuItem? = nil
     
     let canvasWidth: CGFloat = 828
@@ -30,6 +32,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             backgroundImg.image = UIImage(named: "backgroundeng.png")
         }
         
+        textImage.image = UIImage(named: category1_myeongjo[0])
+        
         canvasView.delegate = self
         canvasView.drawing = drawing
         
@@ -42,7 +46,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             toolPicker = PKToolPicker.shared(for: window!)
         }
         
-        toolPicker.setVisible(true, forFirstResponder: canvasView)
+        toolPicker.setVisible(false, forFirstResponder: canvasView)
         toolPicker.addObserver(canvasView)
         toolPicker.addObserver(self)
 //        updateLayout(for: toolPicker)
@@ -59,6 +63,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         updateContentSizeForDrawing()
         canvasView.contentOffset = CGPoint(x: 0, y: -canvasView.adjustedContentInset.top)
     }
+    
     override var prefersHomeIndicatorAutoHidden: Bool {
         return true
     }
@@ -79,7 +84,16 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         
         canvasView.contentSize = CGSize(width: canvasWidth * canvasView.zoomScale, height: contentHeight)
     }
+    
+    @IBAction func toolIsHidden(_ sender: Any) {
+        if toolPicker.isVisible {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+        } else {
+            toolPicker.setVisible(true, forFirstResponder: canvasView)
+        }
+    }
 
+    
     /*
     // MARK: - Navigation
 
