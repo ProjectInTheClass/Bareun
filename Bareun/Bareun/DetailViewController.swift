@@ -10,12 +10,16 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var backgroundImg: UIImageView!
     var menu:MenuItem? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         titleLabel.text = menu?.name
+        if titleLabel.text == "쓸모있는 영어 문장" {
+            backgroundImg.image = UIImage(named: "backgroundeng.png")
+        }
     }
     
 
