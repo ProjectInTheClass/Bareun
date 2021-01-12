@@ -25,16 +25,25 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     var toolPicker: PKToolPicker!
     
     var imageIndex: Int = 0
+    // 선언해둔 이미지 이름의 배열을 선택한 카테고리와 폰트에 따라 받아오는 역할
+    var tempArray:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         titleLabel.text = menu?.name
-        countLabel.text = "1/\(category1_myeongjo.count)"
-        if titleLabel.text == "쓸모있는 영어 문장" {
+
+        switch titleLabel.text {
+        case "쓸모있는 영어 문장":
             backgroundImg.image = UIImage(named: "backgroundeng.png")
+            tempArray = category3_pinyon
+            textImage.image = UIImage(named: tempArray[imageIndex])
+            countLabel.text = "1/\(tempArray.count)"
+        default:
+            tempArray = category1_myeongjo
+            textImage.image = UIImage(named: tempArray[imageIndex])
+            countLabel.text = "1/\(tempArray.count)"
         }
-        textImage.image = UIImage(named: category1_myeongjo[imageIndex])
         
         canvasView.delegate = self
         canvasView.drawing = drawing
@@ -97,25 +106,25 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 
     
     @IBAction func goToNextPage(_ sender: Any) {
-        if imageIndex >= (category1_myeongjo.count - 1) {
+        if imageIndex >= (tempArray.count - 1) {
             imageIndex = 0
-            countLabel.text = "\(1)/\(category1_myeongjo.count)"
+            countLabel.text = "\(1)/\(tempArray.count)"
         } else {
             imageIndex += 1
-            countLabel.text = "\(imageIndex+1)/\(category1_myeongjo.count)"
+            countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
         }
-        textImage.image = UIImage(named: category1_myeongjo[imageIndex])
+        textImage.image = UIImage(named: tempArray[imageIndex])
     }
     
     @IBAction func goToPreviousPage(_ sender: Any) {
         if imageIndex <= 0 {
-            countLabel.text = "\(category1_myeongjo.count)/\(category1_myeongjo.count)"
-            imageIndex = category1_myeongjo.count - 1
+            countLabel.text = "\(tempArray.count)/\(tempArray.count)"
+            imageIndex = tempArray.count - 1
         } else {
             imageIndex -= 1
-            countLabel.text = "\(imageIndex+1)/\(category1_myeongjo.count)"
+            countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
         }
-        textImage.image = UIImage(named: category1_myeongjo[imageIndex])
+        textImage.image = UIImage(named: tempArray[imageIndex])
     }
     /*
     // MARK: - Navigation

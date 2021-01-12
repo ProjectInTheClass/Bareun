@@ -27,3 +27,9 @@ var category1_myeongjo:[String] = [
     "c1_06_mj.png", "c1_07_mj.png", "c1_08_mj.png", "c1_09_mj.png", "c1_10_mj.png",
     "c1_11_mj.png", "c1_12_mj.png", "c1_13_mj.png", "c1_14_mj.png", "c1_15_mj.png"
 ]
+
+var category3_pinyon:[String] = [
+    "01_pinyon.png", "02_pinyon.png", "03_pinyon.png", "04_pinyon.png", "05_pinyon.png",
+    "06_pinyon.png", "07_pinyon.png", "08_pinyon.png", "09_pinyon.png", "10_pinyon.png",
+    "11_pinyon.png", "12_pinyon.png", "13_pinyon.png"
+]
