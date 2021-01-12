@@ -112,7 +112,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             imageIndex = 0
         } else {
             imageIndex -= 1
-            countLabel.text = "\(imageIndex-1)/\(category1_myeongjo.count)"
+            countLabel.text = "\(imageIndex+1)/\(category1_myeongjo.count)"
         }
         textImage.image = UIImage(named: category1_myeongjo[imageIndex])
     }
