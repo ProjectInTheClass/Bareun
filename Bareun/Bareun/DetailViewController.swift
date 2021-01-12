@@ -7,6 +7,7 @@
 
 import UIKit
 import PencilKit
+import PhotosUI
 
 class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver {
 
@@ -165,4 +166,19 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     }
     */
 
+    @IBAction func saveDrawingToCameraRoll(_ sender: Any) {
+        UIGraphicsBeginImageContextWithOptions(canvasView.bounds.size, false, UIScreen.main.scale)
+        canvasView.drawHierarchy(in: canvasView.bounds, afterScreenUpdates: true)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        if image != nil{
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetChangeRequest.creationRequestForAsset(from: image!)
+            }, completionHandler: {success, error in
+                // deal with success or error
+            })
+        }
+    
+    }
 }
