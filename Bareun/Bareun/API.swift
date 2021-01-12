@@ -23,7 +23,7 @@ class MENU {
 }
 
 var category1_myeongjo:[String] = [
-    "01_나눔명조.png", "02_나눔명조.png", "03_나눔명조.png", "04_나눔명조.png", "05_나눔명조.png",
-    "06_나눔명조.png", "07_나눔명조.png", "08_나눔명조.png", "09_나눔명조.png", "10_나눔명조.png",
-    "11_나눔명조.png", "12_나눔명조.png", "13_나눔명조.png", "14_나눔명조.png", "15_나눔명조.png"
+    "c1_01_mj.png", "c1_02_mj.png", "c1_03_mj.png", "c1_04_mj.png", "c1_05_mj.png",
+    "c1_06_mj.png", "c1_07_mj.png", "c1_08_mj.png", "c1_09_mj.png", "c1_10_mj.png",
+    "c1_11_mj.png", "c1_12_mj.png", "c1_13_mj.png", "c1_14_mj.png", "c1_15_mj.png"
 ]
