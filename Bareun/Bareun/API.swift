@@ -7,6 +7,14 @@
 
 import Foundation
 
+
+final class Shared {
+    static let shared = Shared()
+    
+    var FontName : String!
+ 
+}
+
 class MENU {
     static let shared = MENU()
     
