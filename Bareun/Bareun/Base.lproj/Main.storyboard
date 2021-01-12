@@ -162,7 +162,7 @@
         <!--Detail View Controller-->
         <scene sceneID="98x-yV-le4">
             <objects>
-                <viewController id="LzM-zu-zYZ" customClass="DetailViewController" customModule="Bareun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="LzM-zu-zYZ" customClass="DetailViewController" customModule="Bareun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MSY-NO-n2O">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
