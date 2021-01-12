@@ -34,15 +34,25 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         titleLabel.text = menu?.name
 
         switch titleLabel.text {
+        case "나를 깨우는 명언":
+            tempArray = category1_myeongjo
+            textImage.image = UIImage(named: tempArray[imageIndex])
+            countLabel.text = "1/\(tempArray.count)"
+        case "많이 틀리는 맞춤법":
+            tempArray = category2_myeongjo
+            textImage.image = UIImage(named: tempArray[imageIndex])
+            countLabel.text = "1/\(tempArray.count)"
         case "쓸모있는 영어 문장":
             backgroundImg.image = UIImage(named: "backgroundeng.png")
             tempArray = category3_pinyon
             textImage.image = UIImage(named: tempArray[imageIndex])
             countLabel.text = "1/\(tempArray.count)"
-        default:
-            tempArray = category1_myeongjo
+        case "대학 슬로건":
+            tempArray = category4_myeongjo
             textImage.image = UIImage(named: tempArray[imageIndex])
             countLabel.text = "1/\(tempArray.count)"
+        default:
+            print("error!")
         }
         
         canvasView.delegate = self
