@@ -287,6 +287,11 @@
                                                     <action selector="isLayerHidden:" destination="LzM-zu-zYZ" id="eun-2z-JiQ"/>
                                                 </connections>
                                             </barButtonItem>
+                                            <barButtonItem title="Item" image="clear" catalog="system" id="4cf-Ea-cxt">
+                                                <connections>
+                                                    <action selector="canvasClear:" destination="LzM-zu-zYZ" id="rrw-wb-Q5G"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem systemItem="flexibleSpace" id="m4F-Ob-PBy"/>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="cmd-kD-8qo"/>
                                             <barButtonItem title="Font Select" image="character" catalog="system" id="Eyd-KJ-F3m"/>
@@ -353,6 +358,7 @@
         <image name="character" catalog="system" width="128" height="128"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
         <image name="eye" catalog="system" width="128" height="81"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="pen" width="980" height="981"/>

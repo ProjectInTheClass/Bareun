@@ -117,6 +117,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 
     
     @IBAction func goToNextPage(_ sender: Any) {
+        canvasView.drawing = PKDrawing()
         if imageIndex >= (tempArray.count - 1) {
             imageIndex = 0
             countLabel.text = "\(1)/\(tempArray.count)"
@@ -128,6 +129,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     }
     
     @IBAction func goToPreviousPage(_ sender: Any) {
+        canvasView.drawing = PKDrawing()
         if imageIndex <= 0 {
             countLabel.text = "\(tempArray.count)/\(tempArray.count)"
             imageIndex = tempArray.count - 1
@@ -147,6 +149,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             textImage.isHidden = true
             layerHidden.image = UIImage(systemName: "eye.slash")
         }
+    }
+    
+    
+    @IBAction func canvasClear(_ sender: Any) {
+        canvasView.drawing = PKDrawing()
     }
     /*
     // MARK: - Navigation
