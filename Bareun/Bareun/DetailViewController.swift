@@ -106,6 +106,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
         textImage.image = UIImage(named: category1_myeongjo[imageIndex])
     }
+    
     @IBAction func goToPreviousPage(_ sender: Any) {
         if imageIndex <= 0 {
             countLabel.text = "\(1)/\(category1_myeongjo.count)"
