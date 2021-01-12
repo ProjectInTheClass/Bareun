@@ -109,8 +109,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     @IBAction func goToPreviousPage(_ sender: Any) {
         if imageIndex <= 0 {
-            countLabel.text = "\(1)/\(category1_myeongjo.count)"
-            imageIndex = 0
+            countLabel.text = "\(category1_myeongjo.count)/\(category1_myeongjo.count)"
+            imageIndex = category1_myeongjo.count - 1
         } else {
             imageIndex -= 1
             countLabel.text = "\(imageIndex+1)/\(category1_myeongjo.count)"
