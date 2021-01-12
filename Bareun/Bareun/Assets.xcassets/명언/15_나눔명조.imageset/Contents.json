@@ -1,11 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "15_나눔명조.png",
+      "filename" : "15_나눔명조.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "15_나눔명조-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
