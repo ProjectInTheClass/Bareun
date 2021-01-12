@@ -167,8 +167,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     */
 
     @IBAction func saveDrawingToCameraRoll(_ sender: Any) {
+        UIGraphicsBeginImageContextWithOptions(backgroundImg.bounds.size, false, UIScreen.main.scale)
         UIGraphicsBeginImageContextWithOptions(canvasView.bounds.size, false, UIScreen.main.scale)
+        backgroundImg.drawHierarchy(in: backgroundImg.bounds, afterScreenUpdates: true)
         canvasView.drawHierarchy(in: canvasView.bounds, afterScreenUpdates: true)
+        
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         
