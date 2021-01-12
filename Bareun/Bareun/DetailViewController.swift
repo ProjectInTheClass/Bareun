@@ -44,23 +44,20 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         case "나를 깨우는 명언":
             tempArray = category1_myeongjo
             textImage.image = UIImage(named: tempArray[imageIndex])
-            countLabel.text = "1/\(tempArray.count)"
         case "많이 틀리는 맞춤법":
             tempArray = category2_myeongjo
             textImage.image = UIImage(named: tempArray[imageIndex])
-            countLabel.text = "1/\(tempArray.count)"
         case "쓸모있는 영어 문장":
             backgroundImg.image = UIImage(named: "backgroundeng.png")
             tempArray = category3_pinyon
             textImage.image = UIImage(named: tempArray[imageIndex])
-            countLabel.text = "1/\(tempArray.count)"
         case "대학 슬로건":
             tempArray = category4_myeongjo
             textImage.image = UIImage(named: tempArray[imageIndex])
-            countLabel.text = "1/\(tempArray.count)"
         default:
             print("error!")
         }
+        countLabel.text = "\((imageIndex) + 1)/\(tempArray.count)"
         
         canvasView.delegate = self
         canvasView.drawing = drawing
@@ -77,7 +74,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         toolPicker.setVisible(false, forFirstResponder: canvasView)
         toolPicker.addObserver(canvasView)
         toolPicker.addObserver(self)
-//        updateLayout(for: toolPicker)
         canvasView.becomeFirstResponder()
     }
     override func viewDidLayoutSubviews() {
@@ -121,7 +117,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
     }
 
-    
     @IBAction func goToNextPage(_ sender: Any) {
         canvasView.drawing = PKDrawing()
         if imageIndex >= (tempArray.count - 1) {
@@ -156,7 +151,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             layerHidden.image = UIImage(systemName: "eye.slash")
         }
     }
-    
     
     @IBAction func canvasClear(_ sender: Any) {
         canvasView.drawing = PKDrawing()

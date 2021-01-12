@@ -22,7 +22,7 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
      
        // Apply radius to Popupview
-        Popupview.layer.cornerRadius = 10
+        Popupview.layer.cornerRadius = 5
         Popupview.layer.masksToBounds = true
  
     }
@@ -38,12 +38,11 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         print("Font Name : " + names[indexPath.row])
-      
-         Shared.shared.FontName = names[indexPath.row]
+        Shared.shared.FontName = names[indexPath.row]
  
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//        self.present(newViewController, animated: true, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        self.present(newViewController, animated: true, completion: nil)
   
     }
     
