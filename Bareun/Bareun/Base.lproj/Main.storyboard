@@ -282,9 +282,14 @@
                                                     <action selector="toolIsHidden:" destination="LzM-zu-zYZ" id="ccg-1F-jZe"/>
                                                 </connections>
                                             </barButtonItem>
+                                            <barButtonItem title="Item" image="eye" catalog="system" id="Gnt-ba-dip">
+                                                <connections>
+                                                    <action selector="isLayerHidden:" destination="LzM-zu-zYZ" id="eun-2z-JiQ"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem systemItem="flexibleSpace" id="m4F-Ob-PBy"/>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="cmd-kD-8qo"/>
-                                            <barButtonItem title="Item" id="Eyd-KJ-F3m"/>
+                                            <barButtonItem title="Font Select" image="character" catalog="system" id="Eyd-KJ-F3m"/>
                                             <barButtonItem title="Item" image="chevron.compact.right" catalog="system" id="yib-h4-AYB">
                                                 <connections>
                                                     <action selector="goToNextPage:" destination="LzM-zu-zYZ" id="Ob8-7y-hLS"/>
@@ -314,6 +319,7 @@
                         <outlet property="backgroundImg" destination="1Kl-Fs-8lt" id="mn3-xp-RU9"/>
                         <outlet property="canvasView" destination="lcp-s8-CCA" id="0wr-xK-W3y"/>
                         <outlet property="countLabel" destination="G8l-7B-edx" id="UPF-nJ-nPU"/>
+                        <outlet property="layerHidden" destination="Gnt-ba-dip" id="piE-gt-hd3"/>
                         <outlet property="textImage" destination="xDJ-Ql-rhu" id="mtU-Ax-ZHj"/>
                         <outlet property="titleLabel" destination="4ry-Rz-p9T" id="hQw-xF-a4g"/>
                     </connections>
@@ -344,8 +350,10 @@
     </scenes>
     <resources>
         <image name="backgroundkorChangedSize" width="2732" height="1547"/>
+        <image name="character" catalog="system" width="128" height="128"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="pen" width="980" height="981"/>
         <image name="pencil" catalog="system" width="128" height="113"/>

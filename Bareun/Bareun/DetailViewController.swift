@@ -18,6 +18,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     @IBOutlet weak var textImage: UIImageView!
     var menu:MenuItem? = nil
     
+    @IBOutlet weak var layerHidden: UIBarButtonItem!
     let canvasWidth: CGFloat = 828
     let canvasOverscrollHeight:CGFloat = 500
     
@@ -135,6 +136,17 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
         }
         textImage.image = UIImage(named: tempArray[imageIndex])
+    }
+    
+    
+    @IBAction func isLayerHidden(_ sender: Any) {
+        if textImage.isHidden {
+            textImage.isHidden = false
+            layerHidden.image = UIImage(systemName: "eye")
+        } else {
+            textImage.isHidden = true
+            layerHidden.image = UIImage(systemName: "eye.slash")
+        }
     }
     /*
     // MARK: - Navigation
