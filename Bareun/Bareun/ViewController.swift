@@ -19,9 +19,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItem", for: indexPath)
-//        cell.textLabel?.text = fontInfo[indexPath.row].name
-//        return cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomItem", for: indexPath) as! CustomItem
         let menu = items[indexPath.row]
         cell.TextLabel.text = menu.name
@@ -30,12 +27,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
 
-//    let fontInfo = [
-//        Font(name: "산돌구름체"),
-//        Font(name: "애플고딕"),
-//        Font(name: "나눔고딕"),
-//        Font(name: "DX시인과나"),
-//    ]
     var items:[MenuItem] = []
     @IBOutlet weak var tableView: UITableView!
     @IBAction func unwindFromVC3(segue:UIStoryboardSegue) {}
@@ -45,6 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         MENU.shared.getMenuItems(completion: { menu in
             self.items = menu

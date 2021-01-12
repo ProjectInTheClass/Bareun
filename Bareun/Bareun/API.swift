@@ -17,8 +17,21 @@ class MENU {
         MenuItem(name: "대학 슬로건", image: "category1.png"),
     ]
     
+    var fontItems:[FontInfo] = [
+        FontInfo(fontName: "나눔명조체", infoHidden: true),
+        FontInfo(fontName: "바른히피체", infoHidden: true),
+        FontInfo(fontName: "나눔바른펜", infoHidden: true),
+        FontInfo(fontName: "Pinyon Script", infoHidden: false),
+        FontInfo(fontName: "Allan", infoHidden: false),
+        FontInfo(fontName: "Shadows Into Light Two", infoHidden: false)
+    ]
+    
     func getMenuItems(completion: ([MenuItem]) -> Void) {
         completion(self.items)
+    }
+    
+    func getFontItems(completion: ([FontInfo]) -> Void) {
+        completion(self.fontItems)
     }
 }
 

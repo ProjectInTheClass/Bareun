@@ -19,6 +19,11 @@
 		3963E5B125A45D780028F8B8 /* NanumMyeongjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */; };
 		3963E5B225A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3963E5AF25A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf */; };
 		3995851E25A6ECAB008E720F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995851D25A6ECAB008E720F /* DetailViewController.swift */; };
+		39C14D6625ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39C14D6525ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf */; };
+		39C14D6925ADEF91008E03E3 /* PinyonScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39C14D6825ADEF91008E03E3 /* PinyonScript-Regular.ttf */; };
+		39C14D6C25ADEF99008E03E3 /* Allan-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39C14D6B25ADEF99008E03E3 /* Allan-Regular.ttf */; };
+		39C14D6F25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39C14D6E25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf */; };
+		39C14D7225ADF071008E03E3 /* FontSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C14D7125ADF071008E03E3 /* FontSelectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjo.ttf; sourceTree = "<group>"; };
 		3963E5AF25A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumMyeongjoExtraBold.ttf; sourceTree = "<group>"; };
 		3995851D25A6ECAB008E720F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		39C14D6525ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 바른히피.ttf"; sourceTree = "<group>"; };
+		39C14D6825ADEF91008E03E3 /* PinyonScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PinyonScript-Regular.ttf"; sourceTree = "<group>"; };
+		39C14D6B25ADEF99008E03E3 /* Allan-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Allan-Regular.ttf"; sourceTree = "<group>"; };
+		39C14D6E25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ShadowsIntoLightTwo-Regular.ttf"; sourceTree = "<group>"; };
+		39C14D7125ADF071008E03E3 /* FontSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSelectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,10 @@
 		3963E54825A3081C0028F8B8 /* Bareun */ = {
 			isa = PBXGroup;
 			children = (
+				39C14D6E25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf */,
+				39C14D6B25ADEF99008E03E3 /* Allan-Regular.ttf */,
+				39C14D6825ADEF91008E03E3 /* PinyonScript-Regular.ttf */,
+				39C14D6525ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf */,
 				3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */,
 				3963E5AD25A45D780028F8B8 /* NanumMyeongjoBold.ttf */,
 				3963E5AF25A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf */,
@@ -78,6 +92,7 @@
 				3963E54F25A3081C0028F8B8 /* Main.storyboard */,
 				3995851D25A6ECAB008E720F /* DetailViewController.swift */,
 				3963E59025A44B640028F8B8 /* CustomItem.swift */,
+				39C14D7125ADF071008E03E3 /* FontSelectView.swift */,
 				3963E55225A3081E0028F8B8 /* Assets.xcassets */,
 				3963E55425A3081E0028F8B8 /* LaunchScreen.storyboard */,
 				3963E55725A3081E0028F8B8 /* Info.plist */,
@@ -143,9 +158,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3963E55625A3081E0028F8B8 /* LaunchScreen.storyboard in Resources */,
+				39C14D6C25ADEF99008E03E3 /* Allan-Regular.ttf in Resources */,
 				3963E5B225A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf in Resources */,
+				39C14D6625ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf in Resources */,
 				3963E5B025A45D780028F8B8 /* NanumMyeongjoBold.ttf in Resources */,
+				39C14D6F25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf in Resources */,
 				3963E55325A3081E0028F8B8 /* Assets.xcassets in Resources */,
+				39C14D6925ADEF91008E03E3 /* PinyonScript-Regular.ttf in Resources */,
 				3963E5B125A45D780028F8B8 /* NanumMyeongjo.ttf in Resources */,
 				3963E55125A3081C0028F8B8 /* Main.storyboard in Resources */,
 			);
@@ -162,6 +181,7 @@
 				3963E59125A44B640028F8B8 /* CustomItem.swift in Sources */,
 				3963E54A25A3081C0028F8B8 /* AppDelegate.swift in Sources */,
 				3995851E25A6ECAB008E720F /* DetailViewController.swift in Sources */,
+				39C14D7225ADF071008E03E3 /* FontSelectView.swift in Sources */,
 				3963E54C25A3081C0028F8B8 /* SceneDelegate.swift in Sources */,
 				3963E59425A44C6A0028F8B8 /* API.swift in Sources */,
 			);
