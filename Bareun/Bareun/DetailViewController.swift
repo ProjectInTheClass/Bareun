@@ -9,6 +9,11 @@ import UIKit
 import PencilKit
 import PhotosUI
 
+struct FontInfo {
+    var fontName: String
+    var infoHidden: Bool
+}
+
 class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver {
 
     @IBOutlet weak var canvasView: PKCanvasView!
