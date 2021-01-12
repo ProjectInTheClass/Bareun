@@ -201,7 +201,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86U-aZ-ALz">
-                                        <rect key="frame" x="0.0" y="128" width="1366" height="846"/>
+                                        <rect key="frame" x="0.0" y="128" width="1366" height="786"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundkorChangedSize" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-Fs-8lt">
                                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="786"/>
@@ -210,42 +210,54 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="786"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcp-s8-CCA" customClass="PKCanvasView">
-                                                <rect key="frame" x="0.0" y="0.0" width="1366" height="846"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8l-7B-edx">
-                                                        <rect key="frame" x="653" y="786" width="60" height="52"/>
-                                                        <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="25"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
+                                                <rect key="frame" x="0.0" y="0.0" width="1366" height="786"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="G8l-7B-edx" firstAttribute="centerX" secondItem="lcp-s8-CCA" secondAttribute="centerX" id="YLd-va-aQY"/>
-                                                    <constraint firstItem="G8l-7B-edx" firstAttribute="centerX" secondItem="lcp-s8-CCA" secondAttribute="centerX" id="hOQ-Ky-YR8"/>
-                                                    <constraint firstAttribute="bottom" secondItem="G8l-7B-edx" secondAttribute="bottom" constant="8" id="nzK-8z-I55"/>
-                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.98425012830000003" green="0.98448854679999998" blue="0.97254878280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="G8l-7B-edx" firstAttribute="top" secondItem="xDJ-Ql-rhu" secondAttribute="bottom" id="16X-ZQ-gpo"/>
                                             <constraint firstAttribute="trailing" secondItem="xDJ-Ql-rhu" secondAttribute="trailing" id="2KF-Tw-Jgc"/>
+                                            <constraint firstItem="1Kl-Fs-8lt" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="2Xg-F4-QWf"/>
+                                            <constraint firstItem="xDJ-Ql-rhu" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="4MH-fb-7WM"/>
                                             <constraint firstAttribute="bottom" secondItem="lcp-s8-CCA" secondAttribute="bottom" id="6RJ-6k-Bym"/>
                                             <constraint firstAttribute="trailing" secondItem="lcp-s8-CCA" secondAttribute="trailing" id="7fW-mD-YoK"/>
+                                            <constraint firstAttribute="trailing" secondItem="lcp-s8-CCA" secondAttribute="trailing" id="AT6-cA-s5M"/>
+                                            <constraint firstItem="xDJ-Ql-rhu" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="Ajk-tT-LWx"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="Jjq-JM-Lb9"/>
-                                            <constraint firstAttribute="bottom" secondItem="1Kl-Fs-8lt" secondAttribute="bottom" constant="60" id="KY0-xB-0F6"/>
                                             <constraint firstItem="lcp-s8-CCA" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="MJt-ef-hox"/>
                                             <constraint firstAttribute="trailing" secondItem="1Kl-Fs-8lt" secondAttribute="trailing" id="Ovy-xE-z4y"/>
+                                            <constraint firstAttribute="trailing" secondItem="xDJ-Ql-rhu" secondAttribute="trailing" id="Q1a-0S-d77"/>
+                                            <constraint firstItem="lcp-s8-CCA" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="Rbr-oW-Dj6"/>
                                             <constraint firstItem="lcp-s8-CCA" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="SR0-WF-mNu"/>
+                                            <constraint firstAttribute="bottom" secondItem="1Kl-Fs-8lt" secondAttribute="bottom" id="ScE-bT-aFN"/>
                                             <constraint firstItem="lcp-s8-CCA" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="Uxr-aG-SyH"/>
-                                            <constraint firstAttribute="bottom" secondItem="xDJ-Ql-rhu" secondAttribute="bottom" constant="60" id="b1S-Lp-OfS"/>
+                                            <constraint firstItem="1Kl-Fs-8lt" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="Zqd-Vu-0vv"/>
+                                            <constraint firstAttribute="bottom" secondItem="xDJ-Ql-rhu" secondAttribute="bottom" id="b1S-Lp-OfS"/>
                                             <constraint firstItem="xDJ-Ql-rhu" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="fQS-mD-GEA"/>
                                             <constraint firstAttribute="trailing" secondItem="lcp-s8-CCA" secondAttribute="trailing" id="gfY-rY-szz"/>
                                             <constraint firstItem="xDJ-Ql-rhu" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="mPN-DU-dB2"/>
                                             <constraint firstItem="lcp-s8-CCA" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="pBW-fB-jvY"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="sjt-sy-9tg"/>
+                                            <constraint firstItem="lcp-s8-CCA" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="uwR-uQ-AeK"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Kl-Fs-8lt" secondAttribute="trailing" id="vxm-qb-erF"/>
+                                            <constraint firstAttribute="bottom" secondItem="lcp-s8-CCA" secondAttribute="bottom" id="xPx-Xh-ExU"/>
                                             <constraint firstAttribute="bottom" secondItem="lcp-s8-CCA" secondAttribute="bottom" id="yVY-u9-Zxy"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Of-hb-n7t">
+                                        <rect key="frame" x="0.0" y="914" width="1366" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8l-7B-edx">
+                                                <rect key="frame" x="653" y="15.5" width="60" height="29"/>
+                                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="G8l-7B-edx" firstAttribute="centerX" secondItem="0Of-hb-n7t" secondAttribute="centerX" id="ZZj-Tk-ehk"/>
+                                            <constraint firstItem="G8l-7B-edx" firstAttribute="centerY" secondItem="0Of-hb-n7t" secondAttribute="centerY" id="uPw-i7-HbL"/>
                                         </constraints>
                                     </view>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPu-aY-DCv">
@@ -277,11 +289,6 @@
                                             </barButtonItem>
                                             <barButtonItem systemItem="flexibleSpace" id="m4F-Ob-PBy"/>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="cmd-kD-8qo"/>
-                                            <barButtonItem title="Item" image="square.and.arrow.down" catalog="system" id="9xV-Pe-RPK">
-                                                <connections>
-                                                    <action selector="saveDrawingToCameraRoll:" destination="LzM-zu-zYZ" id="QQf-wQ-BzC"/>
-                                                </connections>
-                                            </barButtonItem>
                                             <barButtonItem title="Font Select" image="character" catalog="system" id="Eyd-KJ-F3m">
                                                 <connections>
                                                     <segue destination="XjC-dl-HP9" kind="popoverPresentation" popoverAnchorBarButtonItem="Eyd-KJ-F3m" id="DQj-4G-cvO">
@@ -298,8 +305,12 @@
                                     </toolbar>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="86U-aZ-ALz" firstAttribute="top" secondItem="4BH-qS-8mi" secondAttribute="bottom" id="05j-WM-h3J"/>
                                     <constraint firstAttribute="trailing" secondItem="zPu-aY-DCv" secondAttribute="trailing" id="1xY-fe-tUl"/>
+                                    <constraint firstItem="86U-aZ-ALz" firstAttribute="leading" secondItem="ysu-ZE-q9G" secondAttribute="leading" id="2Tx-Ih-Fzp"/>
+                                    <constraint firstItem="zPu-aY-DCv" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="bottom" constant="60" id="Ah8-xe-5Zv"/>
                                     <constraint firstItem="86U-aZ-ALz" firstAttribute="top" secondItem="ysu-ZE-q9G" secondAttribute="top" constant="128" id="Q6W-pM-WNl"/>
+                                    <constraint firstAttribute="trailing" secondItem="86U-aZ-ALz" secondAttribute="trailing" id="nHd-jM-ylz"/>
                                     <constraint firstItem="zPu-aY-DCv" firstAttribute="leading" secondItem="ysu-ZE-q9G" secondAttribute="leading" id="nd1-2J-8Yd"/>
                                 </constraints>
                             </stackView>
@@ -436,7 +447,6 @@
         <image name="pen" width="980" height="981"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="settingImage" width="2000" height="2000"/>
-        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
