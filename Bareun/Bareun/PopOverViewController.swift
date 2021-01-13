@@ -39,10 +39,24 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         print("Font Name : " + names[indexPath.row])
         Shared.shared.FontName = names[indexPath.row]
- 
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        self.present(newViewController, animated: true, completion: nil)
+        let FName: String = Shared.shared.FontName
+        
+        switch FName {
+        case "나눔명조":
+            Shared.shared.TextImageName = "c1_01_mj"
+        case "나눔바른펜":
+            Shared.shared.TextImageName = "c1_01_bp"
+        case "바른히피":
+            Shared.shared.TextImageName = "c1_01_bh"
+        default:
+            Shared.shared.TextImageName = "c1_01_mj"
+        }
+        
+        
+        
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        self.present(newViewController, animated: true, completion: nil)
   
     }
     

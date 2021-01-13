@@ -11,8 +11,8 @@ import Foundation
 final class Shared {
     static let shared = Shared()
     
-    var FontName : String!
- 
+    var FontName : String! = "나눔명조"
+    var TextImageName : String = "c1_01_mj"
 }
 
 class MENU {
