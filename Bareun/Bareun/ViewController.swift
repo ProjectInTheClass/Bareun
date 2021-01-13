@@ -35,6 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

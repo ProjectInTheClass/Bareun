@@ -144,20 +144,30 @@
             </objects>
             <point key="canvasLocation" x="723.42606149341134" y="72.0703125"/>
         </scene>
-        <!--View Controller-->
+        <!--Email View Controller-->
         <scene sceneID="5uz-K9-5WJ">
             <objects>
-                <viewController id="V0y-7w-05Z" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmailViewController" id="V0y-7w-05Z" customClass="EmailViewController" customModule="Bareun" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SSc-A2-P4O">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNT-BT-Okh">
+                                <rect key="frame" x="299" y="574" width="107" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send FeedBack"/>
+                                <connections>
+                                    <action selector="SendFeedbackButton:" destination="V0y-7w-05Z" eventType="touchUpInside" id="A40-1z-gfx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="p8D-MM-Oox"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKk-pc-JbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="-459"/>
+            <point key="canvasLocation" x="1553.5871156661785" y="-459.37499999999994"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="98x-yV-le4">
