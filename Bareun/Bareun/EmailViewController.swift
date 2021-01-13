@@ -34,10 +34,10 @@ class EmailViewController: UIViewController,UITableViewDataSource ,MFMailCompose
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
-        if !MFMailComposeViewController.canSendMail() {
-            print("Mail services are not available")
-            return
-        }
+//        if !MFMailComposeViewController.canSendMail() {
+//            print("Mail services are not available")
+//            return
+//        }
         super.viewDidLoad()
     }
     
