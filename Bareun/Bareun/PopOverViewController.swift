@@ -10,7 +10,7 @@ import UIKit
 class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
     @IBOutlet weak var Popupview: UIView!
-    
+    var onChange: ((String) -> Void)? = nil
     @IBOutlet weak var tableView: UITableView!
         
     var names: [String] = ["나눔명조","나눔바른펜","바른히피"]
@@ -52,7 +52,8 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
             Shared.shared.TextImageName = "c1_01_mj"
         }
         
-        
+        self.onChange?(Shared.shared.TextImageName)
+        self.dismiss(animated: true)
         
 //        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //        let newViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
