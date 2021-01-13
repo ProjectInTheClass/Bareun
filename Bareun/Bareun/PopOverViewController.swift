@@ -18,11 +18,11 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
         
-//    var onChange: ((String) -> Void)? = nil
-    var onChange: (([FontInfo]) -> Void)? = nil
+    var onChange: ((String) -> Void)? = nil
+//    var onChange: (([FontInfo]) -> Void)? = nil
     var fontItems: [FontInfo] = []
     
-    var names: [String] = ["나눔명조","나눔바른펜","바른히피"]
+//    var names: [String] = ["나눔명조","나눔바른펜","바른히피"]
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +62,11 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
 //            Shared.shared.TextImageName = "c1_01_mj"
 //        }
         print("Font name : " + fontItems[indexPath.row].fontName)
-        MENU.shared.fontItems = fontItems
-        
+//        MENU.shared.fontItems = fontItems
+        Shared.shared.FontName = fontItems[indexPath.row].fontName
 //        self.onChange?(Shared.shared.TextImageName)
-        self.onChange?(MENU.shared.fontItems)
+        self.onChange?(Shared.shared.FontName)
+//        self.onChange?(MENU.shared.fontItems)
         self.dismiss(animated: true)
         
     }

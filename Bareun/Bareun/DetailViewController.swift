@@ -39,8 +39,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         switch titleLabel.text {
         case "나를 깨우는 명언":
             tempArray = category1_myeongjo
-//            textImage.image = UIImage(named: tempArray[imageIndex])
-            textImage.image = UIImage(named: Shared.shared.TextImageName)
+            textImage.image = UIImage(named: tempArray[imageIndex])
+//            textImage.image = UIImage(named: Shared.shared.TextImageName)
         case "많이 틀리는 맞춤법":
             tempArray = category2_myeongjo
             textImage.image = UIImage(named: tempArray[imageIndex])
@@ -73,21 +73,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         toolPicker.addObserver(self)
         canvasView.becomeFirstResponder()
         
-        
-//        let cn:String = Shared.shared.FontName
-//        print("CurrentFont "+cn)
-//        switch cn {
-//        case "나눔명조":
-//            textImage.image = UIImage(named: "c1_01_mj")
-//        case "나눔바른펜":
-//            textImage.image = UIImage(named: "c1_02_mj")
-//        case "바른히피":
-//            textImage.image = UIImage(named: "c1_03_mj")
-//        default:
-//            textImage.image = UIImage(named: "c1_01_mj")
-//        }
-        
-        
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -106,6 +91,17 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             if let vc = segue.destination as? PopOverViewController {
                 vc.onChange = { font in
                     print(font)
+                    switch font {
+                    case "Pinyon Script":
+                        self.tempArray = category3_pinyon
+                    case "Allan":
+                        self.tempArray = category3_allan
+                    case "Shadows Into Light Two":
+                        self.tempArray = category3_shadow
+                    default:
+                        print("korean font")
+                    }
+                    self.textImage.image = UIImage(named: self.tempArray[self.imageIndex])
 //                    if font == "바른히피"{
 //                        self.textImage.image = UIImage(named: "c1_01_bp")
 //                    }
@@ -115,7 +111,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
         
     }
-        
+    
     
     override var prefersHomeIndicatorAutoHidden: Bool {
         return true

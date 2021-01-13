@@ -8,11 +8,17 @@
 import Foundation
 
 
+//final class Shared {
+//    static let shared = Shared()
+//
+//    var FontName : String! = "나눔명조"
+//    var TextImageName : String = "c1_01_mj"
+//}
+
 final class Shared {
     static let shared = Shared()
     
     var FontName : String! = "나눔명조"
-    var TextImageName : String = "c1_01_mj"
 }
 
 class MENU {
@@ -58,6 +64,18 @@ var category3_pinyon:[String] = [
     "01_pinyon.png", "02_pinyon.png", "03_pinyon.png", "04_pinyon.png", "05_pinyon.png",
     "06_pinyon.png", "07_pinyon.png", "08_pinyon.png", "09_pinyon.png", "10_pinyon.png",
     "11_pinyon.png", "12_pinyon.png", "13_pinyon.png"
+]
+
+var category3_allan:[String] = [
+    "01_allan.png", "02_allan.png", "03_allan.png", "04_allan.png", "05_allan.png",
+    "06_allan.png", "07_allan.png", "08_allan.png", "09_allan.png", "10_allan.png",
+    "11_allan.png", "12_allan.png", "13_allan.png"
+]
+
+var category3_shadow:[String] = [
+    "01_shadow.png", "02_shadow.png", "03_shadow.png", "04_shadow.png", "05_shadow.png",
+    "06_shadow.png", "07_shadow.png", "08_shadow.png", "09_shadow.png", "10_shadow.png",
+    "11_shadow.png", "12_shadow.png", "13_shadow.png"
 ]
 
 var category4_myeongjo:[String] = [
