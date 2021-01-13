@@ -24,12 +24,12 @@ final class Shared {
 class MENU {
     static let shared = MENU()
     
-    var settingMenuList: [settingsMenu] = [
-        settingsMenu(userSettingMenu:"버전 정보 : 1.0"),
-        settingsMenu(userSettingMenu:"라이선스 : MIT Lisense"),
-        settingsMenu(userSettingMenu:"앱 평가하기"),
-        settingsMenu(userSettingMenu:"개발자에게 메일 보내기")
-    ]
+//    var settingMenuList: [settingsMenu] = [
+//        settingsMenu(userSettingMenu:"버전 정보 : 1.0"),
+//        settingsMenu(userSettingMenu:"라이선스 : MIT Lisense"),
+//        settingsMenu(userSettingMenu:"앱 평가하기"),
+//        settingsMenu(userSettingMenu:"개발자에게 메일 보내기")
+//    ]
     
     var items:[MenuItem] = [
         MenuItem(name: "나를 깨우는 명언", image: "category1.png"),
@@ -47,9 +47,9 @@ class MENU {
         FontInfo(fontName: "Shadows Into Light Two", infoHidden: false)
     ]
     
-    func getSettingsMenu(completion: ([settingsMenu]) -> Void) {
-        completion(self.settingMenuList)
-    }
+//    func getSettingsMenu(completion: ([settingsMenu]) -> Void) {
+//        completion(self.settingMenuList)
+//    }
     
     func getMenuItems(completion: ([MenuItem]) -> Void) {
         completion(self.items)

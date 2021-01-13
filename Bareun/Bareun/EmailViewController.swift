@@ -13,25 +13,18 @@ struct settingsMenu {
     var userSettingMenu: String
 }
 
-class EmailViewController: UIViewController,UITableViewDataSource ,MFMailComposeViewControllerDelegate {
+class EmailViewController: UIViewController ,MFMailComposeViewControllerDelegate {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settingMenuList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
-        cell.textLabel?.text = settingMenuList[indexPath.row].userSettingMenu
-        return cell
-        
-    }
     
     
     @IBOutlet var tableView: UITableView!
+    
+    var settingMenuList = [
+        "버전 정보 : 1.0",
+        "라이선스 : MIT Lisense",
+        "앱 평가하기",
+        "개발자에게 메일 보내기"
+    ]
     
     override func viewDidLoad() {
 //        if !MFMailComposeViewController.canSendMail() {
@@ -39,9 +32,11 @@ class EmailViewController: UIViewController,UITableViewDataSource ,MFMailCompose
 //            return
 //        }
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
-    var settingMenuList:[settingsMenu] = []
 
     
     @IBAction func SendFeedbackButton(_ sender: Any) {
@@ -64,6 +59,23 @@ class EmailViewController: UIViewController,UITableViewDataSource ,MFMailCompose
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
         controller.dismiss(animated: true, completion: nil)
+        
+    }
+}
+
+extension EmailViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return settingMenuList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
+        cell.textLabel?.text = settingMenuList[indexPath.row]
+        return cell
         
     }
 }
