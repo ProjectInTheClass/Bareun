@@ -306,7 +306,7 @@
                                             </barButtonItem>
                                             <barButtonItem title="Font Select" image="character" catalog="system" id="Eyd-KJ-F3m">
                                                 <connections>
-                                                    <segue destination="XjC-dl-HP9" kind="popoverPresentation" popoverAnchorBarButtonItem="Eyd-KJ-F3m" id="DQj-4G-cvO">
+                                                    <segue destination="XjC-dl-HP9" kind="popoverPresentation" identifier="popover" popoverAnchorBarButtonItem="Eyd-KJ-F3m" id="DQj-4G-cvO">
                                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                     </segue>
                                                 </connections>

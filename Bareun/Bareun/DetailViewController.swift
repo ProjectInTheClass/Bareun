@@ -104,17 +104,23 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         updateContentSizeForDrawing()
         canvasView.contentOffset = CGPoint(x: 0, y: -canvasView.adjustedContentInset.top)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popover" {
             if let vc = segue.destination as? PopOverViewController {
                 vc.onChange = { font in
                     print(font)
+//                    if font == "바른히피"{
+//                        self.textImage.image = UIImage(named: "c1_01_bp")
+//                    }
                 }
-//                textImage.image = UIImage(named: "c1_01_bp")
+//
             }
         }
         
     }
+        
+    
     override var prefersHomeIndicatorAutoHidden: Bool {
         return true
     }
