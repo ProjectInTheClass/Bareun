@@ -9,18 +9,40 @@ import Foundation
 import UIKit
 import MessageUI
 
-class EmailViewController: UIViewController, MFMailComposeViewControllerDelegate {
+struct settingsMenu {
+    var userSettingMenu: String
+}
+
+class EmailViewController: UIViewController,UITableViewDataSource ,MFMailComposeViewControllerDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return settingMenuList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
+        cell.textLabel?.text = settingMenuList[indexPath.row].userSettingMenu
+        return cell
+        
+    }
+    
+    
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         if !MFMailComposeViewController.canSendMail() {
             print("Mail services are not available")
             return
         }
-        
         super.viewDidLoad()
-        
     }
     
+    var settingMenuList:[settingsMenu] = []
+
     
     @IBAction func SendFeedbackButton(_ sender: Any) {
         if MFMailComposeViewController.canSendMail() {
