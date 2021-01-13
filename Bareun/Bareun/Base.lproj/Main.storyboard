@@ -390,7 +390,29 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lyr-UA-iJS" id="mgS-Vz-5aT">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ax1-4Y-DP2">
+                                                    <rect key="frame" x="16" y="19.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZM-Wd-9RL">
+                                                    <rect key="frame" x="339" y="19" width="20" height="22"/>
+                                                    <state key="normal" image="info.circle" catalog="system"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uZM-Wd-9RL" firstAttribute="centerY" secondItem="mgS-Vz-5aT" secondAttribute="centerY" id="jlU-mM-169"/>
+                                                <constraint firstItem="Ax1-4Y-DP2" firstAttribute="leading" secondItem="mgS-Vz-5aT" secondAttribute="leadingMargin" id="mXT-uC-rPB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="uZM-Wd-9RL" secondAttribute="trailing" id="pm5-rc-sHu"/>
+                                                <constraint firstItem="Ax1-4Y-DP2" firstAttribute="centerY" secondItem="mgS-Vz-5aT" secondAttribute="centerY" id="wth-Qw-jnu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fontName" destination="Ax1-4Y-DP2" id="vv8-vB-7Qw"/>
+                                            <outlet property="infoButton" destination="uZM-Wd-9RL" id="TBM-VE-AQF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -422,6 +444,7 @@
         <image name="clear" catalog="system" width="128" height="114"/>
         <image name="eye" catalog="system" width="128" height="81"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="pen" width="980" height="981"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="settingImage" width="2000" height="2000"/>

@@ -9,10 +9,6 @@ import UIKit
 import PencilKit
 import PhotosUI
 
-struct FontInfo {
-    var fontName: String
-    var infoHidden: Bool
-}
 
 class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver {
 
@@ -189,18 +185,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 
     @IBAction func canvasClear(_ sender: Any) {
         canvasView.drawing = PKDrawing()
-//        let cn:String = Shared.shared.FontName
-//        print("CurrentFont "+cn)
-//        switch cn {
-//        case "나눔명조":
-//            textImage.image = UIImage(named: "c1_01_mj")
-//        case "나눔바른펜":
-//            textImage.image = UIImage(named: "c1_01_bp")
-//        case "바른히피":
-//            textImage.image = UIImage(named: "c1_01_bh")
-//        default:
-//            textImage.image = UIImage(named: "c1_01_mj")
-//        }
     }
     /*
     // MARK: - Navigation
