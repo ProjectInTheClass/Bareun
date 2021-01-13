@@ -91,16 +91,21 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             if let vc = segue.destination as? PopOverViewController {
                 vc.onChange = { font in
                     print(font)
-                    switch font {
-                    case "Pinyon Script":
-                        self.tempArray = category3_pinyon
-                    case "Allan":
-                        self.tempArray = category3_allan
-                    case "Shadows Into Light Two":
-                        self.tempArray = category3_shadow
-                    default:
-                        print("korean font")
+                    if self.titleLabel.text == "쓸모있는 영어 문장" {
+                        switch font {
+                        case "Pinyon Script":
+                            self.tempArray = category3_pinyon
+                        case "Allan":
+                            self.tempArray = category3_allan
+                        case "Shadows Into Light Two":
+                            self.tempArray = category3_shadow
+                        default:
+                            print("korean font")
+                        }
+                    } else {
+                        
                     }
+                    
                     self.textImage.image = UIImage(named: self.tempArray[self.imageIndex])
 //                    if font == "바른히피"{
 //                        self.textImage.image = UIImage(named: "c1_01_bp")
