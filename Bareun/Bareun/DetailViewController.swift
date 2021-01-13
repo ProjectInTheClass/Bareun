@@ -103,7 +103,34 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                             print("korean font")
                         }
                     } else {
-                        
+                        switch font {
+                        case "나눔명조체":
+                            if self.titleLabel.text == "나를 깨우는 명언" {
+                                self.tempArray = category1_myeongjo
+                            } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
+                                self.tempArray = category2_myeongjo
+                            } else {
+                                self.tempArray = category4_myeongjo
+                            }
+                        case "바른히피체":
+                            if self.titleLabel.text == "나를 깨우는 명언" {
+                                self.tempArray = category1_bh
+                            } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
+                                self.tempArray = category2_bh
+                            } else {
+                                self.tempArray = category4_bh
+                            }
+                        case "나눔바른펜":
+                            if self.titleLabel.text == "나를 깨우는 명언" {
+                                self.tempArray = category1_bp
+                            } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
+                                self.tempArray = category2_bp
+                            } else {
+                                self.tempArray = category4_bp
+                            }
+                        default:
+                            print("english font")
+                        }
                     }
                     
                     self.textImage.image = UIImage(named: self.tempArray[self.imageIndex])
