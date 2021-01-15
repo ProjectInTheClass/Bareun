@@ -7,14 +7,6 @@
 
 import Foundation
 
-
-//final class Shared {
-//    static let shared = Shared()
-//
-//    var FontName : String! = "나눔명조"
-//    var TextImageName : String = "c1_01_mj"
-//}
-
 final class Shared {
     static let shared = Shared()
     
@@ -42,14 +34,11 @@ class MENU {
         FontInfo(fontName: "나눔명조체", infoHidden: true, fileName: "NanumMyeongjo"),
         FontInfo(fontName: "바른히피체", infoHidden: true, fileName: "나눔손글씨 바른히피"),
         FontInfo(fontName: "나눔바른펜", infoHidden: true, fileName: "NanumBarunpenR"),
-        FontInfo(fontName: "Pinyon Script", infoHidden: false, fileName: "PinyonScript-Regular"),
+        FontInfo(fontName: "Pinyon Script", infoHidden: false, fileName: "PinyonScript"),
         FontInfo(fontName: "Allan", infoHidden: false, fileName: "Allan-Regular"),
         FontInfo(fontName: "Shadows Into Light Two", infoHidden: false, fileName: "ShadowsIntoLightTwo-Regular")
     ]
     
-//    func getSettingsMenu(completion: ([settingsMenu]) -> Void) {
-//        completion(self.settingMenuList)
-//    }
     
     func getMenuItems(completion: ([MenuItem]) -> Void) {
         completion(self.items)
