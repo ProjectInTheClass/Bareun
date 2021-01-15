@@ -10,8 +10,9 @@ import PencilKit
 import PhotosUI
 
 
-class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver {
+class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver, UIScrollViewDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var canvasView: PKCanvasView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
@@ -19,6 +20,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     @IBOutlet weak var backgroundImg: UIImageView!
     @IBOutlet weak var textImage: UIImageView!
     var menu:MenuItem? = nil
+    
+    var backgroundImgCenter : CGPoint = CGPoint(x: 0, y: 0)
+    var textImageCenter : CGPoint = CGPoint(x: 0, y: 0)
     
     @IBOutlet weak var layerHidden: UIBarButtonItem!
     let canvasWidth: CGFloat = 828
@@ -32,8 +36,21 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     var tempArray:[String] = []
     
     override func viewDidLoad() {
-        super.viewDidLoad()
 
+        super.viewDidLoad()
+        
+        // 스크롤뷰
+        scrollView.delegate = self
+        self.scrollView.isScrollEnabled = true
+        self.scrollView.minimumZoomScale = 1.0
+        self.scrollView.maximumZoomScale = 10.0
+
+        backgroundImgCenter = backgroundImg.center
+        textImageCenter = textImage.center
+
+        self.scrollView.contentSize = self.canvasView.frame.size
+        // 여기까지 for Zoom
+        
         titleLabel.text = menu?.name
 
         switch titleLabel.text {
@@ -143,6 +160,40 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
         
     }
+    
+    // zoom for canvasView
+    func viewForZooming(in scrollView: UIScrollView) -> UIView?
+    {
+        return self.canvasView
+    }
+
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // 이게 canvasview랑 backgroundImg & textImage 같이 스케일되라고 작성한 코드
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+
+        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
+        var translatedPoint = backgroundImgCenter.applying(scaleAffineTransform)
+        backgroundImg.transform = CGAffineTransform.identity.translatedBy(x: translatedPoint.x - backgroundImgCenter.x , y: translatedPoint.y - backgroundImgCenter.y)
+        translatedPoint = textImageCenter.applying(scaleAffineTransform)
+        textImage.transform = CGAffineTransform.identity.translatedBy(x: translatedPoint.x - textImageCenter.x, y: translatedPoint.y - textImageCenter.y)
+
+//        let offsetX = max((scrollView.bounds.width - scrollView.contentSize.width) * 0.5, 0)
+//        let offsetY = max((scrollView.bounds.height - scrollView.contentSize.height) * 0.5, 0)
+//        scrollView.contentInset = UIEdgeInsets(top: offsetY, left: offsetX, bottom: 0, right: 0)
+    }
+
+    
+    // 여기까지..
+    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scale, y: scale)
+        scrollView.contentSize = self.canvasView.bounds.size.applying(scaleAffineTransform)
+    }
+
     
     
     override var prefersHomeIndicatorAutoHidden: Bool {

@@ -364,6 +364,7 @@
                         <outlet property="canvasView" destination="lcp-s8-CCA" id="0wr-xK-W3y"/>
                         <outlet property="countLabel" destination="G8l-7B-edx" id="UPF-nJ-nPU"/>
                         <outlet property="layerHidden" destination="Gnt-ba-dip" id="piE-gt-hd3"/>
+                        <outlet property="scrollView" destination="86U-aZ-ALz" id="O61-Ii-fw2"/>
                         <outlet property="textImage" destination="xDJ-Ql-rhu" id="mtU-Ax-ZHj"/>
                         <outlet property="titleLabel" destination="4ry-Rz-p9T" id="hQw-xF-a4g"/>
                     </connections>
