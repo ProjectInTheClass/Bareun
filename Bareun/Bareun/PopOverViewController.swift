@@ -35,8 +35,15 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
         Popupview.layer.cornerRadius = 5
         Popupview.layer.masksToBounds = true
         
+
+        self.tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+        
+        
     }
     
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        self.preferredContentSize = tableView.contentSize
+    }
     
     // Returns count of items in tableView
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,6 +95,9 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
         MENU.shared.getFontItems(completion: { menu in
             self.fontItems = menu
             self.tableView.reloadData()
+            
+            tableView.removeObserver(self, forKeyPath: "contentSize")
+            
         })
     }
 
