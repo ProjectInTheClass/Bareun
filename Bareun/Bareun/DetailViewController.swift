@@ -35,6 +35,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     // 선언해둔 이미지 이름의 배열을 선택한 카테고리와 폰트에 따라 받아오는 역할
     var tempArray:[String] = []
     
+    @IBAction func unwindFromVC5(segue:UIStoryboardSegue) {}
+    
     override func viewDidLoad() {
 
         super.viewDidLoad()

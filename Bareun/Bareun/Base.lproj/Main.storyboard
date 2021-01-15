@@ -420,6 +420,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZM-Wd-9RL">
                                                     <rect key="frame" x="339" y="19" width="20" height="22"/>
                                                     <state key="normal" image="info.circle" catalog="system"/>
+                                                    <connections>
+                                                        <segue destination="zzD-2q-xAR" kind="show" id="bWd-eO-pYF"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -454,6 +457,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXO-WL-xW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2280.9663250366029" y="571.875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dL0-VY-AAO">
+            <objects>
+                <viewController id="zzD-2q-xAR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lUN-L9-2Jz">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wQ-7q-wRa">
+                                <rect key="frame" x="288" y="477" width="128" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGs-Qt-aAh">
+                                <rect key="frame" x="659" y="15" width="30" height="30"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <segue destination="0dp-lV-XAA" kind="unwind" unwindAction="unwindFromVC5WithSegue:" id="LF0-aB-5N9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SXn-nt-byd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9wQ-7q-wRa" firstAttribute="centerY" secondItem="lUN-L9-2Jz" secondAttribute="centerY" id="7s3-vE-LIN"/>
+                            <constraint firstItem="SXn-nt-byd" firstAttribute="trailing" secondItem="LGs-Qt-aAh" secondAttribute="trailing" constant="15" id="MFk-lr-5bN"/>
+                            <constraint firstItem="9wQ-7q-wRa" firstAttribute="centerX" secondItem="lUN-L9-2Jz" secondAttribute="centerX" id="X71-ol-IuR"/>
+                            <constraint firstItem="LGs-Qt-aAh" firstAttribute="top" secondItem="SXn-nt-byd" secondAttribute="top" constant="15" id="rT2-AQ-5vS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jgl-Jm-zrZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJr-ki-oEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0dp-lV-XAA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2993.8506588579794" y="577.734375"/>
         </scene>
     </scenes>
     <resources>
