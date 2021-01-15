@@ -45,8 +45,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 10.0
 
-        backgroundImgCenter = backgroundImg.center
-        textImageCenter = textImage.center
+//        backgroundImgCenter = backgroundImg.center
+//        textImageCenter = textImage.center
 
         self.scrollView.contentSize = self.canvasView.frame.size
         // 여기까지 for Zoom
