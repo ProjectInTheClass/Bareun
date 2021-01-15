@@ -53,7 +53,7 @@
 		<false/>
 	</dict>
 	<key>UILaunchStoryboardName</key>
-	<string>BareunLaunchScreen</string>
+	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
