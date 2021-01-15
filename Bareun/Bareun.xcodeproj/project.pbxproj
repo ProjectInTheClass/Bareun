@@ -26,6 +26,7 @@
 		39C14D7225ADF071008E03E3 /* FontSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C14D7125ADF071008E03E3 /* FontSelectView.swift */; };
 		6A2725C325ADFD590045FB85 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2725C225ADFD590045FB85 /* PopOverViewController.swift */; };
 		9A01042B25AEBEE800699704 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01042A25AEBEE800699704 /* EmailViewController.swift */; };
+		9A1BEBA425B1B1CA00C53343 /* BareunLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BEBA325B1B1CA00C53343 /* BareunLaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		39C14D7125ADF071008E03E3 /* FontSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSelectView.swift; sourceTree = "<group>"; };
 		6A2725C225ADFD590045FB85 /* PopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		9A01042A25AEBEE800699704 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		9A1BEBA325B1B1CA00C53343 /* BareunLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BareunLaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				3963E55425A3081E0028F8B8 /* LaunchScreen.storyboard */,
 				3963E55725A3081E0028F8B8 /* Info.plist */,
 				9A01042A25AEBEE800699704 /* EmailViewController.swift */,
+				9A1BEBA325B1B1CA00C53343 /* BareunLaunchScreen.storyboard */,
 			);
 			path = Bareun;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				39C14D6F25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf in Resources */,
 				3963E55325A3081E0028F8B8 /* Assets.xcassets in Resources */,
 				39C14D6925ADEF91008E03E3 /* PinyonScript-Regular.ttf in Resources */,
+				9A1BEBA425B1B1CA00C53343 /* BareunLaunchScreen.storyboard in Resources */,
 				3963E5B125A45D780028F8B8 /* NanumMyeongjo.ttf in Resources */,
 				3963E55125A3081C0028F8B8 /* Main.storyboard in Resources */,
 			);

@@ -30,13 +30,18 @@ class ViewController: UIViewController, UITableViewDataSource {
     var items:[MenuItem] = []
     @IBOutlet weak var tableView: UITableView!
     @IBAction func unwindFromVC3(segue:UIStoryboardSegue) {}
+    
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
         
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         MENU.shared.getMenuItems(completion: { menu in
