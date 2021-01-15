@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NanumMyeongjo.ttf</string>
+		<string>나눔손글씨 바른히피.ttf</string>
+		<string>NanumBarunpenR.ttf</string>
+		<string>PinyonScript-Regular.ttf</string>
+		<string>Allan-Regular.ttf</string>
+		<string>ShadowsIntoLightTwo-Regular.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

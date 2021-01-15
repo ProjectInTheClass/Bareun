@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		393C788F25B1E78300131BCE /* NanumBarunpenR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */; };
 		3963E54A25A3081C0028F8B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963E54925A3081C0028F8B8 /* AppDelegate.swift */; };
 		3963E54C25A3081C0028F8B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963E54B25A3081C0028F8B8 /* SceneDelegate.swift */; };
 		3963E54E25A3081C0028F8B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963E54D25A3081C0028F8B8 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunpenR.ttf; sourceTree = "<group>"; };
 		3963E54625A3081C0028F8B8 /* Bareun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bareun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3963E54925A3081C0028F8B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3963E54B25A3081C0028F8B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				39C14D6B25ADEF99008E03E3 /* Allan-Regular.ttf */,
 				39C14D6825ADEF91008E03E3 /* PinyonScript-Regular.ttf */,
 				39C14D6525ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf */,
+				393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */,
 				3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */,
 				3963E5AD25A45D780028F8B8 /* NanumMyeongjoBold.ttf */,
 				3963E5AF25A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf */,
@@ -163,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393C788F25B1E78300131BCE /* NanumBarunpenR.ttf in Resources */,
 				3963E55625A3081E0028F8B8 /* LaunchScreen.storyboard in Resources */,
 				39C14D6C25ADEF99008E03E3 /* Allan-Regular.ttf in Resources */,
 				3963E5B225A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf in Resources */,

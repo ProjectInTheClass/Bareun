@@ -10,6 +10,7 @@ import UIKit
 struct FontInfo {
     var fontName: String
     var infoHidden: Bool
+    var fileName:String
 }
 
 class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -77,9 +78,9 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "FontCell", for: indexPath) as! FontSelectView
         let menu = fontItems[indexPath.row]
         cell.fontName.text = menu.fontName
+        cell.fontName.font = UIFont(name: menu.fileName, size: 18)
         cell.infoButton.isHidden = menu.infoHidden
 //        cell.textLabel?.text = names[indexPath.row]
-
         return cell
     }
     
