@@ -276,21 +276,34 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     */
 
     @IBAction func saveDrawingToCameraRoll(_ sender: Any) {
-        UIGraphicsBeginImageContextWithOptions(backgroundImg.bounds.size, false, UIScreen.main.scale)
-        UIGraphicsBeginImageContextWithOptions(canvasView.bounds.size, false, UIScreen.main.scale)
-        backgroundImg.drawHierarchy(in: backgroundImg.bounds, afterScreenUpdates: true)
-        canvasView.drawHierarchy(in: canvasView.bounds, afterScreenUpdates: true)
         
+        let alert = UIAlertController(title: "현재 손글씨를 카메라 롤에 저장하시겠습니까?", message: "저장을 누를 시 바로 저장됩니다.", preferredStyle: .alert)
+
+        self.present(alert, animated: true)
+            
+        alert.addAction(UIAlertAction(title: "저장", style: .default, handler: { action in
+            UIGraphicsBeginImageContextWithOptions(self.backgroundImg.bounds.size, false, UIScreen.main.scale)
+            UIGraphicsBeginImageContextWithOptions(self.canvasView.bounds.size, false, UIScreen.main.scale)
+            self.backgroundImg.drawHierarchy(in: self.backgroundImg.bounds, afterScreenUpdates: true)
+            self.canvasView.drawHierarchy(in: self.canvasView.bounds, afterScreenUpdates: true)
+            
+            
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            
+            if image != nil{
+                PHPhotoLibrary.shared().performChanges({
+                    PHAssetChangeRequest.creationRequestForAsset(from: image!)
+                }, completionHandler: {success, error in
+                    // deal with success or error
+                })
+            }
+
+        }))
         
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        
-        if image != nil{
-            PHPhotoLibrary.shared().performChanges({
-                PHAssetChangeRequest.creationRequestForAsset(from: image!)
-            }, completionHandler: {success, error in
-                // deal with success or error
-            })
-        }
+        alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { action in
+            
+        }))
+
     
     }
 }
