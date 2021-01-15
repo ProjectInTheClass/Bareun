@@ -421,7 +421,7 @@
                                                     <rect key="frame" x="339" y="19" width="20" height="22"/>
                                                     <state key="normal" image="info.circle" catalog="system"/>
                                                     <connections>
-                                                        <segue destination="zzD-2q-xAR" kind="show" id="bWd-eO-pYF"/>
+                                                        <segue destination="zzD-2q-xAR" kind="show" identifier="license" id="bWd-eO-pYF"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -458,20 +458,14 @@
             </objects>
             <point key="canvasLocation" x="2280.9663250366029" y="571.875"/>
         </scene>
-        <!--View Controller-->
+        <!--Font License View Controller-->
         <scene sceneID="dL0-VY-AAO">
             <objects>
-                <viewController id="zzD-2q-xAR" sceneMemberID="viewController">
+                <viewController id="zzD-2q-xAR" customClass="FontLicenseViewController" customModule="Bareun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lUN-L9-2Jz">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wQ-7q-wRa">
-                                <rect key="frame" x="288" y="477" width="128" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGs-Qt-aAh">
                                 <rect key="frame" x="659" y="15" width="30" height="30"/>
                                 <state key="normal" title="닫기"/>
@@ -479,17 +473,30 @@
                                     <segue destination="0dp-lV-XAA" kind="unwind" unwindAction="unwindFromVC5WithSegue:" id="LF0-aB-5N9"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uRF-v3-U9f">
+                                <rect key="frame" x="0.0" y="60" width="704" height="924"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SXn-nt-byd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9wQ-7q-wRa" firstAttribute="centerY" secondItem="lUN-L9-2Jz" secondAttribute="centerY" id="7s3-vE-LIN"/>
+                            <constraint firstItem="uRF-v3-U9f" firstAttribute="top" secondItem="SXn-nt-byd" secondAttribute="top" constant="60" id="9Yi-yO-Tt3"/>
                             <constraint firstItem="SXn-nt-byd" firstAttribute="trailing" secondItem="LGs-Qt-aAh" secondAttribute="trailing" constant="15" id="MFk-lr-5bN"/>
-                            <constraint firstItem="9wQ-7q-wRa" firstAttribute="centerX" secondItem="lUN-L9-2Jz" secondAttribute="centerX" id="X71-ol-IuR"/>
+                            <constraint firstItem="uRF-v3-U9f" firstAttribute="leading" secondItem="SXn-nt-byd" secondAttribute="leading" id="VkG-hQ-Kvi"/>
+                            <constraint firstItem="SXn-nt-byd" firstAttribute="trailing" secondItem="uRF-v3-U9f" secondAttribute="trailing" id="gJp-Ab-wjb"/>
+                            <constraint firstItem="SXn-nt-byd" firstAttribute="bottom" secondItem="uRF-v3-U9f" secondAttribute="bottom" id="jKH-qH-d7G"/>
                             <constraint firstItem="LGs-Qt-aAh" firstAttribute="top" secondItem="SXn-nt-byd" secondAttribute="top" constant="15" id="rT2-AQ-5vS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jgl-Jm-zrZ"/>
+                    <connections>
+                        <outlet property="content" destination="uRF-v3-U9f" id="ZJh-JR-MS2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJr-ki-oEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0dp-lV-XAA" userLabel="Exit" sceneMemberID="exit"/>
@@ -510,6 +517,9 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="settingImage" width="2000" height="2000"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

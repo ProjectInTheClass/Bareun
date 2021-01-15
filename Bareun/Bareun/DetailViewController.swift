@@ -153,11 +153,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                     }
                     
                     self.textImage.image = UIImage(named: self.tempArray[self.imageIndex])
-//                    if font == "바른히피"{
-//                        self.textImage.image = UIImage(named: "c1_01_bp")
-//                    }
                 }
-//
             }
         }
         
