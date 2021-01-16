@@ -10,8 +10,8 @@
 		393C788F25B1E78300131BCE /* NanumBarunpenR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */; };
 		393C789225B2152200131BCE /* FontLicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C789125B2152200131BCE /* FontLicenseViewController.swift */; };
 		393C789525B216AF00131BCE /* OFL-Pinyon.txt in Resources */ = {isa = PBXBuildFile; fileRef = 393C789425B216AF00131BCE /* OFL-Pinyon.txt */; };
-		393C789825B216B700131BCE /* OFL-Allan.txt in Resources */ = {isa = PBXBuildFile; fileRef = 393C789725B216B700131BCE /* OFL-Allan.txt */; };
 		393C789C25B216D700131BCE /* OFL-Shadow.txt in Resources */ = {isa = PBXBuildFile; fileRef = 393C789B25B216D700131BCE /* OFL-Shadow.txt */; };
+		393C78A125B27E7300131BCE /* OFL-Allan.txt in Resources */ = {isa = PBXBuildFile; fileRef = 393C78A025B27E7300131BCE /* OFL-Allan.txt */; };
 		3963E54A25A3081C0028F8B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963E54925A3081C0028F8B8 /* AppDelegate.swift */; };
 		3963E54C25A3081C0028F8B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963E54B25A3081C0028F8B8 /* SceneDelegate.swift */; };
 		3963E54E25A3081C0028F8B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963E54D25A3081C0028F8B8 /* ViewController.swift */; };
@@ -37,8 +37,8 @@
 		393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunpenR.ttf; sourceTree = "<group>"; };
 		393C789125B2152200131BCE /* FontLicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLicenseViewController.swift; sourceTree = "<group>"; };
 		393C789425B216AF00131BCE /* OFL-Pinyon.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-Pinyon.txt"; sourceTree = "<group>"; };
-		393C789725B216B700131BCE /* OFL-Allan.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "OFL-Allan.txt"; path = "../../../../../../Downloads/Allan/OFL-Allan.txt"; sourceTree = "<group>"; };
 		393C789B25B216D700131BCE /* OFL-Shadow.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-Shadow.txt"; sourceTree = "<group>"; };
+		393C78A025B27E7300131BCE /* OFL-Allan.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-Allan.txt"; sourceTree = "<group>"; };
 		3963E54625A3081C0028F8B8 /* Bareun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bareun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3963E54925A3081C0028F8B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3963E54B25A3081C0028F8B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				393C789425B216AF00131BCE /* OFL-Pinyon.txt */,
-				393C789725B216B700131BCE /* OFL-Allan.txt */,
 				393C789B25B216D700131BCE /* OFL-Shadow.txt */,
+				393C78A025B27E7300131BCE /* OFL-Allan.txt */,
 				39C14D6E25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf */,
 				39C14D6B25ADEF99008E03E3 /* Allan-Regular.ttf */,
 				39C14D6825ADEF91008E03E3 /* PinyonScript-Regular.ttf */,
@@ -187,11 +187,11 @@
 				3963E5B025A45D780028F8B8 /* NanumMyeongjoBold.ttf in Resources */,
 				393C789525B216AF00131BCE /* OFL-Pinyon.txt in Resources */,
 				39C14D6F25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf in Resources */,
-				393C789825B216B700131BCE /* OFL-Allan.txt in Resources */,
 				3963E55325A3081E0028F8B8 /* Assets.xcassets in Resources */,
 				39C14D6925ADEF91008E03E3 /* PinyonScript-Regular.ttf in Resources */,
 				3963E5B125A45D780028F8B8 /* NanumMyeongjo.ttf in Resources */,
 				3963E55125A3081C0028F8B8 /* Main.storyboard in Resources */,
+				393C78A125B27E7300131BCE /* OFL-Allan.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
