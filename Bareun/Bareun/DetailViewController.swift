@@ -154,7 +154,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                 }
             }
         }
-        
+        Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
     }
     
     // zoom for canvasView

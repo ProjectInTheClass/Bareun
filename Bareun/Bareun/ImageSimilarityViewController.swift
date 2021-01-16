@@ -38,9 +38,14 @@ class ImageSimilarityViewController: UIViewController {
         scoreLabel.isHidden = false
         
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        original.image = UIImage(named: Shared.shared.CurTextImage ?? "c1_01_mj")
+        compare.image = UIImage(named: "c1_01_bh")
+        
         
         scoreLabel.isHidden = true
     }
