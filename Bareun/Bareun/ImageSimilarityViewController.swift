@@ -47,6 +47,6 @@ class ImageSimilarityViewController: UIViewController {
         compare.image = newImage
         
         
-        scoreLabel.isHidden = true
+//        scoreLabel.isHidden = true
     }
 }
