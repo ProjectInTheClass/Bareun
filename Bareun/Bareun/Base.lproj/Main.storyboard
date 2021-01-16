@@ -45,7 +45,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button" image="settingImage"/>
                                                 <connections>
-                                                    <segue destination="V0y-7w-05Z" kind="presentation" id="UG8-BR-3d4"/>
+                                                    <segue destination="V0y-7w-05Z" kind="presentation" identifier="testImage" id="UG8-BR-3d4"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pen" translatesAutoresizingMaskIntoConstraints="NO" id="Kdv-cx-DPd">
@@ -226,7 +226,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button" image="checkmark" catalog="system"/>
                                                 <connections>
-                                                    <segue destination="f0P-PT-Drv" kind="modal" id="Kmv-hq-d3Q"/>
+                                                    <segue destination="f0P-PT-Drv" kind="modal" identifier="testImage" id="Kmv-hq-d3Q"/>
                                                 </connections>
                                             </button>
                                         </subviews>

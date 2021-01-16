@@ -155,6 +155,15 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             }
         }
         Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
+        
+        if segue.identifier == "testImage" {
+            let dvc = segue.destination as! ImageSimilarityViewController
+            UIGraphicsBeginImageContextWithOptions(self.canvasView.bounds.size, false, UIScreen.main.scale)
+            self.canvasView.drawHierarchy(in: self.canvasView.bounds, afterScreenUpdates: true)
+            
+            let compareImage = UIGraphicsGetImageFromCurrentImageContext()
+            dvc.newImage = compareImage
+        }
     }
     
     // zoom for canvasView
@@ -300,6 +309,12 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             
         }))
 
+        
     
     }
+    
+    
 }
+
+
+

@@ -12,7 +12,7 @@ class ImageSimilarityViewController: UIViewController {
 
     @IBOutlet weak var original: UIImageView!
     @IBOutlet weak var compare: UIImageView!
-    
+    var newImage: UIImage?
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
     
@@ -44,7 +44,7 @@ class ImageSimilarityViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         original.image = UIImage(named: Shared.shared.CurTextImage ?? "c1_01_mj")
-        compare.image = UIImage(named: "c1_01_bh")
+        compare.image = newImage
         
         
         scoreLabel.isHidden = true
