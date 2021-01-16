@@ -247,7 +247,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
         textImage.image = UIImage(named: tempArray[imageIndex])
         Shared.shared.CurTextImage = tempArray[imageIndex]
-//        EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
+        EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
 
     }
     
@@ -262,7 +262,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
         }
         textImage.image = UIImage(named: tempArray[imageIndex])
-
+        EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
     }
     
     
