@@ -72,6 +72,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             print("error!")
         }
         countLabel.text = "\((imageIndex) + 1)/\(tempArray.count)"
+        Shared.shared.CurTextImage = tempArray[imageIndex]
         
         canvasView.delegate = self
         canvasView.drawing = drawing
@@ -151,10 +152,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                     }
                     
                     self.textImage.image = UIImage(named: self.tempArray[self.imageIndex])
+                    Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
                 }
             }
         }
-        Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
+        
         
         if segue.identifier == "testImage" {
             let dvc = segue.destination as! ImageSimilarityViewController
@@ -240,6 +242,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
         }
         textImage.image = UIImage(named: tempArray[imageIndex])
+        Shared.shared.CurTextImage = tempArray[imageIndex]
     }
     
     @IBAction func goToPreviousPage(_ sender: Any) {
@@ -252,6 +255,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
         }
         textImage.image = UIImage(named: tempArray[imageIndex])
+        Shared.shared.CurTextImage = tempArray[imageIndex]
     }
     
     
