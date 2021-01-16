@@ -290,7 +290,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNm-hd-Jpp">
-                                                <rect key="frame" x="29" y="19" width="592" height="23"/>
+                                                <rect key="frame" x="29" y="18.5" width="592" height="23"/>
                                                 <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -511,6 +511,7 @@
                                                     <rect key="frame" x="339" y="19" width="20" height="22"/>
                                                     <state key="normal" image="info.circle" catalog="system"/>
                                                     <connections>
+                                                        <action selector="selectedInfoButton:" destination="lyr-UA-iJS" eventType="touchUpInside" id="ysV-Wj-btb"/>
                                                         <segue destination="zzD-2q-xAR" kind="show" identifier="license" id="bWd-eO-pYF"/>
                                                     </connections>
                                                 </button>
@@ -596,18 +597,18 @@
     </scenes>
     <resources>
         <image name="backgroundkorChangedSize" width="2732" height="1547"/>
-        <image name="character" catalog="system" width="128" height="128"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
-        <image name="clear" catalog="system" width="128" height="114"/>
-        <image name="eye" catalog="system" width="128" height="81"/>
-        <image name="homekit" catalog="system" width="128" height="106"/>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="character" catalog="system" width="32" height="32"/>
+        <image name="checkmark" catalog="system" width="32" height="32"/>
+        <image name="chevron.backward" catalog="system" width="32" height="32"/>
+        <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
+        <image name="clear" catalog="system" width="32" height="32"/>
+        <image name="eye" catalog="system" width="32" height="32"/>
+        <image name="homekit" catalog="system" width="32" height="32"/>
+        <image name="info.circle" catalog="system" width="32" height="32"/>
         <image name="pen" width="980" height="981"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="pencil" catalog="system" width="32" height="32"/>
         <image name="settingImage" width="2000" height="2000"/>
-        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

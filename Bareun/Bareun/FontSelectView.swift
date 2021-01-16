@@ -7,10 +7,18 @@
 
 import UIKit
 
+protocol ComponentProductCellDelegate {
+    func selectedInfoButton(index: Int)
+}
+
 class FontSelectView: UITableViewCell {
 
     @IBOutlet weak var fontName: UILabel!
     @IBOutlet weak var infoButton: UIButton!
+    
+    var index: Int = 0
+    var delegate: ComponentProductCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,4 +30,8 @@ class FontSelectView: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func selectedInfoButton(_ sender: Any) {
+        self.delegate?.selectedInfoButton(index: index)
+    }
+    
 }
