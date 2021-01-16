@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print("Bareun app launch")
         
-        sleep(3)
+        sleep(2)
         
         return true
     }
