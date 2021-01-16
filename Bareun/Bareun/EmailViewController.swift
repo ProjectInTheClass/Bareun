@@ -39,22 +39,22 @@ class EmailViewController: UIViewController ,MFMailComposeViewControllerDelegate
     
 
     
-    @IBAction func SendFeedbackButton(_ sender: Any) {
-        if MFMailComposeViewController.canSendMail() {
-            let composeVC = MFMailComposeViewController()
-            composeVC.mailComposeDelegate = self
-
-            composeVC.setToRecipients(["Bareun@naver.com"])
-            composeVC.setSubject("Message Subject")
-            composeVC.setMessageBody("Message content", isHTML: false)
-
-            self.present(composeVC, animated: true, completion: nil)
-        }else{
-            print("cannotsendmail")
-        }
-        
-        
-    }
+//    @IBAction func SendFeedbackButton(_ sender: Any) {
+//        if MFMailComposeViewController.canSendMail() {
+//            let composeVC = MFMailComposeViewController()
+//            composeVC.mailComposeDelegate = self
+//
+//            composeVC.setToRecipients(["Bareun@naver.com"])
+//            composeVC.setSubject("Message Subject")
+//            composeVC.setMessageBody("Message content", isHTML: false)
+//
+//            self.present(composeVC, animated: true, completion: nil)
+//        }else{
+//            print("cannotsendmail")
+//        }
+//
+//
+//    }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
@@ -76,6 +76,30 @@ extension EmailViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
         cell.textLabel?.text = settingMenuList[indexPath.row]
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        switch indexPath.row {
+        case 2:
+            print("APP Store 연결")
+        case 3:
+            if MFMailComposeViewController.canSendMail() {
+                let composeVC = MFMailComposeViewController()
+                composeVC.mailComposeDelegate = self
+
+                composeVC.setToRecipients(["Bareun@naver.com"])
+                composeVC.setSubject("Message Subject")
+                composeVC.setMessageBody("Message content", isHTML: false)
+
+                self.present(composeVC, animated: true, completion: nil)
+            }else{
+                print("cannotsendmail")
+            }
+        default:
+            return
+        }
         
     }
 }
