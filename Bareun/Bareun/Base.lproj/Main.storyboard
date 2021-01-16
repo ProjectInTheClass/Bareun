@@ -415,26 +415,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNK-29-KtV">
-                                <rect key="frame" x="117" y="167" width="470" height="289"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ci3-mg-WYj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ci3-mg-WYj">
                                 <rect key="frame" x="117" y="509" width="470" height="289"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="289" id="elu-Dd-bN9"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="당신의 글씨는" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKf-3V-jXG">
-                                <rect key="frame" x="211" y="85" width="282" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 글씨는" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKf-3V-jXG">
+                                <rect key="frame" x="262" y="70" width="180.5" height="35"/>
                                 <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCA-q3-Pfr">
+                                <rect key="frame" x="316" y="847" width="72" height="35"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUq-PK-OmM">
+                                <rect key="frame" x="310.5" y="908" width="83" height="36"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="20"/>
+                                <state key="normal" title="검사 시작"/>
+                                <connections>
+                                    <action selector="compare:" destination="f0P-PT-Drv" eventType="touchUpInside" id="zSX-CH-Nur"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DNK-29-KtV">
+                                <rect key="frame" x="117" y="139" width="470" height="289"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WON-ko-Axo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ci3-mg-WYj" firstAttribute="top" secondItem="DNK-29-KtV" secondAttribute="bottom" constant="81" id="2Kj-12-dPk"/>
+                            <constraint firstItem="Ci3-mg-WYj" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="APZ-AR-5NS"/>
+                            <constraint firstItem="DNK-29-KtV" firstAttribute="top" secondItem="SKf-3V-jXG" secondAttribute="bottom" constant="34" id="BWR-bj-c3p"/>
+                            <constraint firstItem="Ci3-mg-WYj" firstAttribute="leading" secondItem="WON-ko-Axo" secondAttribute="leading" constant="117" id="H0E-G0-TtC"/>
+                            <constraint firstItem="Ci3-mg-WYj" firstAttribute="leading" secondItem="DNK-29-KtV" secondAttribute="leading" id="QDD-qY-vKp"/>
+                            <constraint firstItem="JCA-q3-Pfr" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="Qhq-no-KSk"/>
+                            <constraint firstItem="DNK-29-KtV" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="SVP-GO-zsm"/>
+                            <constraint firstItem="JCA-q3-Pfr" firstAttribute="top" secondItem="Ci3-mg-WYj" secondAttribute="bottom" constant="49" id="m4B-1L-hyv"/>
+                            <constraint firstItem="SKf-3V-jXG" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="rw0-Pf-otb"/>
+                            <constraint firstItem="WON-ko-Axo" firstAttribute="bottom" secondItem="JCA-q3-Pfr" secondAttribute="bottom" constant="102" id="sFS-g5-T8A"/>
+                            <constraint firstItem="sUq-PK-OmM" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="vL2-Q3-zKz"/>
+                            <constraint firstItem="WON-ko-Axo" firstAttribute="bottom" secondItem="sUq-PK-OmM" secondAttribute="bottom" constant="40" id="x5t-wd-VlE"/>
+                            <constraint firstItem="SKf-3V-jXG" firstAttribute="top" secondItem="WON-ko-Axo" secondAttribute="top" constant="70" id="xtz-tC-KZW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x9q-MM-Peb"/>
+                    <connections>
+                        <outlet property="compare" destination="Ci3-mg-WYj" id="Cg8-MX-oCz"/>
+                        <outlet property="original" destination="DNK-29-KtV" id="oAy-6r-VTc"/>
+                        <outlet property="scoreLabel" destination="JCA-q3-Pfr" id="R3s-P5-5QK"/>
+                        <outlet property="testButton" destination="sUq-PK-OmM" id="R8g-yf-8nb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAs-m2-A28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
