@@ -226,7 +226,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button" image="checkmark" catalog="system"/>
                                                 <connections>
-                                                    <segue destination="f0P-PT-Drv" kind="modal" identifier="testImage" id="Kmv-hq-d3Q"/>
+                                                    <segue destination="f0P-PT-Drv" kind="presentation" identifier="testImage" id="Kmv-hq-d3Q"/>
                                                 </connections>
                                             </button>
                                         </subviews>
