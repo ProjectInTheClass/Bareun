@@ -12,6 +12,7 @@ import PhotosUI
 
 class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver, UIScrollViewDelegate {
 
+    @IBOutlet weak var EnglishMeaningLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var canvasView: PKCanvasView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -58,16 +59,20 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             tempArray = category1_myeongjo
             textImage.image = UIImage(named: tempArray[imageIndex])
 //            textImage.image = UIImage(named: Shared.shared.TextImageName)
+            EnglishMeaningLabel.isHidden = true
         case "많이 틀리는 맞춤법":
             tempArray = category2_myeongjo
             textImage.image = UIImage(named: tempArray[imageIndex])
+            EnglishMeaningLabel.isHidden = true
         case "쓸모있는 영어 문장":
             backgroundImg.image = UIImage(named: "backgroundeng.png")
             tempArray = category3_pinyon
             textImage.image = UIImage(named: tempArray[imageIndex])
+            EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
         case "대학 슬로건":
             tempArray = category4_myeongjo
             textImage.image = UIImage(named: tempArray[imageIndex])
+            EnglishMeaningLabel.isHidden = true
         default:
             print("error!")
         }
@@ -151,6 +156,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                     }
                     
                     self.textImage.image = UIImage(named: self.tempArray[self.imageIndex])
+
                 }
             }
         }
@@ -240,6 +246,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
         }
         textImage.image = UIImage(named: tempArray[imageIndex])
+        Shared.shared.CurTextImage = tempArray[imageIndex]
+        EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
+
     }
     
     @IBAction func goToPreviousPage(_ sender: Any) {
@@ -247,11 +256,13 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         if imageIndex <= 0 {
             countLabel.text = "\(tempArray.count)/\(tempArray.count)"
             imageIndex = tempArray.count - 1
+            
         } else {
             imageIndex -= 1
             countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
         }
         textImage.image = UIImage(named: tempArray[imageIndex])
+        EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
     }
     
     

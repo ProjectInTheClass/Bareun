@@ -289,11 +289,21 @@
                                                 <color key="textColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNm-hd-Jpp">
+                                                <rect key="frame" x="29" y="19" width="592" height="23"/>
+                                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.98425012830000003" green="0.98448854679999998" blue="0.97254878280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
+                                            <constraint firstItem="kNm-hd-Jpp" firstAttribute="centerY" secondItem="0Of-hb-n7t" secondAttribute="centerY" id="1Ij-IM-cSL"/>
+                                            <constraint firstItem="G8l-7B-edx" firstAttribute="leading" secondItem="kNm-hd-Jpp" secondAttribute="trailing" constant="32" id="AAb-Sx-Rmu"/>
+                                            <constraint firstItem="kNm-hd-Jpp" firstAttribute="leading" secondItem="0Of-hb-n7t" secondAttribute="leading" constant="29" id="FT7-Jm-tWC"/>
                                             <constraint firstItem="G8l-7B-edx" firstAttribute="centerX" secondItem="0Of-hb-n7t" secondAttribute="centerX" id="ZZj-Tk-ehk"/>
                                             <constraint firstItem="G8l-7B-edx" firstAttribute="centerY" secondItem="0Of-hb-n7t" secondAttribute="centerY" id="uPw-i7-HbL"/>
+                                            <constraint firstItem="kNm-hd-Jpp" firstAttribute="top" secondItem="0Of-hb-n7t" secondAttribute="top" constant="18.5" id="ygS-y3-ybn"/>
                                         </constraints>
                                     </view>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPu-aY-DCv">
@@ -367,6 +377,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="MoP-eH-SMh"/>
                     <connections>
+                        <outlet property="EnglishMeaningLabel" destination="kNm-hd-Jpp" id="cbe-DO-GlT"/>
                         <outlet property="backgroundImg" destination="1Kl-Fs-8lt" id="mn3-xp-RU9"/>
                         <outlet property="canvasView" destination="lcp-s8-CCA" id="0wr-xK-W3y"/>
                         <outlet property="countLabel" destination="G8l-7B-edx" id="UPF-nJ-nPU"/>
