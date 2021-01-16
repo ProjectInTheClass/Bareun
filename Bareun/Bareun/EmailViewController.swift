@@ -21,7 +21,7 @@ class EmailViewController: UIViewController ,MFMailComposeViewControllerDelegate
     
     var settingMenuList = [
         "버전 정보 : 1.0",
-        "라이선스 : 000 Lisense",
+        "라이선스 : MIT Lisense",
         "앱 평가하기",
         "개발자에게 메일 보내기"
     ]
