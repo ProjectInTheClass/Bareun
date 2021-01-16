@@ -34,7 +34,7 @@ class ImageSimilarityViewController: UIViewController {
         var distance = Float(0)
         try? compareFPO.computeDistance(&distance, to: originalFPO)
         print(100-distance)
-        scoreLabel.text = "\(round(100-distance * 100) / 100) 점 입니다."
+        scoreLabel.text = "\(round((100-distance) * 100) / 100) 점 입니다."
         scoreLabel.isHidden = false
         
     }
