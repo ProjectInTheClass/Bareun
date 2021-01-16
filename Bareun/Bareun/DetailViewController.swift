@@ -247,7 +247,12 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
         textImage.image = UIImage(named: tempArray[imageIndex])
         Shared.shared.CurTextImage = tempArray[imageIndex]
-        EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
+        if self.titleLabel.text == "쓸모있는 영어 문장"{
+            EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
+        }
+        else{
+            EnglishMeaningLabel.text = ""
+        }
 
     }
     
@@ -262,7 +267,13 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
         }
         textImage.image = UIImage(named: tempArray[imageIndex])
-        EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
+        Shared.shared.CurTextImage = tempArray[imageIndex]
+        if self.titleLabel.text == "쓸모있는 영어 문장"{
+            EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
+        }
+        else{
+            EnglishMeaningLabel.text = ""
+        }
     }
     
     
