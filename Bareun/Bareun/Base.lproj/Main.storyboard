@@ -218,13 +218,28 @@
                                                     <segue destination="mwU-s2-wRj" kind="unwind" unwindAction="unwindFromVC3WithSegue:" id="shd-oQ-9fC"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6p-3e-zdY">
+                                                <rect key="frame" x="1316" y="53" width="20" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="3aD-A1-2Ji"/>
+                                                    <constraint firstAttribute="width" constant="20" id="73l-T0-e6Z"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="checkmark" catalog="system"/>
+                                                <connections>
+                                                    <segue destination="f0P-PT-Drv" kind="modal" id="Kmv-hq-d3Q"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.98425012830000003" green="0.98448854679999998" blue="0.97254878280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
+                                            <constraint firstItem="c6p-3e-zdY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4ry-Rz-p9T" secondAttribute="trailing" constant="8" symbolic="YES" id="2kI-xw-djq"/>
                                             <constraint firstItem="4ry-Rz-p9T" firstAttribute="centerX" secondItem="4BH-qS-8mi" secondAttribute="centerX" id="47A-eb-U27"/>
                                             <constraint firstItem="Xyj-Vy-P6z" firstAttribute="centerY" secondItem="4BH-qS-8mi" secondAttribute="centerY" id="8Zs-aX-52A"/>
+                                            <constraint firstItem="c6p-3e-zdY" firstAttribute="centerY" secondItem="4BH-qS-8mi" secondAttribute="centerY" id="C7F-h8-hLd"/>
                                             <constraint firstItem="4ry-Rz-p9T" firstAttribute="top" secondItem="4BH-qS-8mi" secondAttribute="top" constant="46" id="Uzl-e2-Nwq"/>
                                             <constraint firstItem="4ry-Rz-p9T" firstAttribute="centerY" secondItem="4BH-qS-8mi" secondAttribute="centerY" id="dBQ-72-pga"/>
+                                            <constraint firstAttribute="trailing" secondItem="c6p-3e-zdY" secondAttribute="trailing" constant="30" id="dDb-rl-lKy"/>
+                                            <constraint firstAttribute="trailing" secondItem="c6p-3e-zdY" secondAttribute="trailing" constant="30" id="nOL-8r-7AE"/>
                                             <constraint firstItem="Xyj-Vy-P6z" firstAttribute="bottom" secondItem="4ry-Rz-p9T" secondAttribute="bottom" id="wLf-Vm-0xH"/>
                                             <constraint firstItem="Xyj-Vy-P6z" firstAttribute="leading" secondItem="4BH-qS-8mi" secondAttribute="leading" constant="30" id="wPQ-rZ-VwN"/>
                                         </constraints>
@@ -392,6 +407,39 @@
             </objects>
             <point key="canvasLocation" x="29.868228404099558" y="72.65625"/>
         </scene>
+        <!--Image Similarity View Controller-->
+        <scene sceneID="BNd-f7-UF4">
+            <objects>
+                <viewController id="f0P-PT-Drv" customClass="ImageSimilarityViewController" customModule="Bareun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bo8-jn-g1U">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNK-29-KtV">
+                                <rect key="frame" x="117" y="167" width="470" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ci3-mg-WYj">
+                                <rect key="frame" x="117" y="509" width="470" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="당신의 글씨는" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKf-3V-jXG">
+                                <rect key="frame" x="211" y="85" width="282" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WON-ko-Axo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x9q-MM-Peb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAs-m2-A28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2272.6207906295754" y="-99.0234375"/>
+        </scene>
         <!--Pop Over View Controller-->
         <scene sceneID="FBq-0Q-nTS">
             <objects>
@@ -476,7 +524,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uRF-v3-U9f">
                                 <rect key="frame" x="0.0" y="60" width="704" height="924"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -507,6 +555,7 @@
     <resources>
         <image name="backgroundkorChangedSize" width="2732" height="1547"/>
         <image name="character" catalog="system" width="128" height="128"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
         <image name="clear" catalog="system" width="128" height="114"/>
