@@ -297,9 +297,8 @@
                                                 <color key="textColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNm-hd-Jpp">
-                                                <rect key="frame" x="53" y="23" width="502" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNm-hd-Jpp">
+                                                <rect key="frame" x="53" y="18.5" width="502" height="23"/>
                                                 <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -307,8 +306,12 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.98425012830000003" green="0.98448854679999998" blue="0.97254878280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
+                                            <constraint firstItem="kNm-hd-Jpp" firstAttribute="centerY" secondItem="0Of-hb-n7t" secondAttribute="centerY" id="1Ij-IM-cSL"/>
+                                            <constraint firstItem="G8l-7B-edx" firstAttribute="leading" secondItem="kNm-hd-Jpp" secondAttribute="trailing" constant="98" id="AAb-Sx-Rmu"/>
+                                            <constraint firstItem="kNm-hd-Jpp" firstAttribute="leading" secondItem="0Of-hb-n7t" secondAttribute="leading" constant="53" id="FT7-Jm-tWC"/>
                                             <constraint firstItem="G8l-7B-edx" firstAttribute="centerX" secondItem="0Of-hb-n7t" secondAttribute="centerX" id="ZZj-Tk-ehk"/>
                                             <constraint firstItem="G8l-7B-edx" firstAttribute="centerY" secondItem="0Of-hb-n7t" secondAttribute="centerY" id="uPw-i7-HbL"/>
+                                            <constraint firstItem="kNm-hd-Jpp" firstAttribute="top" secondItem="0Of-hb-n7t" secondAttribute="top" constant="18.5" id="ygS-y3-ybn"/>
                                         </constraints>
                                     </view>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPu-aY-DCv">
