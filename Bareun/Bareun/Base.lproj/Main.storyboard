@@ -553,7 +553,7 @@
                                 <rect key="frame" x="659" y="15" width="30" height="30"/>
                                 <state key="normal" title="닫기"/>
                                 <connections>
-                                    <segue destination="0dp-lV-XAA" kind="unwind" unwindAction="unwindFromVC5WithSegue:" id="LF0-aB-5N9"/>
+                                    <segue destination="0dp-lV-XAA" kind="unwind" unwindAction="unwindFromVC5WithSegue:" id="FPW-I6-v5v"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uRF-v3-U9f">
