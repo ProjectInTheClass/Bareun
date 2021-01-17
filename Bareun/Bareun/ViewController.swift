@@ -57,7 +57,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
     }
 
-
 }
 
 extension ViewController: UITableViewDelegate {

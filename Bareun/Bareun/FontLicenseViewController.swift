@@ -10,11 +10,12 @@ import UIKit
 class FontLicenseViewController: UIViewController {
 
     @IBOutlet weak var content: UITextView!
+    var licenseText: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        content.text = Shared.shared.fontLicense
+//        content.text = Shared.shared.fontLicense
 //        if let filepath = Bundle.main.path(forResource: "OFL-Pinyon", ofType: "txt") {
 //            do {
 //                let licenseScript = try String(contentsOfFile: filepath)
@@ -34,16 +35,5 @@ class FontLicenseViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "license" {
-//            print("checked")
-//            if let vc = segue.destination as? PopOverViewController {
-//                vc.onPrint = { index in
-//                    print(index)
-//                }
-//            }
-//        }
-//    }
         
 }

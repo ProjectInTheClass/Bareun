@@ -11,7 +11,6 @@ final class Shared {
     static let shared = Shared()
     var CurTextImage : String?
     var FontName : String! = "나눔명조체"
-    var fontLicense: String?
 }
 
 class MENU {

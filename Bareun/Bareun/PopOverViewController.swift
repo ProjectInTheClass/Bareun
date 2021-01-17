@@ -83,38 +83,23 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
             tableView.removeObserver(self, forKeyPath: "contentSize")
         })
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "license" {
+//            let vc = segue.destination as! FontLicenseViewController
+//        }
+//    }
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        if identifier == "license" {
+            
+        }
+    }
 
 }
 
 extension PopOverViewController: ComponentProductCellDelegate {
     func selectedInfoButton(index: Int) {
-        switch index {
-        case 3:
-            if let filepath = Bundle.main.path(forResource: "OFL-Pinyon", ofType: "txt") {
-                do {
-                    Shared.shared.fontLicense = try String(contentsOfFile: filepath)
-                } catch {}
-            } else {
-                print("file not found!")
-            }
-        case 4:
-            if let filepath = Bundle.main.path(forResource: "OFL-Allan", ofType: "txt") {
-                do {
-                    Shared.shared.fontLicense = try String(contentsOfFile: filepath)
-                } catch {}
-            } else {
-                print("file not found!")
-            }
-        case 5:
-            if let filepath = Bundle.main.path(forResource: "OFL-Shadow", ofType: "txt") {
-                do {
-                    Shared.shared.fontLicense = try String(contentsOfFile: filepath)
-                } catch {}
-            } else {
-                print("file not found!")
-            }
-        default:
-            print("")
-        }
+        print(index)
+        performSegue(withIdentifier: "license", sender: index)
     }
 }

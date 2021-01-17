@@ -23,6 +23,7 @@ class ImageSimilarityViewController: UIViewController {
             try requestHandler.perform([request])
             return request.results?.first as? VNFeaturePrintObservation
         } catch {
+            
             return nil
         }
     }
