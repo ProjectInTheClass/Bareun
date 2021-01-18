@@ -14,6 +14,7 @@ class FontLicenseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(licenseText)
         // Do any additional setup after loading the view.
 //        content.text = Shared.shared.fontLicense
 //        if let filepath = Bundle.main.path(forResource: "OFL-Pinyon", ofType: "txt") {
