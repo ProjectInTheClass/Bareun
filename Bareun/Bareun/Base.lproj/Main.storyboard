@@ -520,7 +520,6 @@
                                                     <state key="normal" image="info.circle" catalog="system"/>
                                                     <connections>
                                                         <action selector="selectedInfoButton:" destination="lyr-UA-iJS" eventType="touchUpInside" id="ysV-Wj-btb"/>
-                                                        <segue destination="zzD-2q-xAR" kind="show" identifier="license" id="7IN-VY-0YE"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -551,6 +550,7 @@
                     <connections>
                         <outlet property="Popupview" destination="kD1-hc-cEP" id="iN1-xc-uWB"/>
                         <outlet property="tableView" destination="Hzn-Ud-SS2" id="F2G-s6-Rri"/>
+                        <segue destination="zzD-2q-xAR" kind="show" identifier="license" id="iUg-W6-RL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXO-WL-xW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

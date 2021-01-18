@@ -84,14 +84,19 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
         })
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "license" {
-//            let vc = segue.destination as! FontLicenseViewController
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "license" {
+            let vc = segue.destination as! FontLicenseViewController
+            if let index = sender as? Int {
+                print(index)
+                vc.licenseText = "\(index) LIC"
+            }
+            print("prepare")
+        }
+    }
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
         if identifier == "license" {
-            
+            print("perfomrSegue")
         }
     }
 
@@ -100,6 +105,6 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
 extension PopOverViewController: ComponentProductCellDelegate {
     func selectedInfoButton(index: Int) {
         print(index)
-        performSegue(withIdentifier: "license", sender: index)
+        self.performSegue(withIdentifier: "license", sender: index)
     }
 }
