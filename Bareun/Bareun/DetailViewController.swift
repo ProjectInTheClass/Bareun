@@ -187,11 +187,14 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     // 이게 canvasview랑 backgroundImg & textImage 같이 스케일되라고 작성한 코드
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
 
-        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
-        var translatedPoint = backgroundImgCenter.applying(scaleAffineTransform)
-        backgroundImg.transform = CGAffineTransform.identity.translatedBy(x: translatedPoint.x - backgroundImgCenter.x , y: translatedPoint.y - backgroundImgCenter.y)
-        translatedPoint = textImageCenter.applying(scaleAffineTransform)
-        textImage.transform = CGAffineTransform.identity.translatedBy(x: translatedPoint.x - textImageCenter.x, y: translatedPoint.y - textImageCenter.y)
+//        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
+        textImage.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
+        backgroundImg.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
+//        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
+//        var translatedPoint = backgroundImgCenter.applying(scaleAffineTransform)
+//        backgroundImg.transform = CGAffineTransform.identity.translatedBy(x: translatedPoint.x - backgroundImgCenter.x , y: translatedPoint.y - backgroundImgCenter.y)
+//        translatedPoint = textImageCenter.applying(scaleAffineTransform)
+//        textImage.transform = CGAffineTransform.identity.translatedBy(x: translatedPoint.x - textImageCenter.x, y: translatedPoint.y - textImageCenter.y)
 
 //        let offsetX = max((scrollView.bounds.width - scrollView.contentSize.width) * 0.5, 0)
 //        let offsetY = max((scrollView.bounds.height - scrollView.contentSize.height) * 0.5, 0)
