@@ -9,7 +9,6 @@ import UIKit
 
 struct FontInfo {
     var fontName: String
-    var infoHidden: Bool
     var fileName:String
 }
 
@@ -67,8 +66,7 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
         let menu = fontItems[indexPath.row]
         cell.fontName.text = menu.fontName
         cell.fontName.font = UIFont(name: menu.fileName, size: 18)
-        cell.infoButton.isHidden = menu.infoHidden
-        
+       
         cell.index = indexPath.row
         cell.delegate = self
         
@@ -86,25 +84,22 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "license" {
-            let vc = segue.destination as! FontLicenseViewController
             if let index = sender as? Int {
-                print(index)
-                vc.licenseText = "\(index) LIC"
+                Shared.shared.licenseIndex = index
             }
-            print("prepare")
         }
     }
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        if identifier == "license" {
-            print("perfomrSegue")
-        }
-    }
+ 
+//    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+//        if identifier == "license" {
+//            print("performSegue")
+//        }
+//    }
 
 }
 
 extension PopOverViewController: ComponentProductCellDelegate {
     func selectedInfoButton(index: Int) {
-        print(index)
         self.performSegue(withIdentifier: "license", sender: index)
     }
 }

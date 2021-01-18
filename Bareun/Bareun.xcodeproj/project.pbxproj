@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390B206925B573A5009C6DCD /* OFL-nanum.txt in Resources */ = {isa = PBXBuildFile; fileRef = 390B206825B573A5009C6DCD /* OFL-nanum.txt */; };
 		393C788F25B1E78300131BCE /* NanumBarunpenR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */; };
 		393C789225B2152200131BCE /* FontLicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C789125B2152200131BCE /* FontLicenseViewController.swift */; };
 		393C789525B216AF00131BCE /* OFL-Pinyon.txt in Resources */ = {isa = PBXBuildFile; fileRef = 393C789425B216AF00131BCE /* OFL-Pinyon.txt */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		390B206825B573A5009C6DCD /* OFL-nanum.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-nanum.txt"; sourceTree = "<group>"; };
 		393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunpenR.ttf; sourceTree = "<group>"; };
 		393C789125B2152200131BCE /* FontLicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLicenseViewController.swift; sourceTree = "<group>"; };
 		393C789425B216AF00131BCE /* OFL-Pinyon.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-Pinyon.txt"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		3963E54825A3081C0028F8B8 /* Bareun */ = {
 			isa = PBXGroup;
 			children = (
+				390B206825B573A5009C6DCD /* OFL-nanum.txt */,
 				393C789425B216AF00131BCE /* OFL-Pinyon.txt */,
 				393C789B25B216D700131BCE /* OFL-Shadow.txt */,
 				393C78A025B27E7300131BCE /* OFL-Allan.txt */,
@@ -191,6 +194,7 @@
 				393C789525B216AF00131BCE /* OFL-Pinyon.txt in Resources */,
 				39C14D6F25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf in Resources */,
 				3963E55325A3081E0028F8B8 /* Assets.xcassets in Resources */,
+				390B206925B573A5009C6DCD /* OFL-nanum.txt in Resources */,
 				39C14D6925ADEF91008E03E3 /* PinyonScript-Regular.ttf in Resources */,
 				3963E5B125A45D780028F8B8 /* NanumMyeongjo.ttf in Resources */,
 				3963E55125A3081C0028F8B8 /* Main.storyboard in Resources */,

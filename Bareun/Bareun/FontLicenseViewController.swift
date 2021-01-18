@@ -10,11 +10,48 @@ import UIKit
 class FontLicenseViewController: UIViewController {
 
     @IBOutlet weak var content: UITextView!
-    var licenseText: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(licenseText)
+        print("shared : \(Shared.shared.licenseIndex)")
+        switch Shared.shared.licenseIndex {
+        case 3:
+            if let filepath = Bundle.main.path(forResource: "OFL-Pinyon", ofType: "txt") {
+                do {
+                    let licenseScript = try String(contentsOfFile: filepath)
+                    self.content.text = licenseScript
+                } catch {}
+            } else {
+                print("file not found!")
+            }
+        case 4:
+            if let filepath = Bundle.main.path(forResource: "OFL-Allan", ofType: "txt") {
+                do {
+                    let licenseScript = try String(contentsOfFile: filepath)
+                    self.content.text = licenseScript
+                } catch {}
+            } else {
+                print("file not found!")
+            }
+        case 5:
+            if let filepath = Bundle.main.path(forResource: "OFL-Shadow", ofType: "txt") {
+                do {
+                    let licenseScript = try String(contentsOfFile: filepath)
+                    self.content.text = licenseScript
+                } catch {}
+            } else {
+                print("file not found!")
+            }
+        default:
+            if let filepath = Bundle.main.path(forResource: "OFL-nanum", ofType: "txt") {
+                do {
+                    let licenseScript = try String(contentsOfFile: filepath)
+                    self.content.text = licenseScript
+                } catch {}
+            } else {
+                print("file not found!")
+            }
+        }
         // Do any additional setup after loading the view.
 //        content.text = Shared.shared.fontLicense
 //        if let filepath = Bundle.main.path(forResource: "OFL-Pinyon", ofType: "txt") {
