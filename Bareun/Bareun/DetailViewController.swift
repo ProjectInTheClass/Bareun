@@ -194,7 +194,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         
         
 // canvas view content size (그려지는 영역 늘리기)
-        canvasView.contentSize.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
+//        canvasView.contentSize.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
 //        backgroundImg.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
 //        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
 //        var translatedPoint = backgroundImgCenter.applying(scaleAffineTransform)
