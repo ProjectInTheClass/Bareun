@@ -44,12 +44,16 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         scrollView.delegate = self
         self.scrollView.isScrollEnabled = true
         self.scrollView.minimumZoomScale = 1.0
-        self.scrollView.maximumZoomScale = 10.0
+        self.scrollView.maximumZoomScale = 6.0
 
 //        backgroundImgCenter = backgroundImg.center
 //        textImageCenter = textImage.center
+//        canvasView.contentSize.height = 1547.0
+//        canvasView.contentSize.width = 2732.0
+        
 
         self.scrollView.contentSize = self.canvasView.frame.size
+
         // 여기까지 for Zoom
         
         titleLabel.text = menu?.name
@@ -187,18 +191,22 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     // 이게 canvasview랑 backgroundImg & textImage 같이 스케일되라고 작성한 코드
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
 
-        canvasView.contentSize = CGSize(width: scrollView.contentSize.width, height: scrollView.contentSize.height)
+    
         
 //        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
         
+        print(self.backgroundImg.frame)
+        print(self.textImage.frame)
         print(self.scrollView.contentSize)
         print(self.canvasView.contentSize)
         print(self.canvasView.frame)
         
+        // canvas view content size (그려지는 영역 늘리기)
+        canvasView.contentSize = CGSize(width: scrollView.contentSize.width, height: scrollView.contentSize.height)
         
-// canvas view content size (그려지는 영역 늘리기)
-//        textImage.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
-//        backgroundImg.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
+
+        textImage.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
+        backgroundImg.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
 //        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
 //        var translatedPoint = backgroundImgCenter.applying(scaleAffineTransform)
 //        backgroundImg.transform = CGAffineTransform.identity.translatedBy(x: translatedPoint.x - backgroundImgCenter.x , y: translatedPoint.y - backgroundImgCenter.y)
@@ -212,10 +220,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 
     
 //    // 여기까지..
-    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
-        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scale, y: scale)
-        scrollView.contentSize = self.canvasView.bounds.size.applying(scaleAffineTransform)
-    }
+//    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+//        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scale, y: scale)
+//        scrollView.contentSize = self.canvasView.bounds.size.applying(scaleAffineTransform)
+//    }
 
     
     
