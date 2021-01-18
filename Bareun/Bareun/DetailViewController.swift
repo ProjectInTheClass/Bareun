@@ -188,8 +188,14 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
 
 //        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
-        textImage.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
-        backgroundImg.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
+        print(self.scrollView.contentSize)
+        print(self.canvasView.contentSize)
+        print(self.canvasView.frame)
+        
+        
+// canvas view content size (그려지는 영역 늘리기)
+        canvasView.contentSize.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
+//        backgroundImg.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
 //        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
 //        var translatedPoint = backgroundImgCenter.applying(scaleAffineTransform)
 //        backgroundImg.transform = CGAffineTransform.identity.translatedBy(x: translatedPoint.x - backgroundImgCenter.x , y: translatedPoint.y - backgroundImgCenter.y)

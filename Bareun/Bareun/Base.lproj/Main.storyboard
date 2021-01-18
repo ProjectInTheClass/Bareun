@@ -254,25 +254,33 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="xDJ-Ql-rhu" secondAttribute="trailing" id="2KF-Tw-Jgc"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="2Xg-F4-QWf"/>
+                                            <constraint firstItem="xDJ-Ql-rhu" firstAttribute="height" secondItem="lcp-s8-CCA" secondAttribute="height" id="3FK-tL-WWY"/>
                                             <constraint firstItem="xDJ-Ql-rhu" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="4MH-fb-7WM"/>
                                             <constraint firstAttribute="bottom" secondItem="lcp-s8-CCA" secondAttribute="bottom" id="6RJ-6k-Bym"/>
                                             <constraint firstAttribute="trailing" secondItem="lcp-s8-CCA" secondAttribute="trailing" id="7fW-mD-YoK"/>
+                                            <constraint firstItem="1Kl-Fs-8lt" firstAttribute="centerY" secondItem="lcp-s8-CCA" secondAttribute="centerY" id="7hn-t7-A0b"/>
+                                            <constraint firstItem="xDJ-Ql-rhu" firstAttribute="centerY" secondItem="lcp-s8-CCA" secondAttribute="centerY" id="7qa-oK-YQ3"/>
                                             <constraint firstAttribute="trailing" secondItem="lcp-s8-CCA" secondAttribute="trailing" id="AT6-cA-s5M"/>
                                             <constraint firstItem="xDJ-Ql-rhu" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="Ajk-tT-LWx"/>
+                                            <constraint firstItem="1Kl-Fs-8lt" firstAttribute="width" secondItem="lcp-s8-CCA" secondAttribute="width" id="IJG-aW-7wf"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="Jjq-JM-Lb9"/>
                                             <constraint firstItem="lcp-s8-CCA" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="MJt-ef-hox"/>
                                             <constraint firstAttribute="trailing" secondItem="1Kl-Fs-8lt" secondAttribute="trailing" id="Ovy-xE-z4y"/>
                                             <constraint firstAttribute="trailing" secondItem="xDJ-Ql-rhu" secondAttribute="trailing" id="Q1a-0S-d77"/>
+                                            <constraint firstItem="1Kl-Fs-8lt" firstAttribute="centerX" secondItem="lcp-s8-CCA" secondAttribute="centerX" id="Qgb-QC-rBT"/>
                                             <constraint firstItem="lcp-s8-CCA" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="Rbr-oW-Dj6"/>
                                             <constraint firstItem="lcp-s8-CCA" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="SR0-WF-mNu"/>
                                             <constraint firstAttribute="bottom" secondItem="1Kl-Fs-8lt" secondAttribute="bottom" id="ScE-bT-aFN"/>
                                             <constraint firstItem="lcp-s8-CCA" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="Uxr-aG-SyH"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="Zqd-Vu-0vv"/>
                                             <constraint firstAttribute="bottom" secondItem="xDJ-Ql-rhu" secondAttribute="bottom" id="b1S-Lp-OfS"/>
+                                            <constraint firstItem="xDJ-Ql-rhu" firstAttribute="centerX" secondItem="lcp-s8-CCA" secondAttribute="centerX" id="dHl-oH-ml8"/>
                                             <constraint firstItem="xDJ-Ql-rhu" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="fQS-mD-GEA"/>
                                             <constraint firstAttribute="trailing" secondItem="lcp-s8-CCA" secondAttribute="trailing" id="gfY-rY-szz"/>
+                                            <constraint firstItem="1Kl-Fs-8lt" firstAttribute="height" secondItem="lcp-s8-CCA" secondAttribute="height" id="hZm-Ze-ibT"/>
                                             <constraint firstItem="xDJ-Ql-rhu" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="mPN-DU-dB2"/>
                                             <constraint firstItem="lcp-s8-CCA" firstAttribute="top" secondItem="86U-aZ-ALz" secondAttribute="top" id="pBW-fB-jvY"/>
+                                            <constraint firstItem="xDJ-Ql-rhu" firstAttribute="width" secondItem="lcp-s8-CCA" secondAttribute="width" id="scU-a3-k8h"/>
                                             <constraint firstItem="1Kl-Fs-8lt" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="sjt-sy-9tg"/>
                                             <constraint firstItem="lcp-s8-CCA" firstAttribute="leading" secondItem="86U-aZ-ALz" secondAttribute="leading" id="uwR-uQ-AeK"/>
                                             <constraint firstAttribute="trailing" secondItem="1Kl-Fs-8lt" secondAttribute="trailing" id="vxm-qb-erF"/>
@@ -597,18 +605,18 @@
     </scenes>
     <resources>
         <image name="backgroundkorChangedSize" width="2732" height="1547"/>
-        <image name="character" catalog="system" width="32" height="32"/>
-        <image name="checkmark" catalog="system" width="32" height="32"/>
-        <image name="chevron.backward" catalog="system" width="32" height="32"/>
-        <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
-        <image name="clear" catalog="system" width="32" height="32"/>
-        <image name="eye" catalog="system" width="32" height="32"/>
-        <image name="homekit" catalog="system" width="32" height="32"/>
-        <image name="info.circle" catalog="system" width="32" height="32"/>
+        <image name="character" catalog="system" width="128" height="128"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="pen" width="980" height="981"/>
-        <image name="pencil" catalog="system" width="32" height="32"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="settingImage" width="2000" height="2000"/>
-        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
