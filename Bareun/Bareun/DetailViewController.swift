@@ -187,7 +187,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     // 이게 canvasview랑 backgroundImg & textImage 같이 스케일되라고 작성한 코드
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
 
+        canvasView.contentSize = CGSize(width: scrollView.contentSize.width, height: scrollView.contentSize.height)
+        
 //        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
+        
         print(self.scrollView.contentSize)
         print(self.canvasView.contentSize)
         print(self.canvasView.frame)
@@ -208,7 +211,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     }
 
     
-    // 여기까지..
+//    // 여기까지..
     func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
         let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scale, y: scale)
         scrollView.contentSize = self.canvasView.bounds.size.applying(scaleAffineTransform)
