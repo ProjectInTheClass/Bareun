@@ -10,7 +10,7 @@ import PencilKit
 import PhotosUI
 
 
-class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver, UIScrollViewDelegate {
+class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver, UIScrollViewDelegate, UIPencilInteractionDelegate {
 
     @IBOutlet weak var EnglishMeaningLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -35,6 +35,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     var imageIndex: Int = 0
     // 선언해둔 이미지 이름의 배열을 선택한 카테고리와 폰트에 따라 받아오는 역할
     var tempArray:[String] = []
+    
+    let pencilInteraction = UIPencilInteraction()
+    
     
     override func viewDidLoad() {
 
@@ -248,7 +251,19 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         canvasView.contentSize = CGSize(width: canvasWidth * canvasView.zoomScale, height: contentHeight)
     }
     
+    func pencilInteractionDidTap(_ interaction: UIPencilInteraction) {
+        //더블클릭 인지 코드
+        if UIPencilInteraction.preferredTapAction == .switchPrevious {
+            if toolPicker.isVisible {
+                toolPicker.setVisible(false, forFirstResponder: canvasView)
+            } else {
+                toolPicker.setVisible(true, forFirstResponder: canvasView)
+            }
+        }
+    }
+    
     @IBAction func toolIsHidden(_ sender: Any) {
+        
         if toolPicker.isVisible {
             toolPicker.setVisible(false, forFirstResponder: canvasView)
         } else {
