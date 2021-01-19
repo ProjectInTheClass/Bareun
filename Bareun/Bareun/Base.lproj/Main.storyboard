@@ -48,7 +48,7 @@
                                                     <segue destination="V0y-7w-05Z" kind="presentation" identifier="testImage" id="UG8-BR-3d4"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pen" translatesAutoresizingMaskIntoConstraints="NO" id="Kdv-cx-DPd">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pen2" translatesAutoresizingMaskIntoConstraints="NO" id="Kdv-cx-DPd">
                                                 <rect key="frame" x="733" y="31" width="70" height="65"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="65" id="FGV-XB-Yjm" userLabel="height = 62"/>
@@ -617,18 +617,18 @@
     </scenes>
     <resources>
         <image name="backgroundkorChangedSize" width="2732" height="1547"/>
-        <image name="character" catalog="system" width="32" height="32"/>
-        <image name="checkmark" catalog="system" width="32" height="32"/>
-        <image name="chevron.backward" catalog="system" width="32" height="32"/>
-        <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
-        <image name="clear" catalog="system" width="32" height="32"/>
-        <image name="eye" catalog="system" width="32" height="32"/>
-        <image name="homekit" catalog="system" width="32" height="32"/>
-        <image name="info.circle" catalog="system" width="32" height="32"/>
-        <image name="pen" width="980" height="981"/>
-        <image name="pencil" catalog="system" width="32" height="32"/>
+        <image name="character" catalog="system" width="128" height="128"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="pen2" width="720" height="720"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="settingImage" width="2000" height="2000"/>
-        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
