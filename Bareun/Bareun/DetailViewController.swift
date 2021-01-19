@@ -116,6 +116,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popover" {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+            
             if let vc = segue.destination as? PopOverViewController {
                 vc.onChange = { font in
                     print(font)
