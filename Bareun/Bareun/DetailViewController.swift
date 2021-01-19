@@ -263,7 +263,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     @IBAction func toolIsHidden(_ sender: Any) {
         
-        toolPicker.setVisible(false, forFirstResponder: canvasView)
+        if toolPicker.isVisible {
+                toolPicker.setVisible(false, forFirstResponder: canvasView)
+            } else {
+                toolPicker.setVisible(true, forFirstResponder: canvasView)
+            }
         
     }
 
