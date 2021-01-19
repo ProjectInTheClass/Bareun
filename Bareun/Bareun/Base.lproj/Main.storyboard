@@ -226,12 +226,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6p-3e-zdY">
-                                                <rect key="frame" x="1296" y="44" width="40" height="40"/>
+                                                <rect key="frame" x="1297" y="44.5" width="39" height="39"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="SXh-Nf-udw"/>
-                                                    <constraint firstAttribute="width" constant="40" id="XWz-tC-IYi"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="dsD-ah-rDZ"/>
-                                                    <constraint firstAttribute="height" constant="40" id="hwB-N2-Ye3"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="39" id="IAg-A1-86U"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="39" id="YJ3-F2-gKl"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="checkmark"/>
                                                 <connections>
