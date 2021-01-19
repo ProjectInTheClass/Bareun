@@ -263,11 +263,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     @IBAction func toolIsHidden(_ sender: Any) {
         
-        if toolPicker.isVisible {
-            toolPicker.setVisible(false, forFirstResponder: canvasView)
-        } else {
-            toolPicker.setVisible(true, forFirstResponder: canvasView)
-        }
+        toolPicker.setVisible(false, forFirstResponder: canvasView)
+        
     }
 
     @IBAction func goToNextPage(_ sender: Any) {
@@ -287,11 +284,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         else{
             EnglishMeaningLabel.text = ""
         }
-        if toolPicker.isVisible {
-            toolPicker.setVisible(false, forFirstResponder: canvasView)
-        } else {
-            toolPicker.setVisible(true, forFirstResponder: canvasView)
-        }
+       
+        toolPicker.setVisible(false, forFirstResponder: canvasView)
+        
 
     }
     
@@ -313,11 +308,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         else{
             EnglishMeaningLabel.text = ""
         }
-        if toolPicker.isVisible {
-            toolPicker.setVisible(false, forFirstResponder: canvasView)
-        } else {
-            toolPicker.setVisible(true, forFirstResponder: canvasView)
-        }
+       
+        toolPicker.setVisible(false, forFirstResponder: canvasView)
+        
     }
     
     
@@ -335,11 +328,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 
     @IBAction func canvasClear(_ sender: Any) {
         
-        if toolPicker.isVisible {
-            toolPicker.setVisible(false, forFirstResponder: canvasView)
-        } else {
-            toolPicker.setVisible(true, forFirstResponder: canvasView)
-        }
+        toolPicker.setVisible(false, forFirstResponder: canvasView)
+        
         
         canvasView.drawing = PKDrawing()
     }
@@ -355,11 +345,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 
     
     @IBAction func Simil_Button_Clicked(_ sender: Any) {
-        if toolPicker.isVisible {
-            toolPicker.setVisible(false, forFirstResponder: canvasView)
-        } else {
-            toolPicker.setVisible(true, forFirstResponder: canvasView)
-        }
+        
+        toolPicker.setVisible(false, forFirstResponder: canvasView)
+        
     }
     
     
@@ -367,11 +355,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     @IBAction func saveDrawingToCameraRoll(_ sender: Any) {
         
-        if toolPicker.isVisible {
-            toolPicker.setVisible(false, forFirstResponder: canvasView)
-        } else {
-            toolPicker.setVisible(true, forFirstResponder: canvasView)
-        }
+      
+        toolPicker.setVisible(false, forFirstResponder: canvasView)
+        
         
         let alert = UIAlertController(title: "현재 손글씨를 카메라 롤에 저장하시겠습니까?", message: "저장을 누를 시 바로 저장됩니다.", preferredStyle: .alert)
 
