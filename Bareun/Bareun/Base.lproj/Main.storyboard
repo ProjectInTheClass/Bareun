@@ -213,22 +213,27 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyj-Vy-P6z">
-                                                <rect key="frame" x="30" y="46" width="32" height="36"/>
+                                                <rect key="frame" x="30" y="44" width="40" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="32" id="Nva-uv-1qO"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="KBw-gO-n2d"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Zyq-cm-CwF"/>
+                                                    <constraint firstAttribute="width" constant="40" id="mjV-r8-H30"/>
+                                                    <constraint firstAttribute="height" constant="40" id="t0e-d4-JdT"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="homekit" catalog="system"/>
+                                                <state key="normal" title="Button" image="home"/>
                                                 <connections>
                                                     <segue destination="mwU-s2-wRj" kind="unwind" unwindAction="unwindFromVC3WithSegue:" id="shd-oQ-9fC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6p-3e-zdY">
-                                                <rect key="frame" x="1316" y="53" width="20" height="22"/>
+                                                <rect key="frame" x="1296" y="44" width="40" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="22" id="3aD-A1-2Ji"/>
-                                                    <constraint firstAttribute="width" constant="20" id="73l-T0-e6Z"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="SXh-Nf-udw"/>
+                                                    <constraint firstAttribute="width" constant="40" id="XWz-tC-IYi"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="dsD-ah-rDZ"/>
+                                                    <constraint firstAttribute="height" constant="40" id="hwB-N2-Ye3"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="checkmark" catalog="system"/>
+                                                <state key="normal" title="Button" image="checkmark"/>
                                                 <connections>
                                                     <segue destination="f0P-PT-Drv" kind="modal" identifier="testImage" id="Kmv-hq-d3Q"/>
                                                 </connections>
@@ -244,7 +249,6 @@
                                             <constraint firstItem="4ry-Rz-p9T" firstAttribute="centerY" secondItem="4BH-qS-8mi" secondAttribute="centerY" id="dBQ-72-pga"/>
                                             <constraint firstAttribute="trailing" secondItem="c6p-3e-zdY" secondAttribute="trailing" constant="30" id="dDb-rl-lKy"/>
                                             <constraint firstAttribute="trailing" secondItem="c6p-3e-zdY" secondAttribute="trailing" constant="30" id="nOL-8r-7AE"/>
-                                            <constraint firstItem="Xyj-Vy-P6z" firstAttribute="bottom" secondItem="4ry-Rz-p9T" secondAttribute="bottom" id="wLf-Vm-0xH"/>
                                             <constraint firstItem="Xyj-Vy-P6z" firstAttribute="leading" secondItem="4BH-qS-8mi" secondAttribute="leading" constant="30" id="wPQ-rZ-VwN"/>
                                         </constraints>
                                     </view>
@@ -618,12 +622,12 @@
     <resources>
         <image name="backgroundkorChangedSize" width="2732" height="1547"/>
         <image name="character" catalog="system" width="128" height="128"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="checkmark" width="540" height="540"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
         <image name="clear" catalog="system" width="128" height="114"/>
         <image name="eye" catalog="system" width="128" height="81"/>
-        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="home" width="1024" height="1024"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="pen2" width="720" height="720"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
