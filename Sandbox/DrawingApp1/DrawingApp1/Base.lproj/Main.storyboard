@@ -16,21 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundkorChangedSize" translatesAutoresizingMaskIntoConstraints="NO" id="BCH-AH-Wzt">
-                                <rect key="frame" x="0.0" y="62" width="1366" height="900"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="01_나눔바른펜" translatesAutoresizingMaskIntoConstraints="NO" id="2ta-Y3-Xb6">
-                                <rect key="frame" x="0.0" y="62" width="1366" height="900"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0KF-g5-Xbv" customClass="PKCanvasView">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ml-s8-Ilb">
+                                <rect key="frame" x="0.0" y="62" width="1366" height="942"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dI5-AV-ofn">
+                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="954"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dI5-AV-ofn" firstAttribute="leading" secondItem="HIJ-uw-prQ" secondAttribute="leading" id="KVc-zf-S4s"/>
+                                    <constraint firstItem="HIJ-uw-prQ" firstAttribute="bottom" secondItem="dI5-AV-ofn" secondAttribute="bottom" id="cht-pK-Yhc"/>
+                                    <constraint firstItem="HIJ-uw-prQ" firstAttribute="trailing" secondItem="dI5-AV-ofn" secondAttribute="trailing" id="fqC-vj-gZg"/>
+                                    <constraint firstItem="dI5-AV-ofn" firstAttribute="top" secondItem="HIJ-uw-prQ" secondAttribute="top" id="l7s-rM-5uA"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="doM-hC-XWT"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="HIJ-uw-prQ"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3ml-s8-Ilb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IiK-Sj-q14"/>
+                            <constraint firstItem="3ml-s8-Ilb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ah7-KO-ZFr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ml-s8-Ilb" secondAttribute="trailing" id="uC9-gE-6Vl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3ml-s8-Ilb" secondAttribute="bottom" id="yJ0-UF-lVd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dvi-Ix-hEX">
                         <barButtonItem key="leftBarButtonItem" systemItem="camera" id="WF4-CO-RVE">
@@ -45,7 +55,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="canvasView" destination="0KF-g5-Xbv" id="Ed0-Ks-b9X"/>
                         <outlet property="pencilFingerButton" destination="OPP-06-d2t" id="ql2-yy-D2j"/>
                     </connections>
                 </viewController>
@@ -73,8 +82,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="01_나눔바른펜" width="1366" height="773.5"/>
-        <image name="backgroundkorChangedSize" width="1366" height="773.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
