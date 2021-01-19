@@ -10,7 +10,7 @@ import PencilKit
 import PhotosUI
 
 
-class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver, UIScrollViewDelegate, UIPencilInteractionDelegate {
+class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver, UIScrollViewDelegate {
 
     @IBOutlet weak var EnglishMeaningLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -36,8 +36,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     // 선언해둔 이미지 이름의 배열을 선택한 카테고리와 폰트에 따라 받아오는 역할
     var tempArray:[String] = []
     
-    let pencilInteraction = UIPencilInteraction()
-    
+//    let pencilInteraction = UIPencilInteraction()
     
     override func viewDidLoad() {
 
@@ -251,16 +250,16 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         canvasView.contentSize = CGSize(width: canvasWidth * canvasView.zoomScale, height: contentHeight)
     }
     
-    func pencilInteractionDidTap(_ interaction: UIPencilInteraction) {
-        //더블클릭 인지 코드
-        if UIPencilInteraction.preferredTapAction == .switchPrevious {
-            if toolPicker.isVisible {
-                toolPicker.setVisible(false, forFirstResponder: canvasView)
-            } else {
-                toolPicker.setVisible(true, forFirstResponder: canvasView)
-            }
-        }
-    }
+//    func pencilInteractionDidTap(_ interaction: UIPencilInteraction) {
+//        //더블클릭 인지 코드
+//        if UIPencilInteraction.preferredTapAction == .switchPrevious {
+//            if toolPicker.isVisible {
+//                toolPicker.setVisible(false, forFirstResponder: canvasView)
+//            } else {
+//                toolPicker.setVisible(true, forFirstResponder: canvasView)
+//            }
+//        }
+//    }
     
     @IBAction func toolIsHidden(_ sender: Any) {
         
@@ -288,6 +287,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         else{
             EnglishMeaningLabel.text = ""
         }
+        if toolPicker.isVisible {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+        } else {
+            toolPicker.setVisible(true, forFirstResponder: canvasView)
+        }
 
     }
     
@@ -309,6 +313,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         else{
             EnglishMeaningLabel.text = ""
         }
+        if toolPicker.isVisible {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+        } else {
+            toolPicker.setVisible(true, forFirstResponder: canvasView)
+        }
     }
     
     
@@ -325,6 +334,13 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
 
     @IBAction func canvasClear(_ sender: Any) {
+        
+        if toolPicker.isVisible {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+        } else {
+            toolPicker.setVisible(true, forFirstResponder: canvasView)
+        }
+        
         canvasView.drawing = PKDrawing()
     }
     /*
@@ -337,7 +353,25 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     }
     */
 
+    
+    @IBAction func Simil_Button_Clicked(_ sender: Any) {
+        if toolPicker.isVisible {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+        } else {
+            toolPicker.setVisible(true, forFirstResponder: canvasView)
+        }
+    }
+    
+    
+    
+    
     @IBAction func saveDrawingToCameraRoll(_ sender: Any) {
+        
+        if toolPicker.isVisible {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+        } else {
+            toolPicker.setVisible(true, forFirstResponder: canvasView)
+        }
         
         let alert = UIAlertController(title: "현재 손글씨를 카메라 롤에 저장하시겠습니까?", message: "저장을 누를 시 바로 저장됩니다.", preferredStyle: .alert)
 

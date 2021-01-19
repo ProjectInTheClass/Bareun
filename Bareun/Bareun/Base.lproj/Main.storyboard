@@ -233,6 +233,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button" image="checkmark"/>
                                                 <connections>
+                                                    <action selector="Simil_Button_Clicked:" destination="LzM-zu-zYZ" eventType="touchUpInside" id="VtZ-cM-rrQ"/>
                                                     <segue destination="f0P-PT-Drv" kind="modal" identifier="testImage" id="Kmv-hq-d3Q"/>
                                                 </connections>
                                             </button>
