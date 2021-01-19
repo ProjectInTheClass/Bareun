@@ -152,8 +152,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqv-Ha-6BB">
+                                <rect key="frame" x="659" y="15" width="30" height="30"/>
+                                <state key="normal" title="닫기"/>
+                                <connections>
+                                    <segue destination="hK1-rd-azf" kind="unwind" unwindAction="unwindFromSettingVCWithSegue:" id="Ymk-rh-K15"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="QY7-Ui-c4P">
-                                <rect key="frame" x="20" y="20" width="664" height="508"/>
+                                <rect key="frame" x="20" y="72" width="664" height="508"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -171,12 +178,17 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p8D-MM-Oox"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hqv-Ha-6BB" firstAttribute="top" secondItem="p8D-MM-Oox" secondAttribute="top" constant="15" id="4L9-ew-KTd"/>
+                            <constraint firstItem="p8D-MM-Oox" firstAttribute="trailing" secondItem="Hqv-Ha-6BB" secondAttribute="trailing" constant="15" id="Uwz-pL-4gv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="QY7-Ui-c4P" id="aSB-oP-PeV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKk-pc-JbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hK1-rd-azf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1553.5871156661785" y="-459.37499999999994"/>
         </scene>
@@ -605,18 +617,18 @@
     </scenes>
     <resources>
         <image name="backgroundkorChangedSize" width="2732" height="1547"/>
-        <image name="character" catalog="system" width="128" height="128"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
-        <image name="clear" catalog="system" width="128" height="114"/>
-        <image name="eye" catalog="system" width="128" height="81"/>
-        <image name="homekit" catalog="system" width="128" height="106"/>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="character" catalog="system" width="32" height="32"/>
+        <image name="checkmark" catalog="system" width="32" height="32"/>
+        <image name="chevron.backward" catalog="system" width="32" height="32"/>
+        <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
+        <image name="clear" catalog="system" width="32" height="32"/>
+        <image name="eye" catalog="system" width="32" height="32"/>
+        <image name="homekit" catalog="system" width="32" height="32"/>
+        <image name="info.circle" catalog="system" width="32" height="32"/>
         <image name="pen" width="980" height="981"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="pencil" catalog="system" width="32" height="32"/>
         <image name="settingImage" width="2000" height="2000"/>
-        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

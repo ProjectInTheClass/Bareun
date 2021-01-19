@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     var items:[MenuItem] = []
     @IBOutlet weak var tableView: UITableView!
     @IBAction func unwindFromVC3(segue:UIStoryboardSegue) {}
-    
+    @IBAction func unwindFromSettingVC(segue:UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         
