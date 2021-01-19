@@ -341,6 +341,7 @@
                                                     <action selector="goToPreviousPage:" destination="LzM-zu-zYZ" id="gT5-lL-Y5B"/>
                                                 </connections>
                                             </barButtonItem>
+                                            <barButtonItem width="24" style="plain" systemItem="fixedSpace" id="4qy-jJ-HRq"/>
                                             <barButtonItem title="Pencil" id="haF-dD-IX1">
                                                 <imageReference key="image" image="pencil" catalog="system" symbolScale="large"/>
                                                 <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -348,12 +349,14 @@
                                                     <action selector="toolIsHidden:" destination="LzM-zu-zYZ" id="ccg-1F-jZe"/>
                                                 </connections>
                                             </barButtonItem>
+                                            <barButtonItem width="24" style="plain" systemItem="fixedSpace" id="Ie9-0J-hb2"/>
                                             <barButtonItem title="Item" image="eye" catalog="system" id="Gnt-ba-dip">
                                                 <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="isLayerHidden:" destination="LzM-zu-zYZ" id="eun-2z-JiQ"/>
                                                 </connections>
                                             </barButtonItem>
+                                            <barButtonItem width="24" style="plain" systemItem="fixedSpace" id="n4E-VX-yoC"/>
                                             <barButtonItem title="Item" image="clear" catalog="system" id="4cf-Ea-cxt">
                                                 <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
@@ -368,6 +371,7 @@
                                                     <action selector="saveDrawingToCameraRoll:" destination="LzM-zu-zYZ" id="Hri-MT-A2C"/>
                                                 </connections>
                                             </barButtonItem>
+                                            <barButtonItem width="24" style="plain" systemItem="fixedSpace" id="zoF-OX-Oyy"/>
                                             <barButtonItem title="Font Select" image="character" catalog="system" id="Eyd-KJ-F3m">
                                                 <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
@@ -376,6 +380,7 @@
                                                     </segue>
                                                 </connections>
                                             </barButtonItem>
+                                            <barButtonItem width="24" style="plain" systemItem="fixedSpace" id="SqM-8c-6Ql"/>
                                             <barButtonItem title="Item" image="chevron.compact.right" catalog="system" id="yib-h4-AYB">
                                                 <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
