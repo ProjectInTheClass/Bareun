@@ -228,7 +228,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6p-3e-zdY">
                                                 <rect key="frame" x="1297" y="44.5" width="39" height="39"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="39" id="IAg-A1-86U"/>
+                                                    <constraint firstAttribute="width" constant="39" id="HwZ-Iu-KdG"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="39" id="YJ3-F2-gKl"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="checkmark"/>
