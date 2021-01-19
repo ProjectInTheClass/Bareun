@@ -336,22 +336,26 @@
                                         </constraints>
                                         <items>
                                             <barButtonItem title="Item" image="chevron.backward" catalog="system" id="b9D-ve-E1V">
+                                                <color key="tintColor" red="0.28627450980392155" green="0.28627450980392155" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="goToPreviousPage:" destination="LzM-zu-zYZ" id="gT5-lL-Y5B"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem title="Pencil" id="haF-dD-IX1">
                                                 <imageReference key="image" image="pencil" catalog="system" symbolScale="large"/>
+                                                <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="toolIsHidden:" destination="LzM-zu-zYZ" id="ccg-1F-jZe"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem title="Item" image="eye" catalog="system" id="Gnt-ba-dip">
+                                                <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="isLayerHidden:" destination="LzM-zu-zYZ" id="eun-2z-JiQ"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem title="Item" image="clear" catalog="system" id="4cf-Ea-cxt">
+                                                <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="canvasClear:" destination="LzM-zu-zYZ" id="rrw-wb-Q5G"/>
                                                 </connections>
@@ -359,11 +363,13 @@
                                             <barButtonItem systemItem="flexibleSpace" id="m4F-Ob-PBy"/>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="cmd-kD-8qo"/>
                                             <barButtonItem title="Item" image="square.and.arrow.down" catalog="system" id="ugz-sZ-RAW">
+                                                <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="saveDrawingToCameraRoll:" destination="LzM-zu-zYZ" id="Hri-MT-A2C"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem title="Font Select" image="character" catalog="system" id="Eyd-KJ-F3m">
+                                                <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <segue destination="XjC-dl-HP9" kind="popoverPresentation" identifier="popover" popoverAnchorBarButtonItem="Eyd-KJ-F3m" id="DQj-4G-cvO">
                                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -371,6 +377,7 @@
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem title="Item" image="chevron.compact.right" catalog="system" id="yib-h4-AYB">
+                                                <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="goToNextPage:" destination="LzM-zu-zYZ" id="Ob8-7y-hLS"/>
                                                 </connections>
@@ -620,18 +627,18 @@
     </scenes>
     <resources>
         <image name="backgroundkorChangedSize" width="2732" height="1547"/>
-        <image name="character" catalog="system" width="128" height="128"/>
+        <image name="character" catalog="system" width="32" height="32"/>
         <image name="checkmark" width="540" height="540"/>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
-        <image name="clear" catalog="system" width="128" height="114"/>
-        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="chevron.backward" catalog="system" width="32" height="32"/>
+        <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
+        <image name="clear" catalog="system" width="32" height="32"/>
+        <image name="eye" catalog="system" width="32" height="32"/>
         <image name="home" width="1024" height="1024"/>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="info.circle" catalog="system" width="32" height="32"/>
         <image name="pen2" width="720" height="720"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="pencil" catalog="system" width="32" height="32"/>
         <image name="settingImage" width="2000" height="2000"/>
-        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
