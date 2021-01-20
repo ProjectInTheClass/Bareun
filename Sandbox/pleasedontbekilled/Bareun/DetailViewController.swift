@@ -53,7 +53,7 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
         let areaSize = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         bottomImage.draw(in: areaSize)
 
-        topImage.draw(in: areaSize, blendMode: .normal, alpha: 0.8)
+        topImage.draw(in: areaSize, blendMode: .normal, alpha: 1.0)
 
         newImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
@@ -127,7 +127,7 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
             print("error!")
         }
         countLabel.text = "\((imageIndex) + 1)/\(tempArray.count)"
-        self.underlayView.image = mergeImages(bottomImage: textImage,topImage: backgroundImg)
+        self.underlayView.image = mergeImages(bottomImage: backgroundImg,topImage: textImage)
 
 //        canvasView.delegate = self
 //        canvasView.drawing = drawing
@@ -221,7 +221,7 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
                             print("english font")
                         }
                     }
-                    self.underlayView.image = self.mergeImages(bottomImage: self.textImage,topImage: self.backgroundImg)
+                    self.underlayView.image = self.mergeImages(bottomImage: self.backgroundImg,topImage: self.textImage)
                     self.textImage = UIImage(named: self.tempArray[self.imageIndex])!
 
                 }
@@ -287,7 +287,7 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
         }
        
         toolPicker.setVisible(false, forFirstResponder: canvasView)
-        self.underlayView.image = mergeImages(bottomImage: textImage,topImage: backgroundImg)
+        self.underlayView.image = mergeImages(bottomImage: backgroundImg,topImage: textImage)
 
     }
     
@@ -311,7 +311,7 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
         }
        
         toolPicker.setVisible(false, forFirstResponder: canvasView)
-        self.underlayView.image = mergeImages(bottomImage: textImage,topImage: backgroundImg)
+        self.underlayView.image = mergeImages(bottomImage: backgroundImg,topImage: textImage)
     }
     
     
