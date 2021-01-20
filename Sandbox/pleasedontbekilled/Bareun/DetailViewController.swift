@@ -21,17 +21,18 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
 
     var menu:MenuItem? = nil
     
-    lazy var textImage: UIImage = {
-        return UIImage(named: "c1_01_bh")!
-    }()
-
-    lazy var backgroundImg: UIImage = {
-        return UIImage(named: "backgroundkorChangedSize")!
-    }()
+//    lazy var textImage: UIImage = {
+//        return UIImage(named: "c1_01_bh")!
+//    }()
+//
+//    lazy var backgroundImg: UIImage = {
+//        return UIImage(named: "backgroundkorChangedSize")!
+//    }()
     
-//    var textImage: UIImage = UIImage(named: "c1_01_mj")!
-//    var backgroundImg: UIImage = UIImage(named: "backgroundkorChangedSize")!
+    var textImage: UIImage = UIImage(named: "c1_01_mj")!
+    var backgroundImg: UIImage = UIImage(named: "backgroundkorChangedSize")!
     
+    var newImage: UIImage = UIImage(named: "c1_01_mj")!
     @IBOutlet weak var layerHidden: UIBarButtonItem!
     let canvasWidth: CGFloat = 828
     let canvasOverscrollHeight:CGFloat = 500
@@ -44,6 +45,21 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
     var tempArray:[String] = []
     
 //    let pencilInteraction = UIPencilInteraction()
+    func mergeImages(bottomImage: UIImage,topImage: UIImage) -> UIImage{
+
+        let size = CGSize(width: 2732, height: 1547)
+        UIGraphicsBeginImageContext(size)
+
+        let areaSize = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        bottomImage.draw(in: areaSize)
+
+        topImage.draw(in: areaSize, blendMode: .normal, alpha: 0.8)
+
+        newImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
     
     override func viewDidLoad() {
 
@@ -54,19 +70,19 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
         assert(self.underlayView.superview == self.canvasView)
         super.viewDidLoad()
 
-        let bottomImage = backgroundImg
-        let topImage = textImage
-
-        let size = CGSize(width: 2732, height: 1547)
-        UIGraphicsBeginImageContext(size)
-
-        let areaSize = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        bottomImage.draw(in: areaSize)
-
-        topImage.draw(in: areaSize, blendMode: .normal, alpha: 0.8)
-
-        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
+//        let bottomImage = backgroundImg
+//        let topImage = textImage
+//
+//        let size = CGSize(width: 2732, height: 1547)
+//        UIGraphicsBeginImageContext(size)
+//
+//        let areaSize = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+//        bottomImage.draw(in: areaSize)
+//
+//        topImage.draw(in: areaSize, blendMode: .normal, alpha: 0.8)
+//
+//        newImage = UIGraphicsGetImageFromCurrentImageContext()!
+//        UIGraphicsEndImageContext()
         
         self.canvasView.translatesAutoresizingMaskIntoConstraints = false
         self.canvasView.contentInsetAdjustmentBehavior = .never
@@ -93,6 +109,7 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
             textImage = UIImage(named: tempArray[imageIndex]) ?? UIImage(named:"c1_01_mj")!
 //            textImage.image = UIImage(named: Shared.shared.TextImageName)
             EnglishMeaningLabel.isHidden = true
+            
         case "많이 틀리는 맞춤법":
             tempArray = category2_myeongjo
             textImage = UIImage(named: tempArray[imageIndex])!
@@ -110,7 +127,8 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
             print("error!")
         }
         countLabel.text = "\((imageIndex) + 1)/\(tempArray.count)"
-        
+        self.underlayView.image = mergeImages(bottomImage: textImage,topImage: backgroundImg)
+
 //        canvasView.delegate = self
 //        canvasView.drawing = drawing
 //
@@ -203,7 +221,7 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
                             print("english font")
                         }
                     }
-                    
+                    self.underlayView.image = self.mergeImages(bottomImage: self.textImage,topImage: self.backgroundImg)
                     self.textImage = UIImage(named: self.tempArray[self.imageIndex])!
 
                 }
@@ -269,7 +287,7 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
         }
        
         toolPicker.setVisible(false, forFirstResponder: canvasView)
-        
+        self.underlayView.image = mergeImages(bottomImage: textImage,topImage: backgroundImg)
 
     }
     
@@ -293,7 +311,7 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
         }
        
         toolPicker.setVisible(false, forFirstResponder: canvasView)
-        
+        self.underlayView.image = mergeImages(bottomImage: textImage,topImage: backgroundImg)
     }
     
     
