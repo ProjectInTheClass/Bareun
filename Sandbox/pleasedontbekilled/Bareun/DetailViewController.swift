@@ -24,10 +24,13 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
     lazy var textImage: UIImage = {
         return UIImage(named: "c1_01_bh")!
     }()
-    
+
     lazy var backgroundImg: UIImage = {
         return UIImage(named: "backgroundkorChangedSize")!
     }()
+    
+//    var textImage: UIImage = UIImage(named: "c1_01_mj")!
+//    var backgroundImg: UIImage = UIImage(named: "backgroundkorChangedSize")!
     
     @IBOutlet weak var layerHidden: UIBarButtonItem!
     let canvasWidth: CGFloat = 828
@@ -50,8 +53,6 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
         assert(self.underlayView != nil)
         assert(self.underlayView.superview == self.canvasView)
         super.viewDidLoad()
-
-        let image = self.textImage
 
         let bottomImage = backgroundImg
         let topImage = textImage
@@ -370,6 +371,22 @@ class DetailViewController: UIViewController,PKToolPickerObserver {
 
         
     
+    }
+    
+    func toolPickerSelectedToolDidChange(_ toolPicker: PKToolPicker) {
+        print(Self.self, #function)
+    }
+
+    func toolPickerIsRulerActiveDidChange(_ toolPicker: PKToolPicker) {
+        print(Self.self, #function)
+    }
+
+    func toolPickerVisibilityDidChange(_ toolPicker: PKToolPicker) {
+        print(Self.self, #function)
+    }
+
+    func toolPickerFramesObscuredDidChange(_ toolPicker: PKToolPicker) {
+        print(Self.self, #function)
     }
     
     

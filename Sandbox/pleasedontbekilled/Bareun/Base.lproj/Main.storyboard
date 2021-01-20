@@ -258,7 +258,7 @@
                                             <constraint firstItem="Xyj-Vy-P6z" firstAttribute="leading" secondItem="4BH-qS-8mi" secondAttribute="leading" constant="30" id="wPQ-rZ-VwN"/>
                                         </constraints>
                                     </view>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rsu-zx-lgN">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rsu-zx-lgN" customClass="PKCanvasView">
                                         <rect key="frame" x="0.0" y="127" width="1366" height="786.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tDv-bb-qei">
