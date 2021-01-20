@@ -220,18 +220,25 @@
                                                     <constraint firstAttribute="width" constant="40" id="mjV-r8-H30"/>
                                                     <constraint firstAttribute="height" constant="40" id="t0e-d4-JdT"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="home"/>
+                                                <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="house" catalog="system" symbolScale="large"/>
+                                                </state>
                                                 <connections>
                                                     <segue destination="mwU-s2-wRj" kind="unwind" unwindAction="unwindFromVC3WithSegue:" id="shd-oQ-9fC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6p-3e-zdY">
-                                                <rect key="frame" x="1297" y="44.5" width="39" height="39"/>
+                                                <rect key="frame" x="1297" y="53.5" width="39" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="39" id="HwZ-Iu-KdG"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="39" id="YJ3-F2-gKl"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="checkmark"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="tintColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="checkmark" catalog="system" symbolScale="large"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="Simil_Button_Clicked:" destination="LzM-zu-zYZ" eventType="touchUpInside" id="VtZ-cM-rrQ"/>
                                                     <segue destination="f0P-PT-Drv" kind="modal" identifier="testImage" id="Kmv-hq-d3Q"/>
@@ -388,6 +395,7 @@
                                                 </connections>
                                             </barButtonItem>
                                         </items>
+                                        <color key="barTintColor" red="0.92156862745098034" green="0.90980392156862744" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                                     </toolbar>
                                 </subviews>
                                 <constraints>
@@ -633,12 +641,12 @@
     <resources>
         <image name="backgroundkorChangedSize" width="2732" height="1547"/>
         <image name="character" catalog="system" width="32" height="32"/>
-        <image name="checkmark" width="540" height="540"/>
+        <image name="checkmark" catalog="system" width="32" height="32"/>
         <image name="chevron.backward" catalog="system" width="32" height="32"/>
         <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
         <image name="clear" catalog="system" width="32" height="32"/>
         <image name="eye" catalog="system" width="32" height="32"/>
-        <image name="home" width="1024" height="1024"/>
+        <image name="house" catalog="system" width="32" height="32"/>
         <image name="info.circle" catalog="system" width="32" height="32"/>
         <image name="pen2" width="720" height="720"/>
         <image name="pencil" catalog="system" width="32" height="32"/>
