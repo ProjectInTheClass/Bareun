@@ -34,6 +34,7 @@
 		6A27E52125B28821000C8CA8 /* ImageSimilarityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27E52025B28821000C8CA8 /* ImageSimilarityViewController.swift */; };
 		6AF733F725B9475900DC815B /* CoreGraphics+Z.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF733F625B9475900DC815B /* CoreGraphics+Z.swift */; };
 		9A01042B25AEBEE800699704 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01042A25AEBEE800699704 /* EmailViewController.swift */; };
+		9AABEF9C25B975320041CE3C /* 나눔손글씨 느릿느릿체.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AABEF9B25B975320041CE3C /* 나눔손글씨 느릿느릿체.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		6A27E52025B28821000C8CA8 /* ImageSimilarityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSimilarityViewController.swift; sourceTree = "<group>"; };
 		6AF733F625B9475900DC815B /* CoreGraphics+Z.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Z.swift"; sourceTree = "<group>"; };
 		9A01042A25AEBEE800699704 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		9AABEF9B25B975320041CE3C /* 나눔손글씨 느릿느릿체.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 느릿느릿체.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				39C14D6E25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf */,
 				39C14D6B25ADEF99008E03E3 /* Allan-Regular.ttf */,
 				39C14D6825ADEF91008E03E3 /* PinyonScript-Regular.ttf */,
+				9AABEF9B25B975320041CE3C /* 나눔손글씨 느릿느릿체.ttf */,
 				39C14D6525ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf */,
 				393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */,
 				3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */,
@@ -195,6 +198,7 @@
 				39C14D6625ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf in Resources */,
 				3963E5B025A45D780028F8B8 /* NanumMyeongjoBold.ttf in Resources */,
 				393C789525B216AF00131BCE /* OFL-Pinyon.txt in Resources */,
+				9AABEF9C25B975320041CE3C /* 나눔손글씨 느릿느릿체.ttf in Resources */,
 				39C14D6F25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf in Resources */,
 				3963E55325A3081E0028F8B8 /* Assets.xcassets in Resources */,
 				390B206925B573A5009C6DCD /* OFL-nanum.txt in Resources */,
