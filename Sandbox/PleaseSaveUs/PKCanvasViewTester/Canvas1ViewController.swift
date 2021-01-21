@@ -50,7 +50,7 @@ class Canvas1ViewController: UIViewController {
 		self.underlayView.layer.borderWidth = 1.0
 
         self.overlayView.contentMode = .scaleToFill
-        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: image2.size)
+        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: image1.size)
         self.overlayView.image = image2
         
 		if let window = UIApplication.shared.windows.first, let toolPicker = PKToolPicker.shared(for: window) {
@@ -80,7 +80,7 @@ class Canvas1ViewController: UIViewController {
 		let contentSize = self.image1.size
 		self.canvasView.contentSize = contentSize
 		self.underlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
-        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: self.image2.size)
+        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
 		let margin = (self.canvasView.bounds.size - contentSize) * 0.5
 		let insets = [margin.width, margin.height].map { $0 > 0 ? $0 : 0 }
 		self.canvasView.contentInset = UIEdgeInsets(top: insets[1], left: insets[0], bottom: insets[1], right: insets[0])
@@ -108,7 +108,7 @@ extension Canvas1ViewController: PKCanvasViewDelegate {
 //			self.underlayView.frame.size = CGSize(width: self.view.bounds.width * scrollView.zoomScale, height: self.view.bounds.height * scrollView.zoomScale)
 			self.underlayView.frame.size = self.image1.size * self.canvasView.zoomScale
 			self.underlayView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
-            self.overlayView.frame.size = self.image2.size * self.canvasView.zoomScale
+            self.overlayView.frame.size = self.image1.size * self.canvasView.zoomScale
             self.overlayView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
 		default:
 			break
