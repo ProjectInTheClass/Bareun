@@ -134,9 +134,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                         }
                     } else {
                         switch font {
-                    case "나눔명조체":
-                        if self.titleLabel.text == "나를 깨우는 명언" {
-                            self.tempArray = category1_myeongjo
+                        case "나눔명조체":
+                            if self.titleLabel.text == "나를 깨우는 명언" {
+                                self.tempArray = category1_myeongjo
                             } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
                                 self.tempArray = category2_myeongjo
                             } else {
@@ -157,6 +157,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                                 self.tempArray = category2_bp
                             } else {
                                 self.tempArray = category4_bp
+                            }
+                        case "느릿느릿체":
+                            if self.titleLabel.text == "나를 깨우는 명언" {
+                                self.tempArray = category1_nl
                             }
                         default:
                             print("english font")
