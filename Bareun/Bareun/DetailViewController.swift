@@ -107,6 +107,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         countLabel.text = "\((imageIndex) + 1)/\(tempArray.count)"
         self.underlayView.image = backgroundImage
         self.overlayView.image = textImage
+        Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
 //        canvasView.delegate = self
 //        canvasView.drawing = drawing
 //
