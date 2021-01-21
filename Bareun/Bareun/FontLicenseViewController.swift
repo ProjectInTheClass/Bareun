@@ -15,7 +15,7 @@ class FontLicenseViewController: UIViewController {
         super.viewDidLoad()
         print("shared : \(Shared.shared.licenseIndex)")
         switch Shared.shared.licenseIndex {
-        case 3:
+        case 4:
             if let filepath = Bundle.main.path(forResource: "OFL-Pinyon", ofType: "txt") {
                 do {
                     let licenseScript = try String(contentsOfFile: filepath)
@@ -24,7 +24,7 @@ class FontLicenseViewController: UIViewController {
             } else {
                 print("file not found!")
             }
-        case 4:
+        case 5:
             if let filepath = Bundle.main.path(forResource: "OFL-Allan", ofType: "txt") {
                 do {
                     let licenseScript = try String(contentsOfFile: filepath)
@@ -33,7 +33,7 @@ class FontLicenseViewController: UIViewController {
             } else {
                 print("file not found!")
             }
-        case 5:
+        case 6:
             if let filepath = Bundle.main.path(forResource: "OFL-Shadow", ofType: "txt") {
                 do {
                     let licenseScript = try String(contentsOfFile: filepath)
