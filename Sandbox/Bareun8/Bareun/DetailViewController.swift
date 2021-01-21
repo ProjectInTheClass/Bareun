@@ -33,9 +33,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     @IBOutlet weak var layerHidden: UIBarButtonItem!
     
-    let canvasWidth: CGFloat = 1366
-    let canvasOverscrollHeight:CGFloat = 786.5
-    
     var drawing = PKDrawing()
     var toolPicker: PKToolPicker!
     
@@ -127,7 +124,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         toolPicker.addObserver(canvasView)
         toolPicker.addObserver(self)
         canvasView.becomeFirstResponder()
-        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -135,31 +132,58 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.canvasView.sendSubviewToBack(self.overlayView)
         self.canvasView.sendSubviewToBack(self.underlayView)
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.canvasView.becomeFirstResponder()
         self.canvasView.tool = PKInkingTool(.pen)
     }
     
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.underlayView
+    }
     
-//    override func viewWillLayoutSubviews() {
-//        print(Self.self, #function)
-//        super.viewWillLayoutSubviews()
-//
-//        let contentSize = self.backgroundImage.size
+    func viewForZooming2(in scrollView: UIScrollView) -> UIView? {
+        return self.overlayView
+    }
+
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        switch scrollView {
+        case canvasView:
+            // https://stackoom.com/question/3pNGe/%E5%A6%82%E4%BD%95%E5%B0%86UIImage%E8%BD%AC%E6%8D%A2%E6%88%96%E5%8A%A0%E8%BD%BD%E5%88%B0PKDrawing%E4%B8%AD
+            let offsetX: CGFloat = max((scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5, 0.0)
+            let offsetY: CGFloat = max((scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5, 0.0)
+//            self.underlayView.frame.size = CGSize(width: self.view.bounds.width * scrollView.zoomScale, height: self.view.bounds.height * scrollView.zoomScale)
+            self.underlayView.frame.size = self.backgroundImage.size * self.canvasView.zoomScale
+            self.underlayView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
+            self.overlayView.frame.size = self.textImage.size * self.canvasView.zoomScale
+            self.overlayView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
+            print("============================")
+            print(self.canvasView.contentSize)
+            print(self.canvasView.frame)
+        default:
+            break
+        }
+
+    }
+    
+    override func viewWillLayoutSubviews() {
+        
+        super.viewWillLayoutSubviews()
+
+        let contentSize = self.canvasView.contentSize
 //        self.canvasView.contentSize = contentSize
-//        self.underlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
-//        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
-//        let margin = (self.canvasView.bounds.size - contentSize) * 0.5
-//        let insets = [margin.width, margin.height].map { $0 > 0 ? $0 : 0 }
-//        self.canvasView.contentInset = UIEdgeInsets(top: insets[1], left: insets[0], bottom: insets[1], right: insets[0])
-//
-//        print(self.canvasView.contentSize)
-//        print(self.underlayView.frame)
-//        print(self.overlayView.frame)
-//
-//    }
+        self.underlayView.frame = CGRect(origin: CGPoint.zero, size: self.underlayView.frame.size)
+        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: self.overlayView.frame.size)
+        let margin = (self.canvasView.bounds.size - contentSize) * 0.5
+        let insets = [margin.width, margin.height].map { $0 > 0 ? $0 : 0 }
+        self.canvasView.contentInset = UIEdgeInsets(top: insets[1], left: insets[0], bottom: insets[1], right: insets[0])
+
+        print(self.canvasView.contentSize)
+        print(self.underlayView.frame)
+        print(self.overlayView.frame)
+        print("===========================")
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popover" {
@@ -225,34 +249,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             let compareImage = UIGraphicsGetImageFromCurrentImageContext()
             dvc.newImage = compareImage
         }
-    }
-    
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return self.underlayView
-    }
-    
-    func viewForZooming2(in scrollView: UIScrollView) -> UIView? {
-        return self.overlayView
-    }
-
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        switch scrollView {
-        case canvasView:
-            // https://stackoom.com/question/3pNGe/%E5%A6%82%E4%BD%95%E5%B0%86UIImage%E8%BD%AC%E6%8D%A2%E6%88%96%E5%8A%A0%E8%BD%BD%E5%88%B0PKDrawing%E4%B8%AD
-            let offsetX: CGFloat = max((scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5, 0.0)
-            let offsetY: CGFloat = max((scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5, 0.0)
-//            self.underlayView.frame.size = CGSize(width: self.view.bounds.width * scrollView.zoomScale, height: self.view.bounds.height * scrollView.zoomScale)
-            self.underlayView.frame.size = self.backgroundImage.size * self.canvasView.zoomScale
-            self.underlayView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
-            self.overlayView.frame.size = self.textImage.size * self.canvasView.zoomScale
-            self.overlayView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
-            print("============================")
-            print(self.canvasView.contentSize)
-            print(self.canvasView.frame)
-        default:
-            break
-        }
-
     }
     
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
