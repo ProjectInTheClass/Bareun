@@ -51,16 +51,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         
         super.viewDidLoad()
         
-        //tap 했을 때 펜슬킷 사라지기
-//        var taps = UITapGestureRecognizer(target: self, action:       Selector("handleTapGesture:"))
-//        self.overlayView.addGestureRecognizer(taps)
-        //
-        // 제스처 아래로 했을 때 펜슬킷 내려가기
-        var swipeDown = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipeDownGesture:"))
-        swipeDown.direction = .down
-        
-        self.overlayView.gestureRecognizers = [swipeDown]
-        
         var textImage = self.textImage
         var backgroundImage = self.backgroundImage
         self.canvasView.translatesAutoresizingMaskIntoConstraints = false
@@ -403,12 +393,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     }
     
     
-}
-
-extension DetailViewController {
-    func handleSwipeDownGesture(recognizer: UISwipeGestureRecognizer) {
-            toolPicker.setVisible(false, forFirstResponder: overlayView)
-        }
 }
 
 
