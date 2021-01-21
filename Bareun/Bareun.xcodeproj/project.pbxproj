@@ -32,12 +32,11 @@
 		39C14D7225ADF071008E03E3 /* FontSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C14D7125ADF071008E03E3 /* FontSelectView.swift */; };
 		6A2725C325ADFD590045FB85 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2725C225ADFD590045FB85 /* PopOverViewController.swift */; };
 		6A27E52125B28821000C8CA8 /* ImageSimilarityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27E52025B28821000C8CA8 /* ImageSimilarityViewController.swift */; };
+		6AF733F725B9475900DC815B /* CoreGraphics+Z.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF733F625B9475900DC815B /* CoreGraphics+Z.swift */; };
 		9A01042B25AEBEE800699704 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01042A25AEBEE800699704 /* EmailViewController.swift */; };
-		9A44D91F25B943100005B594 /* 나눔손글씨 느릿느릿체.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A44D91E25B943100005B594 /* 나눔손글씨 느릿느릿체.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3903E42C25B94CC1002F4780 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		390B206825B573A5009C6DCD /* OFL-nanum.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-nanum.txt"; sourceTree = "<group>"; };
 		393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunpenR.ttf; sourceTree = "<group>"; };
 		393C789125B2152200131BCE /* FontLicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLicenseViewController.swift; sourceTree = "<group>"; };
@@ -65,8 +64,8 @@
 		39C14D7125ADF071008E03E3 /* FontSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSelectView.swift; sourceTree = "<group>"; };
 		6A2725C225ADFD590045FB85 /* PopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		6A27E52025B28821000C8CA8 /* ImageSimilarityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSimilarityViewController.swift; sourceTree = "<group>"; };
+		6AF733F625B9475900DC815B /* CoreGraphics+Z.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Z.swift"; sourceTree = "<group>"; };
 		9A01042A25AEBEE800699704 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
-		9A44D91E25B943100005B594 /* 나눔손글씨 느릿느릿체.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 느릿느릿체.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +105,6 @@
 				39C14D6E25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf */,
 				39C14D6B25ADEF99008E03E3 /* Allan-Regular.ttf */,
 				39C14D6825ADEF91008E03E3 /* PinyonScript-Regular.ttf */,
-				9A44D91E25B943100005B594 /* 나눔손글씨 느릿느릿체.ttf */,
 				39C14D6525ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf */,
 				393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */,
 				3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */,
@@ -118,6 +116,7 @@
 				3963E59325A44C6A0028F8B8 /* API.swift */,
 				3963E54F25A3081C0028F8B8 /* Main.storyboard */,
 				3995851D25A6ECAB008E720F /* DetailViewController.swift */,
+				6AF733F625B9475900DC815B /* CoreGraphics+Z.swift */,
 				6A2725C225ADFD590045FB85 /* PopOverViewController.swift */,
 				393C789125B2152200131BCE /* FontLicenseViewController.swift */,
 				3963E59025A44B640028F8B8 /* CustomItem.swift */,
@@ -196,7 +195,6 @@
 				39C14D6625ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf in Resources */,
 				3963E5B025A45D780028F8B8 /* NanumMyeongjoBold.ttf in Resources */,
 				393C789525B216AF00131BCE /* OFL-Pinyon.txt in Resources */,
-				9A44D91F25B943100005B594 /* 나눔손글씨 느릿느릿체.ttf in Resources */,
 				39C14D6F25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf in Resources */,
 				3963E55325A3081E0028F8B8 /* Assets.xcassets in Resources */,
 				390B206925B573A5009C6DCD /* OFL-nanum.txt in Resources */,
@@ -224,6 +222,7 @@
 				3995851E25A6ECAB008E720F /* DetailViewController.swift in Sources */,
 				39C14D7225ADF071008E03E3 /* FontSelectView.swift in Sources */,
 				3963E54C25A3081C0028F8B8 /* SceneDelegate.swift in Sources */,
+				6AF733F725B9475900DC815B /* CoreGraphics+Z.swift in Sources */,
 				3963E59425A44C6A0028F8B8 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +242,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				3963E55525A3081E0028F8B8 /* Base */,
-				3903E42C25B94CC1002F4780 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -373,13 +371,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3TLJXYB2AH;
+				DEVELOPMENT_TEAM = 9RS7G5D2DV;
 				INFOPLIST_FILE = Bareun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Bareun;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bareun3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -392,13 +390,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3TLJXYB2AH;
+				DEVELOPMENT_TEAM = 9RS7G5D2DV;
 				INFOPLIST_FILE = Bareun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Bareun;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bareun3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;

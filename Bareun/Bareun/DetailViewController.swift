@@ -13,19 +13,25 @@ import PhotosUI
 class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver, UIScrollViewDelegate {
 
     @IBOutlet weak var EnglishMeaningLabel: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var canvasView: PKCanvasView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     
-    @IBOutlet weak var backgroundImg: UIImageView!
-    @IBOutlet weak var textImage: UIImageView!
+    @IBOutlet weak var underlayView : UIImageView!
+    @IBOutlet weak var overlayView: UIImageView!
     var menu:MenuItem? = nil
-    
-    var backgroundImgCenter : CGPoint = CGPoint(x: 0, y: 0)
-    var textImageCenter : CGPoint = CGPoint(x: 0, y: 0)
+  
+    var textImage: UIImage = UIImage(named:"c1_01_mj")!
+    var backgroundImage: UIImage = UIImage(named:"backgroundkorChangedSize")!
+//    lazy var textImage: UIImage = {
+//        return UIImage(named: "c1_01_mj")!
+//    }()
+//    lazy var backgroundImage: UIImage = {
+//        return UIImage(named: "backgroundkorChangedSize")!
+//    }() //underlay
     
     @IBOutlet weak var layerHidden: UIBarButtonItem!
+    
     let canvasWidth: CGFloat = 828
     let canvasOverscrollHeight:CGFloat = 500
     
@@ -39,56 +45,74 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 //    let pencilInteraction = UIPencilInteraction()
     
     override func viewDidLoad() {
-
+        assert(self.canvasView != nil)
+        assert(self.underlayView != nil)
+        assert(self.underlayView.superview == self.canvasView)
+        
         super.viewDidLoad()
         
-        // 스크롤뷰
-        scrollView.delegate = self
-        self.scrollView.isScrollEnabled = true
-        self.scrollView.minimumZoomScale = 1.0
-        self.scrollView.maximumZoomScale = 6.0
-
-//        backgroundImgCenter = backgroundImg.center
-//        textImageCenter = textImage.center
-//        canvasView.contentSize.height = 1547.0
-//        canvasView.contentSize.width = 2732.0
+        var textImage = self.textImage
+        var backgroundImage = self.backgroundImage
+        self.canvasView.translatesAutoresizingMaskIntoConstraints = false
+        self.canvasView.contentInsetAdjustmentBehavior = .never
+        self.canvasView.layer.borderColor = UIColor.red.cgColor
+        self.canvasView.layer.borderWidth = 2.0
+        self.canvasView.delegate = self
+        self.canvasView.maximumZoomScale = 2.0
+        self.canvasView.minimumZoomScale = 0.5
+//        self.canvasView.zoomScale = 0.3
+        self.canvasView.isOpaque = false
+        self.canvasView.backgroundColor = .clear
+        self.canvasView.contentOffset = CGPoint.zero
+        self.canvasView.contentSize = textImage.size
         
+        print(textImage.size)
+        print(self.canvasView.contentSize)
+        print(self.canvasView.frame)
+        
+        self.underlayView.contentMode = .scaleToFill
+        self.underlayView.frame = CGRect(origin: CGPoint.zero, size: backgroundImage.size)
+        
+        self.underlayView.layer.borderColor = UIColor.orange.cgColor
+        self.underlayView.layer.borderWidth = 1.0
 
-        self.scrollView.contentSize = self.canvasView.frame.size
-
-        // 여기까지 for Zoom
+        self.overlayView.contentMode = .scaleToFill
+        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: textImage.size)
+        
         
         titleLabel.text = menu?.name
 
         switch titleLabel.text {
         case "나를 깨우는 명언":
             tempArray = category1_myeongjo
-            textImage.image = UIImage(named: tempArray[imageIndex])
+            textImage = UIImage(named: tempArray[imageIndex])!
 //            textImage.image = UIImage(named: Shared.shared.TextImageName)
             EnglishMeaningLabel.isHidden = true
         case "많이 틀리는 맞춤법":
             tempArray = category2_myeongjo
-            textImage.image = UIImage(named: tempArray[imageIndex])
+            textImage = UIImage(named: tempArray[imageIndex])!
             EnglishMeaningLabel.isHidden = true
         case "쓸모있는 영어 문장":
-            backgroundImg.image = UIImage(named: "backgroundeng.png")
+            backgroundImage = UIImage(named: "backgroundeng.png")!
             tempArray = category3_pinyon
-            textImage.image = UIImage(named: tempArray[imageIndex])
+            textImage = UIImage(named: tempArray[imageIndex])!
             EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
         case "대학 슬로건":
             tempArray = category4_myeongjo
-            textImage.image = UIImage(named: tempArray[imageIndex])
+            textImage = UIImage(named: tempArray[imageIndex])!
             EnglishMeaningLabel.isHidden = true
         default:
             print("error!")
         }
         countLabel.text = "\((imageIndex) + 1)/\(tempArray.count)"
-        
-        canvasView.delegate = self
-        canvasView.drawing = drawing
-        
-        canvasView.alwaysBounceVertical = true
-        canvasView.drawingPolicy = .anyInput
+        self.underlayView.image = backgroundImage
+        self.overlayView.image = textImage
+//        canvasView.delegate = self
+//        canvasView.drawing = drawing
+//
+//        canvasView.alwaysBounceVertical = true
+//        canvasView.drawingPolicy = .anyInput
+//
         if #available(iOS 14.0, *) {
             toolPicker = PKToolPicker()
         } else {
@@ -102,16 +126,29 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         canvasView.becomeFirstResponder()
         
     }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.canvasView.sendSubviewToBack(self.overlayView)
+        self.canvasView.sendSubviewToBack(self.underlayView)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.canvasView.becomeFirstResponder()
+        self.canvasView.tool = PKInkingTool(.pen)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         
-        let canvasScale = canvasView.bounds.width / canvasWidth
-        canvasView.minimumZoomScale = canvasScale
-        canvasView.maximumZoomScale = canvasScale
-        canvasView.zoomScale = canvasScale
-        
-        updateContentSizeForDrawing()
-        canvasView.contentOffset = CGPoint(x: 0, y: -canvasView.adjustedContentInset.top)
+        let contentSize = self.backgroundImage.size
+        self.canvasView.contentSize = contentSize
+        self.underlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
+        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
+        let margin = (self.canvasView.bounds.size - contentSize) * 0.5
+        let insets = [margin.width, margin.height].map { $0 > 0 ? $0 : 0 }
+        self.canvasView.contentInset = UIEdgeInsets(top: insets[1], left: insets[0], bottom: insets[1], right: insets[0])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -134,9 +171,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                         }
                     } else {
                         switch font {
-                        case "나눔명조체":
-                            if self.titleLabel.text == "나를 깨우는 명언" {
-                                self.tempArray = category1_myeongjo
+                    case "나눔명조체":
+                        if self.titleLabel.text == "나를 깨우는 명언" {
+                            self.tempArray = category1_myeongjo
                             } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
                                 self.tempArray = category2_myeongjo
                             } else {
@@ -158,21 +195,17 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                             } else {
                                 self.tempArray = category4_bp
                             }
-                        case "느릿느릿체":
-                            if self.titleLabel.text == "나를 깨우는 명언" {
-                                self.tempArray = category1_nl
-                            }
                         default:
                             print("english font")
                         }
                     }
                     
-                    self.textImage.image = UIImage(named: self.tempArray[self.imageIndex])
-
+                    self.textImage = UIImage(named: self.tempArray[self.imageIndex])!
+                    Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
+                    self.overlayView.image = self.textImage
                 }
             }
         }
-        Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
         
         if segue.identifier == "testImage" {
             let dvc = segue.destination as! ImageSimilarityViewController
@@ -184,88 +217,46 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
     }
     
-    // zoom for canvasView
-    func viewForZooming(in scrollView: UIScrollView) -> UIView?
-    {
-        return self.canvasView
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        self.underlayView
     }
     
-    // 이게 canvasview랑 backgroundImg & textImage 같이 스케일되라고 작성한 코드
+    func viewForZooming2(in scrollView: UIScrollView) -> UIView? {
+        self.overlayView
+    }
+
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
-
-    
-        
-//        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
-        
-        print(self.backgroundImg.frame)
-        print(self.textImage.frame)
-        print(self.scrollView.contentSize)
-        print(self.canvasView.contentSize)
-        print(self.canvasView.frame)
-        
-        // canvas view content size (그려지는 영역 늘리기)
-        canvasView.contentSize = CGSize(width: scrollView.contentSize.width, height: scrollView.contentSize.height)
-        
-
-        textImage.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
-        backgroundImg.transform = CGAffineTransform(scaleX: scrollView.zoomScale, y: scrollView.zoomScale)
-//        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scrollView.zoomScale, y: scrollView.zoomScale)
-//        var translatedPoint = backgroundImgCenter.applying(scaleAffineTransform)
-//        backgroundImg.transform = CGAffineTransform.identity.translatedBy(x: translatedPoint.x - backgroundImgCenter.x , y: translatedPoint.y - backgroundImgCenter.y)
-//        translatedPoint = textImageCenter.applying(scaleAffineTransform)
-//        textImage.transform = CGAffineTransform.identity.translatedBy(x: translatedPoint.x - textImageCenter.x, y: translatedPoint.y - textImageCenter.y)
-
-//        let offsetX = max((scrollView.bounds.width - scrollView.contentSize.width) * 0.5, 0)
-//        let offsetY = max((scrollView.bounds.height - scrollView.contentSize.height) * 0.5, 0)
-//        scrollView.contentInset = UIEdgeInsets(top: offsetY, left: offsetX, bottom: 0, right: 0)
-    }
-
-    
-//    // 여기까지..
-//    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
-//        let scaleAffineTransform = CGAffineTransform.identity.scaledBy(x: scale, y: scale)
-//        scrollView.contentSize = self.canvasView.bounds.size.applying(scaleAffineTransform)
-//    }
-
-    
-    
-    override var prefersHomeIndicatorAutoHidden: Bool {
-        return true
-    }
-    
-    func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
-        updateContentSizeForDrawing()
-    }
-    
-    func updateContentSizeForDrawing() {
-        let drawing = canvasView.drawing
-        let contentHeight: CGFloat
-        
-        if !drawing.bounds.isNull {
-            contentHeight = max(canvasView.bounds.height, (drawing.bounds.maxY + self.canvasOverscrollHeight) * canvasView.zoomScale)
-        } else {
-            contentHeight = canvasView.bounds.height
+        switch scrollView {
+        case canvasView:
+            print(Self.self, #function)
+            // https://stackoom.com/question/3pNGe/%E5%A6%82%E4%BD%95%E5%B0%86UIImage%E8%BD%AC%E6%8D%A2%E6%88%96%E5%8A%A0%E8%BD%BD%E5%88%B0PKDrawing%E4%B8%AD
+            let offsetX: CGFloat = max((scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5, 0.0)
+            let offsetY: CGFloat = max((scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5, 0.0)
+//            self.underlayView.frame.size = CGSize(width: self.view.bounds.width * scrollView.zoomScale, height: self.view.bounds.height * scrollView.zoomScale)
+            self.underlayView.frame.size = self.backgroundImage.size * self.canvasView.zoomScale
+            self.underlayView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
+            self.overlayView.frame.size = self.textImage.size * self.canvasView.zoomScale
+            self.overlayView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
+        default:
+            break
         }
-        
-        canvasView.contentSize = CGSize(width: canvasWidth * canvasView.zoomScale, height: contentHeight)
+
     }
     
-//    func pencilInteractionDidTap(_ interaction: UIPencilInteraction) {
-//        //더블클릭 인지 코드
-//        if UIPencilInteraction.preferredTapAction == .switchPrevious {
-//            if toolPicker.isVisible {
-//                toolPicker.setVisible(false, forFirstResponder: canvasView)
-//            } else {
-//                toolPicker.setVisible(true, forFirstResponder: canvasView)
-//            }
-//        }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        switch scrollView {
+        case canvasView:
+            print(Self.self, #function)
+        default:
+            break
+        }
+    }
+    
+//    override var prefersHomeIndicatorAutoHidden: Bool {
+//        return true
 //    }
+    
+  
     
     @IBAction func toolIsHidden(_ sender: Any) {
         
@@ -286,7 +277,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             imageIndex += 1
             countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
         }
-        textImage.image = UIImage(named: tempArray[imageIndex])
+        textImage = UIImage(named: tempArray[imageIndex])!
         Shared.shared.CurTextImage = tempArray[imageIndex]
         if self.titleLabel.text == "쓸모있는 영어 문장"{
             EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
@@ -294,10 +285,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         else{
             EnglishMeaningLabel.text = ""
         }
-       
+        overlayView.image = textImage
         toolPicker.setVisible(false, forFirstResponder: canvasView)
-        
-
     }
     
     @IBAction func goToPreviousPage(_ sender: Any) {
@@ -310,7 +299,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             imageIndex -= 1
             countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
         }
-        textImage.image = UIImage(named: tempArray[imageIndex])
+        textImage = UIImage(named: tempArray[imageIndex])!
         Shared.shared.CurTextImage = tempArray[imageIndex]
         if self.titleLabel.text == "쓸모있는 영어 문장"{
             EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
@@ -318,21 +307,20 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         else{
             EnglishMeaningLabel.text = ""
         }
-       
+        overlayView.image = textImage
         toolPicker.setVisible(false, forFirstResponder: canvasView)
-        
     }
     
     
     @IBAction func isLayerHidden(_ sender: Any) {
-        if textImage.isHidden {
-            textImage.isHidden = false
-            layerHidden.image = UIImage(systemName: "eye")
-        } else {
-            textImage.isHidden = true
-            layerHidden.image = UIImage(systemName: "eye.slash")
-        }
-
+//        if textImage.isHidden {
+//            textImage.isHidden = false
+//            layerHidden.image = UIImage(systemName: "eye")
+//        } else {
+//            textImage.isHidden = true
+//            layerHidden.image = UIImage(systemName: "eye.slash")
+//        }
+        print("Hidden")
     }
     
 
@@ -374,9 +362,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.present(alert, animated: true)
             
         alert.addAction(UIAlertAction(title: "저장", style: .default, handler: { action in
-            UIGraphicsBeginImageContextWithOptions(self.backgroundImg.bounds.size, false, UIScreen.main.scale)
+            UIGraphicsBeginImageContextWithOptions(self.underlayView.bounds.size, false, UIScreen.main.scale)
             UIGraphicsBeginImageContextWithOptions(self.canvasView.bounds.size, false, UIScreen.main.scale)
-            self.backgroundImg.drawHierarchy(in: self.backgroundImg.bounds, afterScreenUpdates: true)
+            self.underlayView.drawHierarchy(in: self.underlayView.bounds, afterScreenUpdates: true)
             self.canvasView.drawHierarchy(in: self.canvasView.bounds, afterScreenUpdates: true)
             
             
@@ -392,6 +380,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 
         }))
         
+        // subViews 자식 뷰 배열
+        // for 문 글자이미지를 만나면( remove from super view 함수 )
+        // canvasView를 copy 변수 글자가 있는 이미지면 삭제
+        // 일단, hidden으로 숨기고 저장 시도하기~
         alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { action in
             
         }))

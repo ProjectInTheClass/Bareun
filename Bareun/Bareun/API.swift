@@ -17,6 +17,12 @@ final class Shared {
 class MENU {
     static let shared = MENU()
     
+//    var settingMenuList: [settingsMenu] = [
+//        settingsMenu(userSettingMenu:"버전 정보 : 1.0"),
+//        settingsMenu(userSettingMenu:"라이선스 : MIT Lisense"),
+//        settingsMenu(userSettingMenu:"앱 평가하기"),
+//        settingsMenu(userSettingMenu:"개발자에게 메일 보내기")
+//    ]
     
     var items:[MenuItem] = [
         MenuItem(name: "나를 깨우는 명언", image: "category1.png"),
@@ -29,7 +35,6 @@ class MENU {
         FontInfo(fontName: "나눔명조체", fileName: "NanumMyeongjo"),
         FontInfo(fontName: "바른히피체", fileName: "나눔손글씨 바른히피"),
         FontInfo(fontName: "나눔바른펜", fileName: "NanumBarunpenR"),
-        FontInfo(fontName: "느릿느릿체", fileName: "나눔손글씨 느릿느릿체"),
         FontInfo(fontName: "Pinyon Script", fileName: "PinyonScript"),
         FontInfo(fontName: "Allan", fileName: "Allan-Regular"),
         FontInfo(fontName: "Shadows Into Light Two", fileName: "ShadowsIntoLightTwo-Regular")
@@ -60,11 +65,6 @@ var category1_bp:[String] = [
     "c1_01_bp.png", "c1_02_bp.png", "c1_03_bp.png", "c1_04_bp.png", "c1_05_bp.png",
     "c1_06_bp.png", "c1_07_bp.png", "c1_08_bp.png", "c1_09_bp.png", "c1_10_bp.png",
     "c1_11_bp.png", "c1_12_bp.png", "c1_13_bp.png", "c1_14_bp.png", "c1_15_bp.png"
-]
-var category1_nl:[String] = [
-    "c1_01_nl.png", "c1_02_nl.png", "c1_03_nl.png", "c1_04_nl.png", "c1_05_nl.png",
-    "c1_06_nl.png", "c1_07_nl.png", "c1_08_nl.png", "c1_09_nl.png", "c1_10_nl.png",
-    "c1_11_nl.png", "c1_12_nl.png", "c1_13_nl.png", "c1_14_nl.png", "c1_15_nl.png"
 ]
 
 // category2
