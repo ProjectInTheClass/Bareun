@@ -140,17 +140,17 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.canvasView.tool = PKInkingTool(.pen)
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        
-        let contentSize = self.backgroundImage.size
-        self.canvasView.contentSize = contentSize
-        self.underlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
-        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
-        let margin = (self.canvasView.bounds.size - contentSize) * 0.5
-        let insets = [margin.width, margin.height].map { $0 > 0 ? $0 : 0 }
-        self.canvasView.contentInset = UIEdgeInsets(top: insets[1], left: insets[0], bottom: insets[1], right: insets[0])
-    }
+//    override func viewWillLayoutSubviews() {
+//        super.viewWillLayoutSubviews()
+//
+//        let contentSize = self.backgroundImage.size
+//        self.canvasView.contentSize = contentSize
+//        self.underlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
+//        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
+//        let margin = (self.canvasView.bounds.size - contentSize) * 0.5
+//        let insets = [margin.width, margin.height].map { $0 > 0 ? $0 : 0 }
+//        self.canvasView.contentInset = UIEdgeInsets(top: insets[1], left: insets[0], bottom: insets[1], right: insets[0])
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popover" {
