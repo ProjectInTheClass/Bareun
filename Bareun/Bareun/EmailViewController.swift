@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import MessageUI
+import SafariServices
 
 struct settingsMenu {
     var userSettingMenu: String
@@ -82,8 +83,9 @@ extension EmailViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 1:
-            guard let url = URL(string: "https://projectintheclass.github.io/Bareun/index.html"), UIApplication.shared.canOpenURL(url) else { return }
-             UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            guard let url = URL(string: "https://projectintheclass.github.io/Bareun/index.html") else { return }
+                let safariViewController = SFSafariViewController(url: url)
+                present(safariViewController, animated: true, completion: nil)
 
         case 2:
             if MFMailComposeViewController.canSendMail() {
