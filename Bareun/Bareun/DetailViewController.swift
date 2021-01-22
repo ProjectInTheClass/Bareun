@@ -199,6 +199,14 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                         case "느릿느릿체":
                             if self.titleLabel.text == "나를 깨우는 명언" {
                                 self.tempArray = category1_nl
+                            } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
+                                self.tempArray = category2_nl
+                            }
+                        case "유니 띵땅띵땅":
+                            if self.titleLabel.text == "나를 깨우는 명언" {
+                                self.tempArray = category1_dd
+                            } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
+                                self.tempArray = category2_dd
                             }
                         default:
                             print("english font")
