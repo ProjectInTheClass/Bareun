@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import MessageUI
+import SafariServices
 
 struct settingsMenu {
     var userSettingMenu: String
@@ -21,7 +22,7 @@ class EmailViewController: UIViewController ,MFMailComposeViewControllerDelegate
     
     var settingMenuList = [
         "버전 정보 : 1.0",
-        "라이선스 : 000 Lisense",
+        "바른 알아보기",
         "개발자에게 메일 보내기"
     ]
     
@@ -37,23 +38,6 @@ class EmailViewController: UIViewController ,MFMailComposeViewControllerDelegate
     }
     
 
-    
-//    @IBAction func SendFeedbackButton(_ sender: Any) {
-//        if MFMailComposeViewController.canSendMail() {
-//            let composeVC = MFMailComposeViewController()
-//            composeVC.mailComposeDelegate = self
-//
-//            composeVC.setToRecipients(["Bareun@naver.com"])
-//            composeVC.setSubject("Message Subject")
-//            composeVC.setMessageBody("Message content", isHTML: false)
-//
-//            self.present(composeVC, animated: true, completion: nil)
-//        }else{
-//            print("cannotsendmail")
-//        }
-//
-//
-//    }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
@@ -81,6 +65,9 @@ extension EmailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
+        case 1:
+            guard let url = URL(string: "https://projectintheclass.github.io/Bareun/index.html"), UIApplication.shared.canOpenURL(url) else { return }
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
         case 2:
             if MFMailComposeViewController.canSendMail() {
                 let composeVC = MFMailComposeViewController()
