@@ -66,6 +66,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.canvasView.backgroundColor = .clear
         self.canvasView.contentOffset = CGPoint.zero
         self.canvasView.contentSize = textImage.size
+        self.canvasView.showsVerticalScrollIndicator = false
+        self.canvasView.showsHorizontalScrollIndicator = false
         
         print(textImage.size)
         print(self.canvasView.contentSize)
@@ -164,13 +166,12 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         default:
             break
         }
-
     }
     
     override func viewWillLayoutSubviews() {
-        
         super.viewWillLayoutSubviews()
-
+        
+//        let ratio = self.bounds.width / self.textImage.size.width
         let contentSize = self.canvasView.contentSize
 //        self.canvasView.contentSize = contentSize
         self.underlayView.frame = CGRect(origin: CGPoint.zero, size: self.underlayView.frame.size)
@@ -272,7 +273,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             } else {
                 toolPicker.setVisible(true, forFirstResponder: canvasView)
             }
-        
     }
 
     @IBAction func goToNextPage(_ sender: Any) {
@@ -320,13 +320,13 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     
     @IBAction func isLayerHidden(_ sender: Any) {
-//        if textImage.isHidden {
-//            textImage.isHidden = false
-//            layerHidden.image = UIImage(systemName: "eye")
-//        } else {
-//            textImage.isHidden = true
-//            layerHidden.image = UIImage(systemName: "eye.slash")
-//        }
+        if overlayView.isHidden {
+            overlayView.isHidden = false
+            layerHidden.image = UIImage(systemName: "eye")
+        } else {
+            overlayView.isHidden = true
+            layerHidden.image = UIImage(systemName: "eye.slash")
+        }
         print("Hidden")
     }
     
