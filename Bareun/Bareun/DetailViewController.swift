@@ -54,8 +54,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         var backgroundImage = self.backgroundImage
         self.canvasView.translatesAutoresizingMaskIntoConstraints = false
         self.canvasView.contentInsetAdjustmentBehavior = .never
-        self.canvasView.layer.borderColor = UIColor.red.cgColor
-        self.canvasView.layer.borderWidth = 2.0
+//        self.canvasView.layer.borderColor = UIColor.red.cgColor
+//        self.canvasView.layer.borderWidth = 2.0
         self.canvasView.delegate = self
         self.canvasView.maximumZoomScale = 2.0
         self.canvasView.minimumZoomScale = 1.0
@@ -78,8 +78,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.underlayView.contentMode = .scaleToFill
         self.underlayView.frame = CGRect(origin: CGPoint.zero, size: canvasView.frame.size)
         
-        self.underlayView.layer.borderColor = UIColor.orange.cgColor
-        self.underlayView.layer.borderWidth = 1.0
+//        self.underlayView.layer.borderColor = UIColor.orange.cgColor
+//        self.underlayView.layer.borderWidth = 1.0
 
         self.overlayView.contentMode = .scaleToFill
         self.overlayView.frame = CGRect(origin: CGPoint.zero, size: canvasView.frame.size)
