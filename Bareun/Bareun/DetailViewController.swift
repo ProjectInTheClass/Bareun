@@ -155,7 +155,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         switch scrollView {
         case canvasView:
 
-            print(canvasView.zoomScale)
             let paperSize = self.canvasView.frame.size * self.canvasView.zoomScale
             
             self.underlayView.frame.size = paperSize
@@ -369,6 +368,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
       
         toolPicker.setVisible(false, forFirstResponder: canvasView)
         
+        overlayView.isHidden = true
         
         let alert = UIAlertController(title: "현재 손글씨를 카메라 롤에 저장하시겠습니까?", message: "저장을 누를 시 바로 저장됩니다.", preferredStyle: .alert)
 
@@ -390,6 +390,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                     // deal with success or error
                 })
             }
+            self.overlayView.isHidden = false
 
         }))
         
@@ -398,7 +399,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         // canvasView를 copy 변수 글자가 있는 이미지면 삭제
         // 일단, hidden으로 숨기고 저장 시도하기~
         alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { action in
-            
+            self.overlayView.isHidden = false
         }))
     }
     
