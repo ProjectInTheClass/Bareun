@@ -65,6 +65,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.canvasView.contentOffset = CGPoint.zero
         self.canvasView.contentSize = textImage.size
         
+        self.canvasView.showsHorizontalScrollIndicator = false
+        self.canvasView.showsVerticalScrollIndicator = false
+        
         print("First Scene")
         print(self.underlayView.frame)
         print(self.overlayView.frame)
@@ -314,13 +317,13 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     
     @IBAction func isLayerHidden(_ sender: Any) {
-//        if textImage.isHidden {
-//            textImage.isHidden = false
-//            layerHidden.image = UIImage(systemName: "eye")
-//        } else {
-//            textImage.isHidden = true
-//            layerHidden.image = UIImage(systemName: "eye.slash")
-//        }
+        if overlayView.isHidden {
+            overlayView.isHidden = false
+            layerHidden.image = UIImage(systemName: "eye")
+        } else {
+            overlayView.isHidden = true
+            layerHidden.image = UIImage(systemName: "eye.slash")
+        }
         print("Hidden")
     }
     
