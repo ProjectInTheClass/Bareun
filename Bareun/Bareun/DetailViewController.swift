@@ -23,6 +23,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
   
     var textImage: UIImage = UIImage(named:"c1_01_mj")!
     var backgroundImage: UIImage = UIImage(named:"backgroundkorChangedSize")!
+    
 //    lazy var textImage: UIImage = {
 //        return UIImage(named: "c1_01_mj")!
 //    }()
@@ -32,9 +33,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     @IBOutlet weak var layerHidden: UIBarButtonItem!
     
-    let canvasWidth: CGFloat = 828
-    let canvasOverscrollHeight:CGFloat = 500
-    
     var drawing = PKDrawing()
     var toolPicker: PKToolPicker!
     
@@ -42,6 +40,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     // 선언해둔 이미지 이름의 배열을 선택한 카테고리와 폰트에 따라 받아오는 역할
     var tempArray:[String] = []
     
+    var bounds = UIScreen.main.bounds.size
 //    let pencilInteraction = UIPencilInteraction()
     
     override func viewDidLoad() {
@@ -59,26 +58,31 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.canvasView.layer.borderWidth = 2.0
         self.canvasView.delegate = self
         self.canvasView.maximumZoomScale = 2.0
-        self.canvasView.minimumZoomScale = 0.5
+        self.canvasView.minimumZoomScale = 1.0
 //        self.canvasView.zoomScale = 0.3
         self.canvasView.isOpaque = false
         self.canvasView.backgroundColor = .clear
         self.canvasView.contentOffset = CGPoint.zero
         self.canvasView.contentSize = textImage.size
         
-        print(textImage.size)
+        self.canvasView.showsHorizontalScrollIndicator = false
+        self.canvasView.showsVerticalScrollIndicator = false
+        
+        print("First Scene")
+        print(self.underlayView.frame)
+        print(self.overlayView.frame)
         print(self.canvasView.contentSize)
         print(self.canvasView.frame)
+        print("============================")
         
         self.underlayView.contentMode = .scaleToFill
-        self.underlayView.frame = CGRect(origin: CGPoint.zero, size: backgroundImage.size)
+        self.underlayView.frame = CGRect(origin: CGPoint.zero, size: canvasView.frame.size)
         
         self.underlayView.layer.borderColor = UIColor.orange.cgColor
         self.underlayView.layer.borderWidth = 1.0
 
         self.overlayView.contentMode = .scaleToFill
-        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: textImage.size)
-        
+        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: canvasView.frame.size)
         
         titleLabel.text = menu?.name
 
@@ -86,7 +90,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         case "나를 깨우는 명언":
             tempArray = category1_myeongjo
             textImage = UIImage(named: tempArray[imageIndex])!
-//            textImage.image = UIImage(named: Shared.shared.TextImageName)
             EnglishMeaningLabel.isHidden = true
         case "많이 틀리는 맞춤법":
             tempArray = category2_myeongjo
@@ -105,9 +108,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             print("error!")
         }
         countLabel.text = "\((imageIndex) + 1)/\(tempArray.count)"
+        Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
         self.underlayView.image = backgroundImage
         self.overlayView.image = textImage
-        Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
 //        canvasView.delegate = self
 //        canvasView.drawing = drawing
 //
@@ -125,7 +128,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         toolPicker.addObserver(canvasView)
         toolPicker.addObserver(self)
         canvasView.becomeFirstResponder()
-        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -133,24 +136,51 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.canvasView.sendSubviewToBack(self.overlayView)
         self.canvasView.sendSubviewToBack(self.underlayView)
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.canvasView.becomeFirstResponder()
         self.canvasView.tool = PKInkingTool(.pen)
     }
     
-//    override func viewWillLayoutSubviews() {
-//        super.viewWillLayoutSubviews()
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.underlayView
+    }
+    
+    func viewForZooming2(in scrollView: UIScrollView) -> UIView? {
+        return self.overlayView
+    }
+
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        switch scrollView {
+        case canvasView:
+
+            print(canvasView.zoomScale)
+            let paperSize = self.canvasView.frame.size * self.canvasView.zoomScale
+            
+            self.underlayView.frame.size = paperSize
+            self.overlayView.frame.size = paperSize
+            self.canvasView.contentSize = paperSize
+            
+        default:
+            break
+        }
+
+    }
+    
+    override func viewWillLayoutSubviews() {
+        
+        super.viewWillLayoutSubviews()
+//        let offsetX: CGFloat = 0
+//        let offsetY: CGFloat = 0
 //
-//        let contentSize = self.backgroundImage.size
-//        self.canvasView.contentSize = contentSize
-//        self.underlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
-//        self.overlayView.frame = CGRect(origin: CGPoint.zero, size: contentSize)
-//        let margin = (self.canvasView.bounds.size - contentSize) * 0.5
-//        let insets = [margin.width, margin.height].map { $0 > 0 ? $0 : 0 }
-//        self.canvasView.contentInset = UIEdgeInsets(top: insets[1], left: insets[0], bottom: insets[1], right: insets[0])
-//    }
+        
+        let paperSize = self.canvasView.frame.size * self.canvasView.zoomScale
+        
+        self.underlayView.frame.size = paperSize
+        self.overlayView.frame.size = paperSize
+        self.canvasView.contentSize = paperSize
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popover" {
@@ -196,18 +226,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                             } else {
                                 self.tempArray = category4_bp
                             }
-                        case "느릿느릿체":
-                            if self.titleLabel.text == "나를 깨우는 명언" {
-                                self.tempArray = category1_nl
-                            } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
-                                self.tempArray = category2_nl
-                            }
-                        case "유니 띵땅띵땅":
-                            if self.titleLabel.text == "나를 깨우는 명언" {
-                                self.tempArray = category1_dd
-                            } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
-                                self.tempArray = category2_dd
-                            }
                         default:
                             print("english font")
                         }
@@ -230,40 +248,14 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
     }
     
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        self.underlayView
-    }
-    
-    func viewForZooming2(in scrollView: UIScrollView) -> UIView? {
-        self.overlayView
-    }
-
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        switch scrollView {
-        case canvasView:
-            print(Self.self, #function)
-            // https://stackoom.com/question/3pNGe/%E5%A6%82%E4%BD%95%E5%B0%86UIImage%E8%BD%AC%E6%8D%A2%E6%88%96%E5%8A%A0%E8%BD%BD%E5%88%B0PKDrawing%E4%B8%AD
-            let offsetX: CGFloat = max((scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5, 0.0)
-            let offsetY: CGFloat = max((scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5, 0.0)
-//            self.underlayView.frame.size = CGSize(width: self.view.bounds.width * scrollView.zoomScale, height: self.view.bounds.height * scrollView.zoomScale)
-            self.underlayView.frame.size = self.backgroundImage.size * self.canvasView.zoomScale
-            self.underlayView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
-            self.overlayView.frame.size = self.textImage.size * self.canvasView.zoomScale
-            self.overlayView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY)
-        default:
-            break
-        }
-
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        switch scrollView {
-        case canvasView:
-            print(Self.self, #function)
-        default:
-            break
-        }
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        switch scrollView {
+//        case canvasView:
+//            print(Self.self, #function)
+//        default:
+//            break
+//        }
+//    }
     
 //    override var prefersHomeIndicatorAutoHidden: Bool {
 //        return true
@@ -272,7 +264,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
   
     
     @IBAction func toolIsHidden(_ sender: Any) {
-        
         if toolPicker.isVisible {
                 toolPicker.setVisible(false, forFirstResponder: canvasView)
             } else {
@@ -326,13 +317,13 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     
     @IBAction func isLayerHidden(_ sender: Any) {
-//        if textImage.isHidden {
-//            textImage.isHidden = false
-//            layerHidden.image = UIImage(systemName: "eye")
-//        } else {
-//            textImage.isHidden = true
-//            layerHidden.image = UIImage(systemName: "eye.slash")
-//        }
+        if overlayView.isHidden {
+            overlayView.isHidden = false
+            layerHidden.image = UIImage(systemName: "eye")
+        } else {
+            overlayView.isHidden = true
+            layerHidden.image = UIImage(systemName: "eye.slash")
+        }
         print("Hidden")
     }
     
@@ -354,15 +345,12 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     }
     */
 
-    
     @IBAction func Simil_Button_Clicked(_ sender: Any) {
         
         toolPicker.setVisible(false, forFirstResponder: canvasView)
         
     }
-    
-    
-    
+
     
     @IBAction func saveDrawingToCameraRoll(_ sender: Any) {
         
@@ -400,13 +388,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { action in
             
         }))
-
-        
-    
     }
     
-    
 }
-
-
 

@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import MessageUI
-import SafariServices
 
 struct settingsMenu {
     var userSettingMenu: String
@@ -22,7 +21,7 @@ class EmailViewController: UIViewController ,MFMailComposeViewControllerDelegate
     
     var settingMenuList = [
         "버전 정보 : 1.0",
-        "바른 알아보기",
+        "라이선스 : 000 Lisense",
         "개발자에게 메일 보내기"
     ]
     
@@ -82,11 +81,6 @@ extension EmailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
-        case 1:
-            guard let url = URL(string: "https://projectintheclass.github.io/Bareun/index.html") else { return }
-                let safariViewController = SFSafariViewController(url: url)
-                present(safariViewController, animated: true, completion: nil)
-
         case 2:
             if MFMailComposeViewController.canSendMail() {
                 let composeVC = MFMailComposeViewController()

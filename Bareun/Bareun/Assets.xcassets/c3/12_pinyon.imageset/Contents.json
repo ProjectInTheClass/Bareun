@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "12_pinyon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "12_pinyon.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

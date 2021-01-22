@@ -35,8 +35,6 @@ class MENU {
         FontInfo(fontName: "나눔명조체", fileName: "NanumMyeongjo"),
         FontInfo(fontName: "바른히피체", fileName: "나눔손글씨 바른히피"),
         FontInfo(fontName: "나눔바른펜", fileName: "NanumBarunpenR"),
-        FontInfo(fontName: "느릿느릿체", fileName: "나눔손글씨 느릿느릿체"),
-        FontInfo(fontName: "유니 띵땅띵땅", fileName: "나눔손글씨 유니 띵땅띵땅"),
         FontInfo(fontName: "Pinyon Script", fileName: "PinyonScript"),
         FontInfo(fontName: "Allan", fileName: "Allan-Regular"),
         FontInfo(fontName: "Shadows Into Light Two", fileName: "ShadowsIntoLightTwo-Regular")
@@ -68,16 +66,6 @@ var category1_bp:[String] = [
     "c1_06_bp.png", "c1_07_bp.png", "c1_08_bp.png", "c1_09_bp.png", "c1_10_bp.png",
     "c1_11_bp.png", "c1_12_bp.png", "c1_13_bp.png", "c1_14_bp.png", "c1_15_bp.png"
 ]
-var category1_nl:[String] = [
-    "c1_01_nl.png", "c1_02_nl.png", "c1_03_nl.png", "c1_04_nl.png", "c1_05_nl.png",
-    "c1_06_nl.png", "c1_07_nl.png", "c1_08_nl.png", "c1_09_nl.png", "c1_10_nl.png",
-    "c1_11_nl.png", "c1_12_nl.png", "c1_13_nl.png", "c1_14_nl.png", "c1_15_nl.png"
-]
-var category1_dd:[String] = [
-    "c1_01_dd.png", "c1_02_dd.png", "c1_03_dd.png", "c1_04_dd.png", "c1_05_dd.png",
-    "c1_06_dd.png", "c1_07_dd.png", "c1_08_dd.png", "c1_09_dd.png", "c1_10_dd.png",
-    "c1_11_dd.png", "c1_12_dd.png", "c1_13_dd.png", "c1_14_dd.png", "c1_15_dd.png"
-]
 
 // category2
 var category2_myeongjo:[String] = [
@@ -91,14 +79,6 @@ var category2_bh:[String] = [
 var category2_bp:[String] = [
     "c2_01_bp.png", "c2_02_bp.png", "c2_03_bp.png", "c2_04_bp.png", "c2_05_bp.png",
     "c2_06_bp.png", "c2_07_bp.png", "c2_08_bp.png", "c2_09_bp.png"
-]
-var category2_nl:[String] = [
-    "c2_01_nl.png", "c2_02_nl.png", "c2_03_nl.png", "c2_04_nl.png", "c2_05_nl.png",
-    "c2_06_nl.png", "c2_07_nl.png", "c2_08_nl.png", "c2_09_nl.png"
-]
-var category2_dd:[String] = [
-    "c2_01_dd.png", "c2_02_dd.png", "c2_03_dd.png", "c2_04_dd.png", "c2_05_dd.png",
-    "c2_06_dd.png", "c2_07_dd.png", "c2_08_dd.png", "c2_09_dd.png"
 ]
 
 // category3
