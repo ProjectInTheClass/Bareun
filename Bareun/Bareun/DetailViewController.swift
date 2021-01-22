@@ -176,6 +176,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         
         let paperSize = self.canvasView.frame.size * self.canvasView.zoomScale
         
+        
         self.underlayView.frame.size = paperSize
         self.overlayView.frame.size = paperSize
         self.canvasView.contentSize = paperSize
@@ -369,7 +370,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         toolPicker.setVisible(false, forFirstResponder: canvasView)
         
         overlayView.isHidden = true
-        
+        canvasView.zoomScale = 1.0
         let alert = UIAlertController(title: "현재 손글씨를 카메라 롤에 저장하시겠습니까?", message: "저장을 누를 시 바로 저장됩니다.", preferredStyle: .alert)
 
         self.present(alert, animated: true)
