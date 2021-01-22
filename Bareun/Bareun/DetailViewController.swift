@@ -392,6 +392,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                 })
             }
             
+            sleep(1/2)
             self.overlayView.isHidden = false
 
         }))
@@ -401,6 +402,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         // canvasView를 copy 변수 글자가 있는 이미지면 삭제
         // 일단, hidden으로 숨기고 저장 시도하기~
         alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { action in
+            sleep(1/2)
             self.overlayView.isHidden = false
         }))
     }
