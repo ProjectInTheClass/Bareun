@@ -42,6 +42,33 @@ class FontLicenseViewController: UIViewController {
             } else {
                 print("file not found!")
             }
+        case 8:
+            if let filepath = Bundle.main.path(forResource: "OFL-kalam", ofType: "txt") {
+                do {
+                    let licenseScript = try String(contentsOfFile: filepath)
+                    self.content.text = licenseScript
+                } catch {}
+            } else {
+                print("file not found!")
+            }
+        case 9:
+            if let filepath = Bundle.main.path(forResource: "OFL-petit", ofType: "txt") {
+                do {
+                    let licenseScript = try String(contentsOfFile: filepath)
+                    self.content.text = licenseScript
+                } catch {}
+            } else {
+                print("file not found!")
+            }
+        case 10:
+            if let filepath = Bundle.main.path(forResource: "OFL-sacra", ofType: "txt") {
+                do {
+                    let licenseScript = try String(contentsOfFile: filepath)
+                    self.content.text = licenseScript
+                } catch {}
+            } else {
+                print("file not found!")
+            }
         default:
             if let filepath = Bundle.main.path(forResource: "OFL-nanum", ofType: "txt") {
                 do {

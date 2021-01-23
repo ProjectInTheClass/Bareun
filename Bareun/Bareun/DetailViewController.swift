@@ -199,6 +199,12 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                             self.tempArray = category3_allan
                         case "Shadows Into Light Two":
                             self.tempArray = category3_shadow
+                        case "Kalam":
+                            self.tempArray = category3_kalam
+                        case "Petit Formal Script":
+                            self.tempArray = category3_petit
+                        case "Sacramento":
+                            self.tempArray = category3_sacra
                         default:
                             print("korean font")
                         }

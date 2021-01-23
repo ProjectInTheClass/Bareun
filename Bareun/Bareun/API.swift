@@ -33,7 +33,10 @@ class MENU {
         FontInfo(fontName: "유니 띵땅띵땅", fileName: "나눔손글씨 유니 띵땅띵땅"),
         FontInfo(fontName: "Pinyon Script", fileName: "PinyonScript"),
         FontInfo(fontName: "Allan", fileName: "Allan-Regular"),
-        FontInfo(fontName: "Shadows Into Light Two", fileName: "ShadowsIntoLightTwo-Regular")
+        FontInfo(fontName: "Shadows Into Light Two", fileName: "ShadowsIntoLightTwo-Regular"),
+        FontInfo(fontName: "Kalam", fileName: "Kalam-Light"),
+        FontInfo(fontName: "Petit Formal Script", fileName: "PetitFormalScript-Regular"),
+        FontInfo(fontName: "Sacramento", fileName: "Sacramento-Regular")
     ]
     
     
@@ -110,6 +113,21 @@ var category3_shadow:[String] = [
     "01_shadow.png", "02_shadow.png", "03_shadow.png", "04_shadow.png", "05_shadow.png",
     "06_shadow.png", "07_shadow.png", "08_shadow.png", "09_shadow.png", "10_shadow.png",
     "11_shadow.png", "12_shadow.png", "13_shadow.png"
+]
+var category3_kalam:[String] = [
+    "01_kalam.png", "02_kalam.png", "03_kalam.png", "04_kalam.png", "05_kalam.png",
+    "06_kalam.png", "07_kalam.png", "08_kalam.png", "09_kalam.png", "10_kalam.png",
+    "11_kalam.png", "12_kalam.png", "13_kalam.png"
+]
+var category3_sacra:[String] = [
+    "01_sacra.png", "02_sacra.png", "03_sacra.png", "04_sacra.png", "05_sacra.png",
+    "06_sacra.png", "07_sacra.png", "08_sacra.png", "09_sacra.png", "10_sacra.png",
+    "11_sacra.png", "12_sacra.png", "13_sacra.png"
+]
+var category3_petit:[String] = [
+    "01_petit.png", "02_petit.png", "03_petit.png", "04_petit.png", "05_petit.png",
+    "06_petit.png", "07_petit.png", "08_petit.png", "09_petit.png", "10_petit.png",
+    "11_petit.png", "12_petit.png", "13_petit.png"
 ]
 
 // category4
