@@ -80,15 +80,6 @@ class FontLicenseViewController: UIViewController {
             }
         }
         // Do any additional setup after loading the view.
-//        content.text = Shared.shared.fontLicense
-//        if let filepath = Bundle.main.path(forResource: "OFL-Pinyon", ofType: "txt") {
-//            do {
-//                let licenseScript = try String(contentsOfFile: filepath)
-//                self.content.text = licenseScript
-//            } catch {}
-//        } else {
-//            print("file not found!")
-//        }
     }
     
     /*
