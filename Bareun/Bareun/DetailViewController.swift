@@ -252,11 +252,16 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         
         if segue.identifier == "testImage" {
             let dvc = segue.destination as! ImageSimilarityViewController
+            canvasView.zoomScale = 1.0
+            underlayView.isHidden = true
+            overlayView.isHidden = true
             UIGraphicsBeginImageContextWithOptions(self.canvasView.bounds.size, false, UIScreen.main.scale)
             self.canvasView.drawHierarchy(in: self.canvasView.bounds, afterScreenUpdates: true)
             
             let compareImage = UIGraphicsGetImageFromCurrentImageContext()
             dvc.newImage = compareImage
+            underlayView.isHidden = false
+            overlayView.isHidden = false
         }
     }
     
