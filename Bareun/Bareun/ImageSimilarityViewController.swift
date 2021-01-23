@@ -85,7 +85,7 @@ class ImageSimilarityViewController: UIViewController {
 //        newImage = newImage?.maskWithColors(color: textColor)
         original.image = modelImage
         compare.image = newImage
-ß
+
         
         scoreLabel.isHidden = true
     }
