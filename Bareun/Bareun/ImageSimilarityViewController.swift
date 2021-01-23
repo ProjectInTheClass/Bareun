@@ -50,7 +50,7 @@ class ImageSimilarityViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         var modelImage: UIImage = UIImage(named:Shared.shared.CurTextImage ?? "c1_01_mj")!
-        modelImage = modelImage.cropToRect(rect: CGRect.init(0.0,0.0,(modelImage.size.width),(modelImage.size.height)/1.5))!
+        modelImage = modelImage.cropToRect(rect: CGRect.init(0.0,20.0,(modelImage.size.width),(modelImage.size.height)/1.7))!
 //        newImage = TransperentImageToWhite(image: newImage!)
         guard let currentCGImage = newImage?.cgImage else { return }
         let currentCIImage = CIImage(cgImage: currentCGImage)
@@ -97,7 +97,7 @@ extension UIImage {
         context.translateBy(x: 0, y: -sz.height)
         context.draw(maskImage, in: bounds)
         context.restoreGState()
-        let noAlphaImage = UIGraphicsGetImageFromCurrentImageContext()  elements.
+        let noAlphaImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
         let noAlphaCGRef = noAlphaImage?.cgImage // get CGImage.
