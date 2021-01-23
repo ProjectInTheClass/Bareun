@@ -50,7 +50,7 @@ class ImageSimilarityViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         var modelImage: UIImage = UIImage(named:Shared.shared.CurTextImage ?? "c1_01_mj")!
-        modelImage = modelImage.cropToRect(rect: CGRect.init(10.0,20.0,(modelImage.size.width)-10.0,(modelImage.size.height)/1.7))!
+        modelImage = modelImage.cropToRect(rect: CGRect.init(25.0, 17.0,(modelImage.size.width)-25.0,(modelImage.size.height)/1.75))!
 //        newImage = TransperentImageToWhite(image: newImage!)
         guard let currentCGImage = newImage?.cgImage else { return }
         let currentCIImage = CIImage(cgImage: currentCGImage)

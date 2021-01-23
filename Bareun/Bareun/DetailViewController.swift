@@ -271,7 +271,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             var compareImage = UIGraphicsGetImageFromCurrentImageContext()
             
 //            compareImage = UIImage.cropToBounds(image: compareImage, width: compareImage?.size.width, height: (compareImage?.size.height)!/2)
-            compareImage = compareImage?.cropToRect(rect: CGRect.init(10.0,20.0,(compareImage?.size.width)!-10.0,(compareImage?.size.height)!/1.7))
+            compareImage = compareImage?.cropToRect(rect: CGRect.init(25.0,17.0,(compareImage?.size.width)!-25.0,(compareImage?.size.height)!/1.75))
 
             dvc.newImage = compareImage
             underlayView.isHidden = false
@@ -355,7 +355,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             overlayView.isHidden = true
             layerHidden.image = UIImage(systemName: "eye.slash")
         }
-        print("Hidden")
+
     }
     
 
@@ -378,6 +378,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 
     @IBAction func Simil_Button_Clicked(_ sender: Any) {
         
+        canvasView.zoomScale = 1.0
         toolPicker.setVisible(false, forFirstResponder: canvasView)
         
     }
