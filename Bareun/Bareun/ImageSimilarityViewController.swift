@@ -49,8 +49,8 @@ class ImageSimilarityViewController: UIViewController {
         
         original.image = UIImage(named: Shared.shared.CurTextImage ?? "c1_01_mj")
         compare.image = newImage
+//        compare.image = UIImage(named: ")
         
-        
-//        scoreLabel.isHidden = true
+        scoreLabel.isHidden = true
     }
 }
