@@ -95,6 +95,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3903E46025BC8AF7002F4780 /* FontFiles */ = {
+			isa = PBXGroup;
+			children = (
+				39C14D6E25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf */,
+				39C14D6B25ADEF99008E03E3 /* Allan-Regular.ttf */,
+				39C14D6825ADEF91008E03E3 /* PinyonScript-Regular.ttf */,
+				3903E45425BC4F4D002F4780 /* Sacramento-Regular.ttf */,
+				3903E45625BC4F4D002F4780 /* PetitFormalScript-Regular.ttf */,
+				3903E45525BC4F4D002F4780 /* Kalam-Light.ttf */,
+				39C14D6525ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf */,
+				9A4D3CC025BAB8C60066C33A /* 나눔손글씨 유니 띵땅띵땅.ttf */,
+				9A4D3CC325BAB8CE0066C33A /* 나눔손글씨 느릿느릿체.ttf */,
+				393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */,
+				3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */,
+				3963E5AD25A45D780028F8B8 /* NanumMyeongjoBold.ttf */,
+				3963E5AF25A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf */,
+			);
+			path = FontFiles;
+			sourceTree = "<group>";
+		};
+		3903E46125BC8B15002F4780 /* License Files */ = {
+			isa = PBXGroup;
+			children = (
+				3903E45125BC4F3A002F4780 /* OFL-petit.txt */,
+				3903E44E25BC4EE8002F4780 /* OFL-sacra.txt */,
+				3903E44B25BC4EC8002F4780 /* OFL-kalam.txt */,
+				390B206825B573A5009C6DCD /* OFL-nanum.txt */,
+				393C789425B216AF00131BCE /* OFL-Pinyon.txt */,
+				393C789B25B216D700131BCE /* OFL-Shadow.txt */,
+				393C78A025B27E7300131BCE /* OFL-Allan.txt */,
+			);
+			path = "License Files";
+			sourceTree = "<group>";
+		};
 		3963E53D25A3081C0028F8B8 = {
 			isa = PBXGroup;
 			children = (
@@ -114,26 +148,8 @@
 		3963E54825A3081C0028F8B8 /* Bareun */ = {
 			isa = PBXGroup;
 			children = (
-				3903E45125BC4F3A002F4780 /* OFL-petit.txt */,
-				3903E44E25BC4EE8002F4780 /* OFL-sacra.txt */,
-				3903E44B25BC4EC8002F4780 /* OFL-kalam.txt */,
-				390B206825B573A5009C6DCD /* OFL-nanum.txt */,
-				393C789425B216AF00131BCE /* OFL-Pinyon.txt */,
-				393C789B25B216D700131BCE /* OFL-Shadow.txt */,
-				393C78A025B27E7300131BCE /* OFL-Allan.txt */,
-				39C14D6E25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf */,
-				39C14D6B25ADEF99008E03E3 /* Allan-Regular.ttf */,
-				39C14D6825ADEF91008E03E3 /* PinyonScript-Regular.ttf */,
-				3903E45425BC4F4D002F4780 /* Sacramento-Regular.ttf */,
-				3903E45625BC4F4D002F4780 /* PetitFormalScript-Regular.ttf */,
-				3903E45525BC4F4D002F4780 /* Kalam-Light.ttf */,
-				39C14D6525ADEF44008E03E3 /* 나눔손글씨 바른히피.ttf */,
-				9A4D3CC025BAB8C60066C33A /* 나눔손글씨 유니 띵땅띵땅.ttf */,
-				9A4D3CC325BAB8CE0066C33A /* 나눔손글씨 느릿느릿체.ttf */,
-				393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */,
-				3963E5AE25A45D780028F8B8 /* NanumMyeongjo.ttf */,
-				3963E5AD25A45D780028F8B8 /* NanumMyeongjoBold.ttf */,
-				3963E5AF25A45D780028F8B8 /* NanumMyeongjoExtraBold.ttf */,
+				3903E46125BC8B15002F4780 /* License Files */,
+				3903E46025BC8AF7002F4780 /* FontFiles */,
 				3963E54925A3081C0028F8B8 /* AppDelegate.swift */,
 				3963E54B25A3081C0028F8B8 /* SceneDelegate.swift */,
 				3963E54D25A3081C0028F8B8 /* ViewController.swift */,
