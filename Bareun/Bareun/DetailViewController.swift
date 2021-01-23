@@ -22,7 +22,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     var menu:MenuItem? = nil
   
     var textImage: UIImage = UIImage(named:"c1_01_mj")!
-    var backgroundImage: UIImage = UIImage(named:"backgroundkorChangedSize")!
+    var backgroundImage: UIImage = UIImage(named:"backgroundkor")!
     
 //    lazy var textImage: UIImage = {
 //        return UIImage(named: "c1_01_mj")!
@@ -96,7 +96,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             textImage = UIImage(named: tempArray[imageIndex])!
             EnglishMeaningLabel.isHidden = true
         case "쓸모있는 영어 문장":
-            backgroundImage = UIImage(named: "backgroundeng.png")!
+            backgroundImage = UIImage(named: "backgroundeng2.png")!
             tempArray = category3_pinyon
             textImage = UIImage(named: tempArray[imageIndex])!
             EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
