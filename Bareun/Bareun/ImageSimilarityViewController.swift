@@ -30,6 +30,7 @@ class ImageSimilarityViewController: UIViewController {
     
     @IBAction func compare(_ sender: Any) {
         
+        
         guard let originalFPO = getFPO(from: original.image!) else { return }
         guard let compareFPO = getFPO(from: compare.image!) else { return }
         
@@ -45,9 +46,9 @@ class ImageSimilarityViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
-        
-        original.image = UIImage(named: Shared.shared.CurTextImage ?? "c1_01_mj")
+        var modelImage: UIImage = UIImage(named:Shared.shared.CurTextImage ?? "c1_01_mj")!
+        modelImage = modelImage.cropToRect(rect: CGRect.init(0.0,0.0,(modelImage.size.width),(modelImage.size.height)/1.5))!
+        original.image = modelImage
         compare.image = newImage
 //        compare.image = UIImage(named: ")
         

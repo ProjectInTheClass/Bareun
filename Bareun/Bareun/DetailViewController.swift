@@ -182,6 +182,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.canvasView.contentSize = paperSize
     }
     
+
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popover" {
             toolPicker.setVisible(false, forFirstResponder: canvasView)
@@ -255,10 +257,16 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             canvasView.zoomScale = 1.0
             underlayView.isHidden = true
             overlayView.isHidden = true
+            
             UIGraphicsBeginImageContextWithOptions(self.canvasView.bounds.size, false, UIScreen.main.scale)
             self.canvasView.drawHierarchy(in: self.canvasView.bounds, afterScreenUpdates: true)
             
-            let compareImage = UIGraphicsGetImageFromCurrentImageContext()
+            
+            var compareImage = UIGraphicsGetImageFromCurrentImageContext()
+            
+//            compareImage = UIImage.cropToBounds(image: compareImage, width: compareImage?.size.width, height: (compareImage?.size.height)!/2)
+            compareImage = compareImage?.cropToRect(rect: CGRect.init(0.0,0.0,(compareImage?.size.width)!,(compareImage?.size.height)!/1.5))
+
             dvc.newImage = compareImage
             underlayView.isHidden = false
             overlayView.isHidden = false
@@ -414,3 +422,15 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
 }
 
+extension UIImage {
+    func cropToRect(rect: CGRect!) -> UIImage? {
+        // Correct rect size based on the device screen scale
+        let scaledRect = CGRect.init(rect.origin.x * self.scale, rect.origin.y * self.scale, rect.size.width * self.scale, rect.size.height * self.scale);
+        // New CGImage reference based on the input image (self) and the specified rect
+        let imageRef = self.cgImage!.cropping(to: scaledRect);
+        // Gets an UIImage from the CGImage
+        let result = UIImage(cgImage: imageRef!, scale: self.scale, orientation: self.imageOrientation)
+        // Returns the final image, or NULL on error
+        return result;
+    }
+}
