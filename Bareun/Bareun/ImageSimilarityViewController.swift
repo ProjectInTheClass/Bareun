@@ -42,19 +42,8 @@ class ImageSimilarityViewController: UIViewController {
         
     }
     
-    func TransperentImageToWhite(image: UIImage) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
-        let imageRect: CGRect = CGRect.init(0.0, 0.0, image.size.width, image.size.height)
-        let ctx: CGContext = UIGraphicsGetCurrentContext()!
-        // Draw a white background (for white mask)
-        ctx.setFillColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        ctx.fill(imageRect)
-        // Apply the source image's alpha
-        image.draw(in: imageRect, blendMode: .normal, alpha: 1.0)
-        let mask: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        return mask
-    }
+
+    let textColor: UIColor = UIColor(displayP3Red: 0.58, green: 0.58, blue: 0.58, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +59,7 @@ class ImageSimilarityViewController: UIViewController {
         filter?.setValue(currentCIImage, forKey: "inputImage")
 
         // set a gray value for the tint color
-        filter?.setValue(CIColor(red: 0.58, green: 0.58, blue: 0.58), forKey: "inputColor")
+        filter?.setValue(CIColor(red: 0.94, green: 0.94, blue: 0.94), forKey: "inputColor")
 
         filter?.setValue(1.0, forKey: "inputIntensity")
         guard let outputImage = filter?.outputImage else { return }
@@ -82,6 +71,7 @@ class ImageSimilarityViewController: UIViewController {
             newImage = processedImage
 //            print(processedImage.size)
         }
+        newImage = newImage?.maskWithColors(color: textColor)
 //        newImage = newImage?.maskWithColors(color: textColor)
         original.image = modelImage
         compare.image = newImage
@@ -91,3 +81,40 @@ class ImageSimilarityViewController: UIViewController {
     }
 }
 
+extension UIImage {
+    func maskWithColors(color: UIColor) -> UIImage? {
+        let maskingColors: [CGFloat] = [0,0,0,0,0,0,0]
+        let maskImage = cgImage! //
+        let bounds = CGRect(x: 0, y: 0, width: size.width * 3, height: size.height * 3) // * 3, for best resolution.
+        let sz = CGSize(width: size.width * 3, height: size.height * 3) // Size.
+        var returnImage: UIImage? // Image, to return
+
+
+        UIGraphicsBeginImageContextWithOptions(sz, true, 0.0)
+        let context = UIGraphicsGetCurrentContext()!
+        context.saveGState()
+        context.scaleBy(x: 1.0, y: -1.0)
+        context.translateBy(x: 0, y: -sz.height)
+        context.draw(maskImage, in: bounds)
+        context.restoreGState()
+        let noAlphaImage = UIGraphicsGetImageFromCurrentImageContext()  elements.
+        UIGraphicsEndImageContext()
+
+        let noAlphaCGRef = noAlphaImage?.cgImage // get CGImage.
+
+        if let imgRefCopy = noAlphaCGRef?.copy(maskingColorComponents: maskingColors) { // Magic.
+            UIGraphicsBeginImageContextWithOptions(sz, false, 0.0)
+            let context = UIGraphicsGetCurrentContext()!
+            context.scaleBy(x: 1.0, y: -1.0)
+            context.translateBy(x: 0, y: -sz.height)
+            context.clip(to: bounds, mask: maskImage)
+            context.setFillColor(color.cgColor)
+            context.fill(bounds)
+            context.draw(imgRefCopy, in: bounds) // draw new image
+            let finalImage = UIGraphicsGetImageFromCurrentImageContext()
+            returnImage = finalImage! // YEAH!
+            UIGraphicsEndImageContext()
+        }
+        return returnImage
+    }
+}
