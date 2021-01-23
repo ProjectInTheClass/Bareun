@@ -239,12 +239,16 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                                 self.tempArray = category1_nl
                             } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
                                 self.tempArray = category2_nl
+                            } else {
+                                self.tempArray = category4_nl
                             }
                         case "유니 띵땅띵땅":
                             if self.titleLabel.text == "나를 깨우는 명언" {
                                 self.tempArray = category1_dd
                             } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
                                 self.tempArray = category2_dd
+                            } else {
+                                self.tempArray = category4_dd
                             }
                         default:
                             print("english font")

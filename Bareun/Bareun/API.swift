@@ -149,6 +149,18 @@ var category4_bp:[String] = [
     "c4_11_bp.png", "c4_12_bp.png", "c4_13_bp.png", "c4_14_bp.png", "c4_15_bp.png",
     "c4_16_bp.png", "c4_17_bp.png", "c4_18_bp.png", "c4_19_bp.png", "c4_20_bp.png"
 ]
+var category4_nl:[String] = [
+    "c4_01_nl.png", "c4_02_nl.png", "c4_03_nl.png", "c4_04_nl.png", "c4_05_nl.png",
+    "c4_06_nl.png", "c4_07_nl.png", "c4_08_nl.png", "c4_09_nl.png", "c4_10_nl.png",
+    "c4_11_nl.png", "c4_12_nl.png", "c4_13_nl.png", "c4_14_nl.png", "c4_15_nl.png",
+    "c4_16_nl.png", "c4_17_nl.png", "c4_18_nl.png", "c4_19_nl.png", "c4_20_nl.png"
+]
+var category4_dd:[String] = [
+    "c4_01_dd.png", "c4_02_dd.png", "c4_03_dd.png", "c4_04_dd.png", "c4_05_dd.png",
+    "c4_06_dd.png", "c4_07_dd.png", "c4_08_dd.png", "c4_09_dd.png", "c4_10_dd.png",
+    "c4_11_dd.png", "c4_12_dd.png", "c4_13_dd.png", "c4_14_dd.png", "c4_15_dd.png",
+    "c4_16_dd.png", "c4_17_dd.png", "c4_18_dd.png", "c4_19_dd.png", "c4_20_dd.png"
+]
 
 var EnglishMeaning:[String] = [
     "아무나 안 만나려다 아무도 못 만나는 중입니다.", "날 곤란한 상황에서 벗어나게 해줘서 고마워.", "난 이 순간을 영원히 못 잊을 거야.",
