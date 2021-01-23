@@ -30,16 +30,25 @@ class ImageSimilarityViewController: UIViewController {
     
     @IBAction func compare(_ sender: Any) {
         
-        
         guard let originalFPO = getFPO(from: original.image!) else { return }
         guard let compareFPO = getFPO(from: compare.image!) else { return }
         
         var distance = Float(0)
         try? compareFPO.computeDistance(&distance, to: originalFPO)
-        print(100-distance)
+        print("실제 정확도 \(100-distance)")
         scoreLabel.text = "\(round((100-distance) * 100) / 100) 점 입니다."
         scoreLabel.isHidden = false
         
+    }
+    
+    func getSmallestScore(original: UIImage, compare: UIImage) -> Float{
+        guard let originalFPO = getFPO(from: original) else { return 0 }
+        guard let compareFPO = getFPO(from: compare) else { return 0 }
+        
+        var distance = Float(0)
+        try? compareFPO.computeDistance(&distance, to: originalFPO)
+        
+        return 100-distance
     }
     
 
@@ -50,7 +59,7 @@ class ImageSimilarityViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         var modelImage: UIImage = UIImage(named:Shared.shared.CurTextImage ?? "c1_01_mj")!
-        modelImage = modelImage.cropToRect(rect: CGRect.init(25.0, 17.0,(modelImage.size.width)-25.0,(modelImage.size.height)/1.75))!
+        modelImage = modelImage.cropToRect(rect: CGRect.init(25.0, 17.0,(modelImage.size.width)-23.0,(modelImage.size.height)/1.75))!
 //        newImage = TransperentImageToWhite(image: newImage!)
         guard let currentCGImage = newImage?.cgImage else { return }
         let currentCIImage = CIImage(cgImage: currentCGImage)
@@ -115,6 +124,7 @@ extension UIImage {
             returnImage = finalImage! // YEAH!
             UIGraphicsEndImageContext()
         }
+        
         return returnImage
     }
 }
