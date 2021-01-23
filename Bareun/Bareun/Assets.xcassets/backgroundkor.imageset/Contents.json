@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "backgroundkor.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "backgroundkor.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
