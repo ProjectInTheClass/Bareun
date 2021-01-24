@@ -25,6 +25,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     var textImage: UIImage = UIImage(named:"c1_01_mj")!
     var backgroundImage: UIImage = UIImage(named:"backgroundkor")!
     
+    @IBAction func unwindFromImageSimil(segue:UIStoryboardSegue) {}
+    
 //    lazy var textImage: UIImage = {
 //        return UIImage(named: "c1_01_mj")!
 //    }()
