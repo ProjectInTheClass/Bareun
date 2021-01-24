@@ -305,7 +305,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             var compareImage = UIGraphicsGetImageFromCurrentImageContext()
             
 //            compareImage = UIImage.cropToBounds(image: compareImage, width: compareImage?.size.width, height: (compareImage?.size.height)!/2)
-            compareImage = compareImage?.cropToRect(rect: CGRect.init(25.0,15.0,(compareImage?.size.width)!-25.0,(compareImage?.size.height)!/1.75))
+            compareImage = compareImage?.cropToRect(rect: CGRect.init(25.0,13.0,(compareImage?.size.width)!-25.0,(compareImage?.size.height)!/1.75))
 
             dvc.newImage = compareImage
             underlayView.isHidden = false
