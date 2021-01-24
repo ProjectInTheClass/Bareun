@@ -115,6 +115,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
         self.underlayView.image = backgroundImage
         self.overlayView.image = textImage
+        if (titleLabel.text != "쓸모있는 영어 문장" || canvasView.zoomScale != 1.0 ){
+            EnglishMeaningLabel.isHidden = true
+        } else{
+            EnglishMeaningLabel.isHidden = false
+        }
 //        canvasView.delegate = self
 //        canvasView.drawing = drawing
 //
@@ -132,6 +137,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         toolPicker.addObserver(canvasView)
         toolPicker.addObserver(self)
         canvasView.becomeFirstResponder()
+        
+
 
     }
     
@@ -165,6 +172,12 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             self.overlayView.frame.size = paperSize
             self.canvasView.contentSize = paperSize
             
+            if (titleLabel.text != "쓸모있는 영어 문장" || canvasView.zoomScale != 1.0 ){
+                EnglishMeaningLabel.isHidden = true
+            } else{
+                EnglishMeaningLabel.isHidden = false
+            }
+            
         default:
             break
         }
@@ -184,6 +197,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.overlayView.frame.size = paperSize
         self.canvasView.contentSize = paperSize
         
+        if (titleLabel.text != "쓸모있는 영어 문장" || canvasView.zoomScale != 1.0 ){
+            EnglishMeaningLabel.isHidden = true
+        } else{
+            EnglishMeaningLabel.isHidden = false
+        }
 //        print(self.underlayView.frame)
 //        print(self.overlayView.frame)
 //        print(self.canvasView.contentSize)
@@ -340,6 +358,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
         overlayView.image = textImage
         toolPicker.setVisible(false, forFirstResponder: canvasView)
+        if (titleLabel.text == "쓸모있는 영어 문장" || canvasView.zoomScale != 1.0 ){
+            EnglishMeaningLabel.isHidden = true
+        } else{
+            EnglishMeaningLabel.isHidden = false
+        }
     }
     
     @IBAction func goToPreviousPage(_ sender: Any) {
@@ -362,6 +385,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
         overlayView.image = textImage
         toolPicker.setVisible(false, forFirstResponder: canvasView)
+        if (titleLabel.text != "쓸모있는 영어 문장" || canvasView.zoomScale != 1.0 ){
+            EnglishMeaningLabel.isHidden = true
+        } else{
+            EnglishMeaningLabel.isHidden = false
+        }
     }
     
     
@@ -407,13 +435,14 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
       
         toolPicker.setVisible(false, forFirstResponder: canvasView)
         sleep(1/2)
-        overlayView.isHidden = true
-        EnglishMeaningLabel.isHidden = true
         canvasView.zoomScale = 1.0
+        overlayView.isHidden = true
+        EnglishMeaningLabel.text = " "
+        
         let alert = UIAlertController(title: "현재 손글씨를 카메라 롤에 저장하시겠습니까?", message: "저장을 누를 시 바로 저장됩니다.", preferredStyle: .alert)
-
+        
         self.present(alert, animated: true)
-            
+       
         alert.addAction(UIAlertAction(title: "저장", style: .default, handler: { action in
             UIGraphicsBeginImageContextWithOptions(self.underlayView.bounds.size, false, UIScreen.main.scale)
             UIGraphicsBeginImageContextWithOptions(self.canvasView.bounds.size, false, UIScreen.main.scale)
@@ -434,6 +463,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             sleep(1/2)
             self.overlayView.isHidden = false
             self.EnglishMeaningLabel.isHidden = false
+            self.EnglishMeaningLabel.text = EnglishMeaning[self.imageIndex]
 
         }))
         
@@ -445,7 +475,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             sleep(1/2)
             self.overlayView.isHidden = false
             self.EnglishMeaningLabel.isHidden = false
+            self.EnglishMeaningLabel.text = EnglishMeaning[self.imageIndex]
         }))
+        
+       
     }
     
 }

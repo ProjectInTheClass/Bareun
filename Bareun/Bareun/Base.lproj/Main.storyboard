@@ -272,16 +272,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="786"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxQ-54-5vy">
-                                                <rect key="frame" x="30" y="814.5" width="48" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlI-Pa-hkY">
+                                                <rect key="frame" x="50" y="413.5" width="4.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="J29-mU-soK" firstAttribute="bottom" secondItem="NxQ-54-5vy" secondAttribute="bottom" constant="8.5" id="KxQ-HH-ege"/>
-                                            <constraint firstItem="NxQ-54-5vy" firstAttribute="leading" secondItem="J29-mU-soK" secondAttribute="leading" constant="30" id="Ppe-OM-Ht3"/>
+                                            <constraint firstItem="wlI-Pa-hkY" firstAttribute="leading" secondItem="J29-mU-soK" secondAttribute="leading" constant="50" id="PKe-2C-Yja"/>
+                                            <constraint firstItem="wlI-Pa-hkY" firstAttribute="centerY" secondItem="SFz-3n-y6B" secondAttribute="centerY" id="f64-7J-gUJ"/>
                                         </constraints>
                                         <viewLayoutGuide key="contentLayoutGuide" id="1fK-7c-GmC"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="J29-mU-soK"/>
@@ -377,7 +377,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="MoP-eH-SMh"/>
                     <connections>
-                        <outlet property="EnglishMeaningLabel" destination="NxQ-54-5vy" id="dH2-19-76D"/>
+                        <outlet property="EnglishMeaningLabel" destination="wlI-Pa-hkY" id="m5x-j8-3Uj"/>
                         <outlet property="canvasView" destination="SFz-3n-y6B" id="HBw-ai-XME"/>
                         <outlet property="countLabel" destination="gHo-Al-ybN" id="uyl-8V-6nB"/>
                         <outlet property="layerHidden" destination="Gnt-ba-dip" id="piE-gt-hd3"/>
@@ -603,18 +603,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="character" catalog="system" width="32" height="32"/>
-        <image name="checkmark" catalog="system" width="32" height="32"/>
-        <image name="chevron.backward" catalog="system" width="32" height="32"/>
-        <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
-        <image name="clear" catalog="system" width="32" height="32"/>
-        <image name="eye" catalog="system" width="32" height="32"/>
-        <image name="house" catalog="system" width="32" height="32"/>
-        <image name="info.circle" catalog="system" width="32" height="32"/>
+        <image name="character" catalog="system" width="128" height="128"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="pen2" width="720" height="720"/>
-        <image name="pencil" catalog="system" width="32" height="32"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="settingImage" width="2000" height="2000"/>
-        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
