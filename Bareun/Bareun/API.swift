@@ -28,7 +28,7 @@ class MENU {
     var fontItems:[FontInfo] = [
         FontInfo(fontName: "나눔명조체", fileName: "NanumMyeongjo"),
         FontInfo(fontName: "바른히피체", fileName: "나눔손글씨 바른히피"),
-        FontInfo(fontName: "나눔바른펜", fileName: "NanumBarunpenR"),
+        FontInfo(fontName: "나눔바른펜(한/영)", fileName: "NanumBarunpenR"),
         FontInfo(fontName: "느릿느릿체", fileName: "나눔손글씨 느릿느릿체"),
         FontInfo(fontName: "유니 띵땅띵땅", fileName: "나눔손글씨 유니 띵땅띵땅"),
         FontInfo(fontName: "Pinyon Script", fileName: "PinyonScript"),

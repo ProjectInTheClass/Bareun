@@ -214,7 +214,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                             self.tempArray = category3_petit
                         case "Sacramento":
                             self.tempArray = category3_sacra
-                        case "나눔바른펜":
+                        case "나눔바른펜(한/영)":
                             self.tempArray = category3_bp
                         default:
                             print("korean font")
@@ -237,7 +237,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                             } else {
                                 self.tempArray = category4_bh
                             }
-                        case "나눔바른펜":
+                        case "나눔바른펜(한/영)":
                             if self.titleLabel.text == "나를 깨우는 명언" {
                                 self.tempArray = category1_bp
                             } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
