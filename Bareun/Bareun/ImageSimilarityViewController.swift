@@ -42,7 +42,7 @@ class ImageSimilarityViewController: UIViewController {
         print("최소 점수 \(blankScore)")
         
         // 유사도 new 공식
-        let value: Float = (94 - blankScore) / 5
+        let value: Float = (94.5 - blankScore) / 5
         print(value)
         switch comparedScore {
         case 0 ... (blankScore + value):
@@ -55,9 +55,9 @@ class ImageSimilarityViewController: UIViewController {
             scoreLabel.text = "⭐️⭐️⭐️"
 
         case (blankScore + 3 * value) ... (blankScore + 4 * value):
-            scoreLabel.text = "⭐️⭐️⭐️"
+            scoreLabel.text = "⭐️⭐️⭐️⭐️"
             
-        case (blankScore + 4 * value) ... (blankScore + 5 * value):
+        case (blankScore + 4 * value) ... 100:
             scoreLabel.text = "⭐️⭐️⭐️⭐️⭐️"
 
         default:
