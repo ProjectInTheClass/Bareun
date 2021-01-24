@@ -30,13 +30,16 @@ class ImageSimilarityViewController: UIViewController {
     
     @IBAction func compare(_ sender: Any) {
         
-        guard let originalFPO = getFPO(from: original.image!) else { return }
-        guard let compareFPO = getFPO(from: compare.image!) else { return }
-        
-        var distance = Float(0)
-        try? compareFPO.computeDistance(&distance, to: originalFPO)
-        print("실제 정확도 \(100-distance)")
-        scoreLabel.text = "\(round((100-distance) * 100) / 100) 점 입니다."
+//        guard let originalFPO = getFPO(from: original.image!) else { return }
+//        guard let compareFPO = getFPO(from: compare.image!) else { return }
+//
+//        var distance = Float(0)
+//        try? compareFPO.computeDistance(&distance, to: originalFPO)
+        let comparedScore:Float = getSmallestScore(original: original.image!, compare: compare.image!)
+        print("실제 정확도 \(comparedScore)")
+        let blankScore:Float = getSmallestScore(original: original.image!, compare: UIImage(named:"blank")!)
+        scoreLabel.text = "\(round( comparedScore * 100) / 100) 점 입니다."
+        print("최소 점수 \(blankScore)")
         scoreLabel.isHidden = false
         
     }
@@ -59,7 +62,7 @@ class ImageSimilarityViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         var modelImage: UIImage = UIImage(named:Shared.shared.CurTextImage ?? "c1_01_mj")!
-        modelImage = modelImage.cropToRect(rect: CGRect.init(25.0, 17.0,(modelImage.size.width)-23.0,(modelImage.size.height)/1.75))!
+        modelImage = modelImage.cropToRect(rect: CGRect.init(25.0, 17.0,(modelImage.size.width)-25.0,(modelImage.size.height)/1.75))!
 //        newImage = TransperentImageToWhite(image: newImage!)
         guard let currentCGImage = newImage?.cgImage else { return }
         let currentCIImage = CIImage(cgImage: currentCGImage)
@@ -84,8 +87,6 @@ class ImageSimilarityViewController: UIViewController {
 //        newImage = newImage?.maskWithColors(color: textColor)
         original.image = modelImage
         compare.image = newImage
-
-        
         scoreLabel.isHidden = true
     }
 }

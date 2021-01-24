@@ -69,12 +69,12 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.canvasView.showsHorizontalScrollIndicator = false
         self.canvasView.showsVerticalScrollIndicator = false
         
-        print("First Scene")
-        print(self.underlayView.frame)
-        print(self.overlayView.frame)
-        print(self.canvasView.contentSize)
-        print(self.canvasView.frame)
-        print("============================")
+//        print("First Scene")
+//        print(self.underlayView.frame)
+//        print(self.overlayView.frame)
+//        print(self.canvasView.contentSize)
+//        print(self.canvasView.frame)
+//        print("============================")
         
         self.underlayView.contentMode = .scaleToFill
         self.underlayView.frame = CGRect(origin: CGPoint.zero, size: canvasView.frame.size)
@@ -184,11 +184,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.overlayView.frame.size = paperSize
         self.canvasView.contentSize = paperSize
         
-        print(self.underlayView.frame)
-        print(self.overlayView.frame)
-        print(self.canvasView.contentSize)
-        print(self.canvasView.frame)
-        print("============================")
+//        print(self.underlayView.frame)
+//        print(self.overlayView.frame)
+//        print(self.canvasView.contentSize)
+//        print(self.canvasView.frame)
+//        print("============================")
     }
     
 
@@ -284,7 +284,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             var compareImage = UIGraphicsGetImageFromCurrentImageContext()
             
 //            compareImage = UIImage.cropToBounds(image: compareImage, width: compareImage?.size.width, height: (compareImage?.size.height)!/2)
-            compareImage = compareImage?.cropToRect(rect: CGRect.init(25.0,17.0,(compareImage?.size.width)!-23.0,(compareImage?.size.height)!/1.75))
+            compareImage = compareImage?.cropToRect(rect: CGRect.init(25.0,17.0,(compareImage?.size.width)!-25.0,(compareImage?.size.height)!/1.75))
 
             dvc.newImage = compareImage
             underlayView.isHidden = false
