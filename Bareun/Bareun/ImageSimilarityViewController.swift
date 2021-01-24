@@ -38,8 +38,31 @@ class ImageSimilarityViewController: UIViewController {
         let comparedScore:Float = getSmallestScore(original: original.image!, compare: compare.image!)
         print("실제 정확도 \(comparedScore)")
         let blankScore:Float = getSmallestScore(original: original.image!, compare: UIImage(named:"blank")!)
-        scoreLabel.text = "\(round( comparedScore * 100) / 100) 점 입니다."
+//        scoreLabel.text = "\(round( comparedScore * 100) / 100) 점 입니다."
         print("최소 점수 \(blankScore)")
+        
+        // 유사도 new 공식
+        let value: Float = (94 - blankScore) / 5
+        print(value)
+        switch comparedScore {
+        case 0 ... (blankScore + value):
+            scoreLabel.text = "⭐️"
+
+        case (blankScore + value) ... (blankScore + 2 * value):
+            scoreLabel.text = "⭐️⭐️"
+
+        case (blankScore + 2 * value) ... (blankScore + 3 * value):
+            scoreLabel.text = "⭐️⭐️⭐️"
+
+        case (blankScore + 3 * value) ... (blankScore + 4 * value):
+            scoreLabel.text = "⭐️⭐️⭐️"
+            
+        case (blankScore + 4 * value) ... (blankScore + 5 * value):
+            scoreLabel.text = "⭐️⭐️⭐️⭐️⭐️"
+
+        default:
+            scoreLabel.text = "default"
+        }
         scoreLabel.isHidden = false
         
     }
