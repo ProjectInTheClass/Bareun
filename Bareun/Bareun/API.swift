@@ -99,6 +99,11 @@ var category2_dd:[String] = [
 ]
 
 // category3
+var category3_bp:[String] = [
+    "01_bp.png", "02_bp.png", "03_bp.png", "04_bp.png", "05_bp.png",
+    "06_bp.png", "07_bp.png", "08_bp.png", "09_bp.png", "10_bp.png",
+    "11_bp.png", "12_bp.png", "13_bp.png"
+]
 var category3_pinyon:[String] = [
     "01_pinyon.png", "02_pinyon.png", "03_pinyon.png", "04_pinyon.png", "05_pinyon.png",
     "06_pinyon.png", "07_pinyon.png", "08_pinyon.png", "09_pinyon.png", "10_pinyon.png",
