@@ -16,7 +16,7 @@ class FontLicenseViewController: UIViewController {
         print("shared : \(Shared.shared.licenseIndex)")
         switch Shared.shared.licenseIndex {
         case 5:
-            if let filepath = Bundle.main.path(forResource: "OFL-Pinyon", ofType: "txt") {
+            if let filepath = Bundle.main.path(forResource: "OFL-Oneprettynight", ofType: "txt") {
                 do {
                     let licenseScript = try String(contentsOfFile: filepath)
                     self.content.text = licenseScript
@@ -25,7 +25,7 @@ class FontLicenseViewController: UIViewController {
                 print("file not found!")
             }
         case 6:
-            if let filepath = Bundle.main.path(forResource: "OFL-Allan", ofType: "txt") {
+            if let filepath = Bundle.main.path(forResource: "OFL-Pinyon", ofType: "txt") {
                 do {
                     let licenseScript = try String(contentsOfFile: filepath)
                     self.content.text = licenseScript
@@ -34,7 +34,7 @@ class FontLicenseViewController: UIViewController {
                 print("file not found!")
             }
         case 7:
-            if let filepath = Bundle.main.path(forResource: "OFL-Shadow", ofType: "txt") {
+            if let filepath = Bundle.main.path(forResource: "OFL-Allan", ofType: "txt") {
                 do {
                     let licenseScript = try String(contentsOfFile: filepath)
                     self.content.text = licenseScript
@@ -43,7 +43,7 @@ class FontLicenseViewController: UIViewController {
                 print("file not found!")
             }
         case 8:
-            if let filepath = Bundle.main.path(forResource: "OFL-kalam", ofType: "txt") {
+            if let filepath = Bundle.main.path(forResource: "OFL-Shadow", ofType: "txt") {
                 do {
                     let licenseScript = try String(contentsOfFile: filepath)
                     self.content.text = licenseScript
@@ -52,7 +52,7 @@ class FontLicenseViewController: UIViewController {
                 print("file not found!")
             }
         case 9:
-            if let filepath = Bundle.main.path(forResource: "OFL-petit", ofType: "txt") {
+            if let filepath = Bundle.main.path(forResource: "OFL-kalam", ofType: "txt") {
                 do {
                     let licenseScript = try String(contentsOfFile: filepath)
                     self.content.text = licenseScript
@@ -61,6 +61,15 @@ class FontLicenseViewController: UIViewController {
                 print("file not found!")
             }
         case 10:
+            if let filepath = Bundle.main.path(forResource: "OFL-petit", ofType: "txt") {
+                do {
+                    let licenseScript = try String(contentsOfFile: filepath)
+                    self.content.text = licenseScript
+                } catch {}
+            } else {
+                print("file not found!")
+            }
+        case 11:
             if let filepath = Bundle.main.path(forResource: "OFL-sacra", ofType: "txt") {
                 do {
                     let licenseScript = try String(contentsOfFile: filepath)

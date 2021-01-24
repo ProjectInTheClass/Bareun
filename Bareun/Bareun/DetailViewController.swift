@@ -15,9 +15,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     @IBOutlet weak var EnglishMeaningLabel: UILabel!
     @IBOutlet weak var canvasView: PKCanvasView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var countLabel2: UILabel!
     
+    @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var underlayView : UIImageView!
     @IBOutlet weak var overlayView: UIImageView!
     var menu:MenuItem? = nil
@@ -88,7 +87,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.overlayView.frame = CGRect(origin: CGPoint.zero, size: canvasView.frame.size)
         
         titleLabel.text = menu?.name
-        countLabel2.font = UIFont(name: "NanumMyeongjo", size: 17)
+        countLabel.font = UIFont(name: "NanumMyeongjo", size: 17)
 
         switch titleLabel.text {
         case "나를 깨우는 명언":
@@ -112,7 +111,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             print("error!")
         }
         countLabel.text = "\((imageIndex) + 1)/\(tempArray.count)"
-        countLabel2.text = "\((imageIndex) + 1)/\(tempArray.count)"
         Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
         self.underlayView.image = backgroundImage
         self.overlayView.image = textImage
@@ -325,12 +323,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         if imageIndex >= (tempArray.count - 1) {
             imageIndex = 0
             countLabel.text = "\(1)/\(tempArray.count)"
-            countLabel2.text = "\(1)/\(tempArray.count)"
             
         } else {
             imageIndex += 1
             countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
-            countLabel2.text = "\(imageIndex+1)/\(tempArray.count)"
         }
         textImage = UIImage(named: tempArray[imageIndex])!
         Shared.shared.CurTextImage = tempArray[imageIndex]
@@ -348,13 +344,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         canvasView.drawing = PKDrawing()
         if imageIndex <= 0 {
             countLabel.text = "\(tempArray.count)/\(tempArray.count)"
-            countLabel2.text = "\(tempArray.count)/\(tempArray.count)"
             imageIndex = tempArray.count - 1
             
         } else {
             imageIndex -= 1
             countLabel.text = "\(imageIndex+1)/\(tempArray.count)"
-            countLabel2.text = "\(imageIndex+1)/\(tempArray.count)"
         }
         textImage = UIImage(named: tempArray[imageIndex])!
         Shared.shared.CurTextImage = tempArray[imageIndex]

@@ -13,6 +13,8 @@
 		3903E45725BC4F4D002F4780 /* Sacramento-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3903E45425BC4F4D002F4780 /* Sacramento-Regular.ttf */; };
 		3903E45825BC4F4D002F4780 /* Kalam-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3903E45525BC4F4D002F4780 /* Kalam-Light.ttf */; };
 		3903E45925BC4F4D002F4780 /* PetitFormalScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3903E45625BC4F4D002F4780 /* PetitFormalScript-Regular.ttf */; };
+		3903E47425BDC884002F4780 /* Cafe24Oneprettynight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3903E47325BDC884002F4780 /* Cafe24Oneprettynight.ttf */; };
+		3903E47725BDC8CD002F4780 /* OFL-Oneprettynight.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3903E47625BDC8CD002F4780 /* OFL-Oneprettynight.txt */; };
 		390B206925B573A5009C6DCD /* OFL-nanum.txt in Resources */ = {isa = PBXBuildFile; fileRef = 390B206825B573A5009C6DCD /* OFL-nanum.txt */; };
 		393C788F25B1E78300131BCE /* NanumBarunpenR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */; };
 		393C789225B2152200131BCE /* FontLicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C789125B2152200131BCE /* FontLicenseViewController.swift */; };
@@ -51,6 +53,8 @@
 		3903E45425BC4F4D002F4780 /* Sacramento-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sacramento-Regular.ttf"; sourceTree = "<group>"; };
 		3903E45525BC4F4D002F4780 /* Kalam-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kalam-Light.ttf"; sourceTree = "<group>"; };
 		3903E45625BC4F4D002F4780 /* PetitFormalScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PetitFormalScript-Regular.ttf"; sourceTree = "<group>"; };
+		3903E47325BDC884002F4780 /* Cafe24Oneprettynight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24Oneprettynight.ttf; sourceTree = "<group>"; };
+		3903E47625BDC8CD002F4780 /* OFL-Oneprettynight.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-Oneprettynight.txt"; sourceTree = "<group>"; };
 		390B206825B573A5009C6DCD /* OFL-nanum.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-nanum.txt"; sourceTree = "<group>"; };
 		393C788E25B1E78300131BCE /* NanumBarunpenR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunpenR.ttf; sourceTree = "<group>"; };
 		393C789125B2152200131BCE /* FontLicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLicenseViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 		3903E46025BC8AF7002F4780 /* FontFiles */ = {
 			isa = PBXGroup;
 			children = (
+				3903E47325BDC884002F4780 /* Cafe24Oneprettynight.ttf */,
 				39C14D6E25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf */,
 				39C14D6B25ADEF99008E03E3 /* Allan-Regular.ttf */,
 				39C14D6825ADEF91008E03E3 /* PinyonScript-Regular.ttf */,
@@ -118,6 +123,7 @@
 		3903E46125BC8B15002F4780 /* License Files */ = {
 			isa = PBXGroup;
 			children = (
+				3903E47625BDC8CD002F4780 /* OFL-Oneprettynight.txt */,
 				3903E45125BC4F3A002F4780 /* OFL-petit.txt */,
 				3903E44E25BC4EE8002F4780 /* OFL-sacra.txt */,
 				3903E44B25BC4EC8002F4780 /* OFL-kalam.txt */,
@@ -237,6 +243,7 @@
 				3903E45925BC4F4D002F4780 /* PetitFormalScript-Regular.ttf in Resources */,
 				3963E5B025A45D780028F8B8 /* NanumMyeongjoBold.ttf in Resources */,
 				3903E45225BC4F3A002F4780 /* OFL-petit.txt in Resources */,
+				3903E47725BDC8CD002F4780 /* OFL-Oneprettynight.txt in Resources */,
 				393C789525B216AF00131BCE /* OFL-Pinyon.txt in Resources */,
 				9A4D3CC425BAB8CE0066C33A /* 나눔손글씨 느릿느릿체.ttf in Resources */,
 				3903E44F25BC4EE8002F4780 /* OFL-sacra.txt in Resources */,
@@ -248,6 +255,7 @@
 				3903E45725BC4F4D002F4780 /* Sacramento-Regular.ttf in Resources */,
 				3963E5B125A45D780028F8B8 /* NanumMyeongjo.ttf in Resources */,
 				3963E55125A3081C0028F8B8 /* Main.storyboard in Resources */,
+				3903E47425BDC884002F4780 /* Cafe24Oneprettynight.ttf in Resources */,
 				393C78A125B27E7300131BCE /* OFL-Allan.txt in Resources */,
 				9A4D3CC125BAB8C60066C33A /* 나눔손글씨 유니 띵땅띵땅.ttf in Resources */,
 			);
