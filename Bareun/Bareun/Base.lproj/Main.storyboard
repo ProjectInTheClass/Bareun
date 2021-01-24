@@ -273,15 +273,15 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxQ-54-5vy">
-                                                <rect key="frame" x="20" y="806.5" width="41.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="30" y="814.5" width="48" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="NxQ-54-5vy" firstAttribute="leading" secondItem="J29-mU-soK" secondAttribute="leading" constant="20" id="BCC-Pq-Ray"/>
-                                            <constraint firstItem="J29-mU-soK" firstAttribute="bottom" secondItem="NxQ-54-5vy" secondAttribute="bottom" constant="20" id="Yl0-X2-6rH"/>
+                                            <constraint firstItem="J29-mU-soK" firstAttribute="bottom" secondItem="NxQ-54-5vy" secondAttribute="bottom" constant="8.5" id="KxQ-HH-ege"/>
+                                            <constraint firstItem="NxQ-54-5vy" firstAttribute="leading" secondItem="J29-mU-soK" secondAttribute="leading" constant="30" id="Ppe-OM-Ht3"/>
                                         </constraints>
                                         <viewLayoutGuide key="contentLayoutGuide" id="1fK-7c-GmC"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="J29-mU-soK"/>

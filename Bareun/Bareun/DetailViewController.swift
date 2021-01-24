@@ -88,6 +88,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         
         titleLabel.text = menu?.name
         countLabel.font = UIFont(name: "NanumMyeongjo", size: 17)
+        EnglishMeaningLabel.font = UIFont(name: "NanumMyeongjo", size: 18)
 
         switch titleLabel.text {
         case "나를 깨우는 명언":
@@ -175,8 +176,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         super.viewWillLayoutSubviews()
 //        let offsetX: CGFloat = 0
 //        let offsetY: CGFloat = 0
-//
-        
+
         let paperSize = self.canvasView.frame.size * self.canvasView.zoomScale
         
         
@@ -278,6 +278,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             canvasView.zoomScale = 1.0
             underlayView.isHidden = true
             overlayView.isHidden = true
+            EnglishMeaningLabel.isHidden = true
             
             UIGraphicsBeginImageContextWithOptions(self.canvasView.bounds.size, false, UIScreen.main.scale)
             self.canvasView.drawHierarchy(in: self.canvasView.bounds, afterScreenUpdates: true)
@@ -291,6 +292,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             dvc.newImage = compareImage
             underlayView.isHidden = false
             overlayView.isHidden = false
+            EnglishMeaningLabel.isHidden = false
         }
     }
     
@@ -406,6 +408,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         toolPicker.setVisible(false, forFirstResponder: canvasView)
         sleep(1/2)
         overlayView.isHidden = true
+        EnglishMeaningLabel.isHidden = true
         canvasView.zoomScale = 1.0
         let alert = UIAlertController(title: "현재 손글씨를 카메라 롤에 저장하시겠습니까?", message: "저장을 누를 시 바로 저장됩니다.", preferredStyle: .alert)
 
@@ -430,6 +433,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             
             sleep(1/2)
             self.overlayView.isHidden = false
+            self.EnglishMeaningLabel.isHidden = false
 
         }))
         
@@ -440,6 +444,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { action in
             sleep(1/2)
             self.overlayView.isHidden = false
+            self.EnglishMeaningLabel.isHidden = false
         }))
     }
     
