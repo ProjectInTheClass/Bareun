@@ -14,14 +14,17 @@ struct settingsMenu {
     var userSettingMenu: String
 }
 
+let infoDic = Bundle.main.infoDictionary!
+
+let appVersion = infoDic["CFBundleShortVersionString"] as! String
+
 class EmailViewController: UIViewController ,MFMailComposeViewControllerDelegate {
     
-    
-    
+
     @IBOutlet var tableView: UITableView!
     
     var settingMenuList = [
-        "버전 정보 : 1.0",
+        "버전 정보 : \(appVersion)",
         "바른 알아보기",
         "개발자에게 메일 보내기"
     ]
@@ -32,7 +35,7 @@ class EmailViewController: UIViewController ,MFMailComposeViewControllerDelegate
 //            return
 //        }
         super.viewDidLoad()
-        
+    
         tableView.delegate = self
         tableView.dataSource = self
     }
