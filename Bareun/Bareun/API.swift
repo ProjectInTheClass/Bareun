@@ -53,27 +53,32 @@ class MENU {
 var category1_myeongjo:[String] = [
     "c1_01_mj.png", "c1_02_mj.png", "c1_03_mj.png", "c1_04_mj.png", "c1_05_mj.png",
     "c1_06_mj.png", "c1_07_mj.png", "c1_08_mj.png", "c1_09_mj.png", "c1_10_mj.png",
-    "c1_11_mj.png", "c1_12_mj.png", "c1_13_mj.png", "c1_14_mj.png", "c1_15_mj.png"
+    "c1_11_mj.png", "c1_12_mj.png", "c1_13_mj.png", "c1_14_mj.png", "c1_15_mj.png",
+    "c1_16_mj.png", "c1_17_mj.png", "c1_18_mj.png", "c1_19_mj.png", "c1_20_mj.png"
 ]
 var category1_bh:[String] = [
     "c1_01_bh.png", "c1_02_bh.png", "c1_03_bh.png", "c1_04_bh.png", "c1_05_bh.png",
     "c1_06_bh.png", "c1_07_bh.png", "c1_08_bh.png", "c1_09_bh.png", "c1_10_bh.png",
-    "c1_11_bh.png", "c1_12_bh.png", "c1_13_bh.png", "c1_14_bh.png", "c1_15_bh.png"
+    "c1_11_bh.png", "c1_12_bh.png", "c1_13_bh.png", "c1_14_bh.png", "c1_15_bh.png",
+    "c1_16_bh.png", "c1_17_bh.png", "c1_18_bh.png", "c1_19_bh.png", "c1_20_bh.png"
 ]
 var category1_bp:[String] = [
     "c1_01_bp.png", "c1_02_bp.png", "c1_03_bp.png", "c1_04_bp.png", "c1_05_bp.png",
     "c1_06_bp.png", "c1_07_bp.png", "c1_08_bp.png", "c1_09_bp.png", "c1_10_bp.png",
-    "c1_11_bp.png", "c1_12_bp.png", "c1_13_bp.png", "c1_14_bp.png", "c1_15_bp.png"
+    "c1_11_bp.png", "c1_12_bp.png", "c1_13_bp.png", "c1_14_bp.png", "c1_15_bp.png",
+    "c1_16_bp.png", "c1_17_bp.png", "c1_18_bp.png", "c1_19_bp.png", "c1_20_bp.png"
 ]
 var category1_nl:[String] = [
     "c1_01_nl.png", "c1_02_nl.png", "c1_03_nl.png", "c1_04_nl.png", "c1_05_nl.png",
     "c1_06_nl.png", "c1_07_nl.png", "c1_08_nl.png", "c1_09_nl.png", "c1_10_nl.png",
-    "c1_11_nl.png", "c1_12_nl.png", "c1_13_nl.png", "c1_14_nl.png", "c1_15_nl.png"
+    "c1_11_nl.png", "c1_12_nl.png", "c1_13_nl.png", "c1_14_nl.png", "c1_15_nl.png",
+    "c1_16_nl.png", "c1_17_nl.png", "c1_18_nl.png", "c1_19_nl.png", "c1_20_nl.png"
 ]
 var category1_dd:[String] = [
     "c1_01_dd.png", "c1_02_dd.png", "c1_03_dd.png", "c1_04_dd.png", "c1_05_dd.png",
     "c1_06_dd.png", "c1_07_dd.png", "c1_08_dd.png", "c1_09_dd.png", "c1_10_dd.png",
-    "c1_11_dd.png", "c1_12_dd.png", "c1_13_dd.png", "c1_14_dd.png", "c1_15_dd.png"
+    "c1_11_dd.png", "c1_12_dd.png", "c1_13_dd.png", "c1_14_dd.png", "c1_15_dd.png",
+    "c1_16_dd.png", "c1_17_dd.png", "c1_18_dd.png", "c1_19_dd.png", "c1_20_dd.png"
 ]
 
 // category2
