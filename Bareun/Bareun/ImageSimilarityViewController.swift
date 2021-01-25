@@ -14,6 +14,7 @@ class ImageSimilarityViewController: UIViewController {
     @IBOutlet weak var compare: UIImageView!
     var newImage: UIImage?
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var scoreTextLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
     
     func getFPO(from image: UIImage) -> VNFeaturePrintObservation? {
@@ -47,18 +48,23 @@ class ImageSimilarityViewController: UIViewController {
         switch comparedScore {
         case 0 ... (blankScore + value):
             scoreLabel.text = "⭐️"
+            scoreTextLabel.text = score1[0]
 
         case (blankScore + value) ... (blankScore + 2 * value):
             scoreLabel.text = "⭐️⭐️"
+            scoreTextLabel.text = score2[0]
 
         case (blankScore + 2 * value) ... (blankScore + 3.4 * value):
             scoreLabel.text = "⭐️⭐️⭐️"
+            scoreTextLabel.text = score3[0]
 
         case (blankScore + 3.4 * value) ... (blankScore + 4 * value):
             scoreLabel.text = "⭐️⭐️⭐️⭐️"
+            scoreTextLabel.text = score4[0]
             
         case (blankScore + 4 * value) ... 100:
             scoreLabel.text = "⭐️⭐️⭐️⭐️⭐️"
+            scoreTextLabel.text = score5[0]
 
         default:
             scoreLabel.text = "default"
@@ -83,6 +89,7 @@ class ImageSimilarityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        scoreTextLabel.font = UIFont(name: "NanumMyeongjo", size: 18)
         
         var modelImage: UIImage = UIImage(named:Shared.shared.CurTextImage ?? "c1_01_mj")!
         modelImage = modelImage.cropToRect(rect: CGRect.init(25.0, 13.0,(modelImage.size.width)-25.0,(modelImage.size.height)/1.75))!
