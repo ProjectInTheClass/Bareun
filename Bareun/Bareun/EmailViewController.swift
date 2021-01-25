@@ -61,6 +61,7 @@ extension EmailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
         cell.textLabel?.text = settingMenuList[indexPath.row]
+        cell.textLabel?.textColor = .black
         return cell
         
     }

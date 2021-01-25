@@ -13,6 +13,7 @@ class FontLicenseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        content.backgroundColor = .white
         print("shared : \(Shared.shared.licenseIndex)")
         switch Shared.shared.licenseIndex {
         case 5:
