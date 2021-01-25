@@ -281,6 +281,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                             } else {
                                 self.tempArray = category4_dd
                             }
+                        case "카페24 고운밤":
+                            if self.titleLabel.text == "나를 위한 바른 명언" {
+                                self.tempArray = category1_gb
+                            }
                         default:
                             print("english font")
                         }

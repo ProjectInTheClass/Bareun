@@ -81,6 +81,12 @@ var category1_dd:[String] = [
     "c1_11_dd.png", "c1_12_dd.png", "c1_13_dd.png", "c1_14_dd.png", "c1_15_dd.png",
     "c1_16_dd.png", "c1_17_dd.png", "c1_18_dd.png", "c1_19_dd.png", "c1_20_dd.png"
 ]
+var category1_gb:[String] = [
+    "c1_01_gb.png", "c1_02_gb.png", "c1_03_gb.png", "c1_04_gb.png", "c1_05_gb.png",
+    "c1_06_gb.png", "c1_07_gb.png", "c1_08_gb.png", "c1_09_gb.png", "c1_10_gb.png",
+    "c1_11_gb.png", "c1_12_gb.png", "c1_13_gb.png", "c1_14_gb.png", "c1_15_gb.png",
+    "c1_16_gb.png", "c1_17_gb.png", "c1_18_gb.png", "c1_19_gb.png", "c1_20_gb.png"
+]
 
 // category2
 var category2_myeongjo:[String] = [
