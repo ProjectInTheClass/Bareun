@@ -91,7 +91,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         EnglishMeaningLabel.font = UIFont(name: "NanumMyeongjo", size: 18)
 
         switch titleLabel.text {
-        case "나를 깨우는 명언":
+        case "나를 위한 바른 명언":
             tempArray = category1_myeongjo
             textImage = UIImage(named: tempArray[imageIndex])!
             EnglishMeaningLabel.isHidden = true
@@ -99,7 +99,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             tempArray = category2_myeongjo
             textImage = UIImage(named: tempArray[imageIndex])!
             EnglishMeaningLabel.isHidden = true
-        case "쓸모있는 영어 문장":
+        case "알아두면 좋은 영어 문장":
             backgroundImage = UIImage(named: "backgroundeng2.png")!
             tempArray = category3_pinyon
             textImage = UIImage(named: tempArray[imageIndex])!
@@ -115,7 +115,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         Shared.shared.CurTextImage = self.tempArray[self.imageIndex]
         self.underlayView.image = backgroundImage
         self.overlayView.image = textImage
-        if (titleLabel.text != "쓸모있는 영어 문장" || canvasView.zoomScale != 1.0 ){
+        if (titleLabel.text != "알아두면 좋은 영어 문장" || canvasView.zoomScale != 1.0 ){
             EnglishMeaningLabel.isHidden = true
         } else{
             EnglishMeaningLabel.isHidden = false
@@ -172,7 +172,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             self.overlayView.frame.size = paperSize
             self.canvasView.contentSize = paperSize
             
-            if (titleLabel.text != "쓸모있는 영어 문장" || canvasView.zoomScale != 1.0 ){
+            if (titleLabel.text != "알아두면 좋은 영어 문장" || canvasView.zoomScale != 1.0 ){
                 EnglishMeaningLabel.isHidden = true
             } else{
                 EnglishMeaningLabel.isHidden = false
@@ -199,7 +199,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         
         self.EnglishMeaningLabel.frame.origin = CGPoint(30, paperSize.height * 0.215)
         
-        if (titleLabel.text != "쓸모있는 영어 문장" || canvasView.zoomScale != 1.0 ){
+        if (titleLabel.text != "알아두면 좋은 영어 문장" || canvasView.zoomScale != 1.0 ){
             EnglishMeaningLabel.isHidden = true
         } else{
             EnglishMeaningLabel.isHidden = false
@@ -220,7 +220,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             if let vc = segue.destination as? PopOverViewController {
                 vc.onChange = { font in
                     print(font)
-                    if self.titleLabel.text == "쓸모있는 영어 문장" {
+                    if self.titleLabel.text == "알아두면 좋은 영어 문장" {
                         switch font {
                         case "Pinyon Script":
                             self.tempArray = category3_pinyon
@@ -242,7 +242,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                     } else {
                         switch font {
                     case "나눔명조체":
-                        if self.titleLabel.text == "나를 깨우는 명언" {
+                        if self.titleLabel.text == "나를 위한 바른 명언" {
                             self.tempArray = category1_myeongjo
                             } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
                                 self.tempArray = category2_myeongjo
@@ -250,7 +250,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                                 self.tempArray = category4_myeongjo
                             }
                         case "바른히피체":
-                            if self.titleLabel.text == "나를 깨우는 명언" {
+                            if self.titleLabel.text == "나를 위한 바른 명언" {
                                 self.tempArray = category1_bh
                             } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
                                 self.tempArray = category2_bh
@@ -258,7 +258,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                                 self.tempArray = category4_bh
                             }
                         case "나눔바른펜(한/영)":
-                            if self.titleLabel.text == "나를 깨우는 명언" {
+                            if self.titleLabel.text == "나를 위한 바른 명언" {
                                 self.tempArray = category1_bp
                             } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
                                 self.tempArray = category2_bp
@@ -266,7 +266,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                                 self.tempArray = category4_bp
                             }
                         case "느릿느릿체":
-                            if self.titleLabel.text == "나를 깨우는 명언" {
+                            if self.titleLabel.text == "나를 위한 바른 명언" {
                                 self.tempArray = category1_nl
                             } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
                                 self.tempArray = category2_nl
@@ -274,7 +274,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                                 self.tempArray = category4_nl
                             }
                         case "유니 띵땅띵땅":
-                            if self.titleLabel.text == "나를 깨우는 명언" {
+                            if self.titleLabel.text == "나를 위한 바른 명언" {
                                 self.tempArray = category1_dd
                             } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
                                 self.tempArray = category2_dd
@@ -352,7 +352,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
         textImage = UIImage(named: tempArray[imageIndex])!
         Shared.shared.CurTextImage = tempArray[imageIndex]
-        if self.titleLabel.text == "쓸모있는 영어 문장"{
+        if self.titleLabel.text == "알아두면 좋은 영어 문장"{
             EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
         }
         else{
@@ -360,7 +360,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
         overlayView.image = textImage
         toolPicker.setVisible(false, forFirstResponder: canvasView)
-        if (titleLabel.text == "쓸모있는 영어 문장" || canvasView.zoomScale != 1.0 ){
+        if (titleLabel.text == "알아두면 좋은 영어 문장" || canvasView.zoomScale != 1.0 ){
             EnglishMeaningLabel.isHidden = true
         } else{
             EnglishMeaningLabel.isHidden = false
@@ -379,7 +379,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
         textImage = UIImage(named: tempArray[imageIndex])!
         Shared.shared.CurTextImage = tempArray[imageIndex]
-        if self.titleLabel.text == "쓸모있는 영어 문장"{
+        if self.titleLabel.text == "알아두면 좋은 영어 문장"{
             EnglishMeaningLabel.text = EnglishMeaning[imageIndex]
         }
         else{
@@ -387,7 +387,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
         overlayView.image = textImage
         toolPicker.setVisible(false, forFirstResponder: canvasView)
-        if (titleLabel.text != "쓸모있는 영어 문장" || canvasView.zoomScale != 1.0 ){
+        if (titleLabel.text != "알아두면 좋은 영어 문장" || canvasView.zoomScale != 1.0 ){
             EnglishMeaningLabel.isHidden = true
         } else{
             EnglishMeaningLabel.isHidden = false
@@ -464,7 +464,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             
             sleep(1/2)
             self.overlayView.isHidden = false
-            if (self.titleLabel.text=="쓸모있는 영어 문장"){
+            if (self.titleLabel.text=="알아두면 좋은 영어 문장"){
                 self.EnglishMeaningLabel.text = EnglishMeaning[self.imageIndex]
                 self.EnglishMeaningLabel.isHidden = false
             }
@@ -479,7 +479,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             sleep(1/2)
             self.overlayView.isHidden = false
             
-            if (self.titleLabel.text=="쓸모있는 영어 문장"){
+            if (self.titleLabel.text=="알아두면 좋은 영어 문장"){
                 self.EnglishMeaningLabel.text = EnglishMeaning[self.imageIndex]
                 self.EnglishMeaningLabel.isHidden = false
             }
