@@ -51,11 +51,11 @@
                                                     <segue destination="V0y-7w-05Z" kind="presentation" identifier="testImage" id="UG8-BR-3d4"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bareun_icon1" translatesAutoresizingMaskIntoConstraints="NO" id="Kdv-cx-DPd">
-                                                <rect key="frame" x="723" y="31" width="70" height="65"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bareun_icon3" translatesAutoresizingMaskIntoConstraints="NO" id="Kdv-cx-DPd">
+                                                <rect key="frame" x="723" y="31" width="65" height="65"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="65" id="FGV-XB-Yjm" userLabel="height = 62"/>
-                                                    <constraint firstAttribute="width" constant="70" id="NHl-V8-Wj4" userLabel="width = 68"/>
+                                                    <constraint firstAttribute="width" constant="65" id="NHl-V8-Wj4" userLabel="width = 68"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
@@ -606,7 +606,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bareun_icon1" width="720" height="720"/>
+        <image name="bareun_icon3" width="720" height="720"/>
         <image name="character" catalog="system" width="32" height="32"/>
         <image name="checkmark" catalog="system" width="32" height="32"/>
         <image name="chevron.backward" catalog="system" width="32" height="32"/>
