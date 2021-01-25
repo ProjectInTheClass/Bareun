@@ -197,6 +197,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.overlayView.frame.size = paperSize
         self.canvasView.contentSize = paperSize
         
+        self.EnglishMeaningLabel.frame.origin = CGPoint(30, paperSize.height * 0.215)
+        
         if (titleLabel.text != "쓸모있는 영어 문장" || canvasView.zoomScale != 1.0 ){
             EnglishMeaningLabel.isHidden = true
         } else{
