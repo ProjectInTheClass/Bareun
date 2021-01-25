@@ -464,8 +464,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             
             sleep(1/2)
             self.overlayView.isHidden = false
-            self.EnglishMeaningLabel.isHidden = false
-            self.EnglishMeaningLabel.text = EnglishMeaning[self.imageIndex]
+            if (self.titleLabel.text=="쓸모있는 영어 문장"){
+                self.EnglishMeaningLabel.text = EnglishMeaning[self.imageIndex]
+                self.EnglishMeaningLabel.isHidden = false
+            }
 
         }))
         
@@ -476,8 +478,12 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { action in
             sleep(1/2)
             self.overlayView.isHidden = false
-            self.EnglishMeaningLabel.isHidden = false
-            self.EnglishMeaningLabel.text = EnglishMeaning[self.imageIndex]
+            
+            if (self.titleLabel.text=="쓸모있는 영어 문장"){
+                self.EnglishMeaningLabel.text = EnglishMeaning[self.imageIndex]
+                self.EnglishMeaningLabel.isHidden = false
+            }
+            
         }))
         
        
