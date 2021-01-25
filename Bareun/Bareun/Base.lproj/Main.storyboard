@@ -355,7 +355,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHo-Al-ybN">
-                                <rect key="frame" x="662.5" y="986" width="41.5" height="20.5"/>
+                                <rect key="frame" x="662.5" y="988.5" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -366,7 +366,7 @@
                         <constraints>
                             <constraint firstItem="ysu-ZE-q9G" firstAttribute="leading" secondItem="mdN-Hx-d4D" secondAttribute="leading" id="3Vi-Gg-gXf"/>
                             <constraint firstAttribute="trailing" secondItem="ysu-ZE-q9G" secondAttribute="trailing" id="Kkc-hL-zUc"/>
-                            <constraint firstAttribute="bottom" secondItem="gHo-Al-ybN" secondAttribute="bottom" constant="17.5" id="QrA-bI-ZRF"/>
+                            <constraint firstAttribute="bottom" secondItem="gHo-Al-ybN" secondAttribute="bottom" constant="15" id="UTe-FW-lbA"/>
                             <constraint firstItem="ysu-ZE-q9G" firstAttribute="top" secondItem="MSY-NO-n2O" secondAttribute="top" id="Xhd-sa-Dcc"/>
                             <constraint firstAttribute="bottom" secondItem="ysu-ZE-q9G" secondAttribute="bottom" id="djr-E9-aEv"/>
                             <constraint firstItem="gHo-Al-ybN" firstAttribute="centerX" secondItem="MSY-NO-n2O" secondAttribute="centerX" id="iuY-t5-edq"/>
