@@ -428,21 +428,24 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5fs-1m-9QN">
-                                <rect key="frame" x="122" y="598" width="460" height="200"/>
+                                <rect key="frame" x="122" y="592" width="460" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Hsh-Lz-v8q"/>
                                     <constraint firstAttribute="width" constant="460" id="rTC-th-Sxa"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shD-oE-tRz">
-                                <rect key="frame" x="316.5" y="838" width="71" height="36"/>
+                                <rect key="frame" x="316.5" y="832" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvz-Tu-dIX">
-                                <rect key="frame" x="329" y="909" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="313.5" y="903" width="77" height="36"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="20"/>
+                                <state key="normal" title="검사하기">
+                                    <color key="titleColor" red="0.2862788141" green="0.28626674410000003" blue="0.28627493980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="compare:" destination="f0P-PT-Drv" eventType="touchUpInside" id="gaq-p8-wDM"/>
                                 </connections>
@@ -600,18 +603,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="character" catalog="system" width="32" height="32"/>
-        <image name="checkmark" catalog="system" width="32" height="32"/>
-        <image name="chevron.backward" catalog="system" width="32" height="32"/>
-        <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
-        <image name="clear" catalog="system" width="32" height="32"/>
-        <image name="eye" catalog="system" width="32" height="32"/>
-        <image name="house" catalog="system" width="32" height="32"/>
-        <image name="info.circle" catalog="system" width="32" height="32"/>
+        <image name="character" catalog="system" width="128" height="128"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="pen2" width="720" height="720"/>
-        <image name="pencil" catalog="system" width="32" height="32"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="settingImage" width="2000" height="2000"/>
-        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
