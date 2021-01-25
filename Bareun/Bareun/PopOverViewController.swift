@@ -23,10 +23,11 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
     var onChange: ((String) -> Void)? = nil
 
     var fontItems: [FontInfo] = []
-  
+    let customColor : UIColor = UIColor(displayP3Red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.backgroundColor = customColor
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 44

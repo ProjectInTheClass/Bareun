@@ -34,12 +34,12 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet var CategoryView: UIView!
     
-    let viewColor : UIColor = UIColor(displayP3Red: 252/255, green: 251/255, blue: 244/255, alpha: 1.0)
+    let customColor : UIColor = UIColor(displayP3Red: 252/255, green: 251/255, blue: 244/255, alpha: 1.0)
     override func viewDidLoad() {
         
         super.viewDidLoad()
 //        CategoryView.backgroundColor = viewColor
-        tableView.backgroundColor = viewColor
+        tableView.backgroundColor = customColor
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
