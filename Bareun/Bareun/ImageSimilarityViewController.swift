@@ -51,10 +51,10 @@ class ImageSimilarityViewController: UIViewController {
         case (blankScore + value) ... (blankScore + 2 * value):
             scoreLabel.text = "⭐️⭐️"
 
-        case (blankScore + 2 * value) ... (blankScore + 3 * value):
+        case (blankScore + 2 * value) ... (blankScore + 3.4 * value):
             scoreLabel.text = "⭐️⭐️⭐️"
 
-        case (blankScore + 3 * value) ... (blankScore + 4 * value):
+        case (blankScore + 3.4 * value) ... (blankScore + 4 * value):
             scoreLabel.text = "⭐️⭐️⭐️⭐️"
             
         case (blankScore + 4 * value) ... 100:
