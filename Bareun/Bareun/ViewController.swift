@@ -32,10 +32,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBAction func unwindFromVC3(segue:UIStoryboardSegue) {}
     @IBAction func unwindFromSettingVC(segue:UIStoryboardSegue) {}
     
+    @IBOutlet var CategoryView: UIView!
+    
+    let viewColor : UIColor = UIColor(displayP3Red: 252/255, green: 251/255, blue: 244/255, alpha: 1.0)
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+//        CategoryView.backgroundColor = viewColor
+        tableView.backgroundColor = viewColor
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
