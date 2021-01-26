@@ -22,6 +22,7 @@ class ImageSimilarityViewController: UIViewController {
     @IBOutlet weak var testButton: UIButton!
     
     var confettiView = SwiftConfettiView()
+    var confettiView2 = SwiftConfettiView()
 
     @IBOutlet var SimilarityView: UIView!
 
@@ -39,7 +40,7 @@ class ImageSimilarityViewController: UIViewController {
     
     @IBAction func compare(_ sender: Any) {
         
-        confettiView.stopConfetti()
+//        confettiView.stopConfetti()
 
 //        guard let originalFPO = getFPO(from: original.image!) else { return }
 //        guard let compareFPO = getFPO(from: compare.image!) else { return }
@@ -60,6 +61,8 @@ class ImageSimilarityViewController: UIViewController {
             let random = Int.random(in: 0...(score1.count - 1))
             scoreLabel.text = "⭐️"
             scoreTextLabel.text = score1[random]
+            confettiView.startConfetti()
+            confettiView2.startConfetti()
 
         case (blankScore + value) ... (blankScore + 2 * value):
             let random = Int.random(in: 0...(score2.count - 1))
@@ -106,7 +109,7 @@ class ImageSimilarityViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         confettiView = SwiftConfettiView(frame:self.compare.bounds)
-    
+        confettiView2 = SwiftConfettiView(frame:self.compare.bounds)
         
         // Set colors (default colors are red, green and blue)
         confettiView.colors = [UIColor(red:0.95, green:0.40, blue:0.27, alpha:1.0),
@@ -115,13 +118,22 @@ class ImageSimilarityViewController: UIViewController {
                                UIColor(red:0.30, green:0.76, blue:0.85, alpha:1.0),
                                UIColor(red:0.58, green:0.39, blue:0.55, alpha:1.0)]
         
+        confettiView2.colors = [UIColor(red:0.95, green:0.40, blue:0.27, alpha:1.0),
+                               UIColor(red:1.00, green:0.78, blue:0.36, alpha:1.0),
+                               UIColor(red:0.48, green:0.78, blue:0.64, alpha:1.0),
+                               UIColor(red:0.30, green:0.76, blue:0.85, alpha:1.0),
+                               UIColor(red:0.58, green:0.39, blue:0.55, alpha:1.0)]
         // Set intensity (from 0 - 1, default intensity is 0.5)
         confettiView.intensity = 0.4
+        confettiView2.intensity = 0.4
         
         // Set type
-        confettiView.type = .diamond
+        confettiView.type = .confetti
+        confettiView2.type = .diamond
+        
         self.view.addSubview(confettiView)
-        confettiView.startConfetti()
+        self.view.addSubview(confettiView2)
+        
         
 
         
