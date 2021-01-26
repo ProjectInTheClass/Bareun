@@ -91,23 +91,27 @@ var category1_gb:[String] = [
 // category2
 var category2_myeongjo:[String] = [
     "c2_01_mj.png", "c2_02_mj.png", "c2_03_mj.png", "c2_04_mj.png", "c2_05_mj.png",
-    "c2_06_mj.png", "c2_07_mj.png", "c2_08_mj.png", "c2_09_mj.png"
+    "c2_06_mj.png", "c2_07_mj.png", "c2_08_mj.png", "c2_09_mj.png", "c2_10_mj.png"
 ]
 var category2_bh:[String] = [
     "c2_01_bh.png", "c2_02_bh.png", "c2_03_bh.png", "c2_04_bh.png", "c2_05_bh.png",
-    "c2_06_bh.png", "c2_07_bh.png", "c2_08_bh.png", "c2_09_bh.png"
+    "c2_06_bh.png", "c2_07_bh.png", "c2_08_bh.png", "c2_09_bh.png", "c2_10_bh.png"
 ]
 var category2_bp:[String] = [
     "c2_01_bp.png", "c2_02_bp.png", "c2_03_bp.png", "c2_04_bp.png", "c2_05_bp.png",
-    "c2_06_bp.png", "c2_07_bp.png", "c2_08_bp.png", "c2_09_bp.png"
+    "c2_06_bp.png", "c2_07_bp.png", "c2_08_bp.png", "c2_09_bp.png", "c2_10_bp.png"
 ]
 var category2_nl:[String] = [
     "c2_01_nl.png", "c2_02_nl.png", "c2_03_nl.png", "c2_04_nl.png", "c2_05_nl.png",
-    "c2_06_nl.png", "c2_07_nl.png", "c2_08_nl.png", "c2_09_nl.png"
+    "c2_06_nl.png", "c2_07_nl.png", "c2_08_nl.png", "c2_09_nl.png", "c2_10_nl.png"
 ]
 var category2_dd:[String] = [
     "c2_01_dd.png", "c2_02_dd.png", "c2_03_dd.png", "c2_04_dd.png", "c2_05_dd.png",
-    "c2_06_dd.png", "c2_07_dd.png", "c2_08_dd.png", "c2_09_dd.png"
+    "c2_06_dd.png", "c2_07_dd.png", "c2_08_dd.png", "c2_09_dd.png", "c2_10_dd.png"
+]
+var category2_gb:[String] = [
+    "c2_01_gb.png", "c2_02_gb.png", "c2_03_gb.png", "c2_04_gb.png", "c2_05_gb.png",
+    "c2_06_gb.png", "c2_07_gb.png", "c2_08_gb.png", "c2_09_gb.png", "c2_10_gb.png"
 ]
 
 // category3

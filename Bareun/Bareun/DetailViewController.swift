@@ -319,6 +319,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
                         case "카페24 고운밤":
                             if self.titleLabel.text == "나를 위한 바른 명언" {
                                 self.tempArray = category1_gb
+                            } else if self.titleLabel.text == "많이 틀리는 맞춤법" {
+                                self.tempArray = category2_gb
                             }
                         default:
                             print("english font")
