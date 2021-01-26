@@ -19,6 +19,25 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var underlayView : UIImageView!
     @IBOutlet weak var overlayView: UIImageView!
+    
+    
+    @IBOutlet var tapView: UITapGestureRecognizer!
+    // 탭 -> 펜슬킷 내려가기
+    @IBAction func tapView(_ sender: UIGestureRecognizer) {
+        print("touched")
+        self.view.endEditing(true)
+    }
+    
+    
+    @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
+    @IBAction func swipeAction(_ sender: Any) {
+        if canvasView.zoomScale == 1.0 {
+            if swipeRecognizer.direction ==  .left {
+                goToNextPage(canvasView)
+            }
+        }
+    }
+    
     var menu:MenuItem? = nil
   
     var textImage: UIImage = UIImage(named:"c1_01_mj")!
@@ -51,6 +70,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         assert(self.underlayView.superview == self.canvasView)
         
         super.viewDidLoad()
+        swipeRecognizer.direction = .left
         
         var textImage = self.textImage
         var backgroundImage = self.backgroundImage
