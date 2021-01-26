@@ -29,14 +29,19 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     }
     
     //-> swipe하면 다음 페이지, 이전 페이지
-    @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
-    @IBAction func swipeAction(_ sender: Any) {
+   
+    @IBOutlet var swipeRecognizerLeft: UISwipeGestureRecognizer!
+    @IBAction func swipeRecognizerL(_ sender: Any) {
         if canvasView.zoomScale == 1.0 {
-            if swipeRecognizer.direction ==  .left {
                 goToNextPage(self)
-            } else if swipeRecognizer.direction == .right {
+        }
+    }
+    
+    @IBOutlet var swipeRecognizerRight: UISwipeGestureRecognizer!
+    
+    @IBAction func swipeRecognizerR(_ sender: Any) {
+        if canvasView.zoomScale == 1.0 {
                 goToPreviousPage(self)
-            }
         }
     }
     
@@ -72,17 +77,14 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         assert(self.underlayView.superview == self.canvasView)
         
         super.viewDidLoad()
-        //Gesture
-        if swipeRecognizer.direction == .left {
-            swipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
-        } else {
-            swipeRecognizer.direction = UISwipeGestureRecognizer.Direction.right
-        }
+      
         
         let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer()
         tapGesture.delegate = self
         
-        self.view.addGestureRecognizer(swipeRecognizer)
+        self.view.addGestureRecognizer(swipeRecognizerLeft)
+        self.view.addGestureRecognizer(swipeRecognizerRight)
+    
         self.view.addGestureRecognizer(tapGesture)
         //
         var textImage = self.textImage

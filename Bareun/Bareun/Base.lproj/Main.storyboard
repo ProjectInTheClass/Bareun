@@ -282,6 +282,7 @@
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="NRB-18-3Eh" appends="YES" id="gZE-8o-gBd"/>
                                                     <outletCollection property="gestureRecognizers" destination="owi-Bg-SbD" appends="YES" id="tQT-Cv-i8A"/>
+                                                    <outletCollection property="gestureRecognizers" destination="DzG-Ns-3ba" appends="YES" id="g2z-L3-Lrp"/>
                                                 </connections>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlI-Pa-hkY">
@@ -391,7 +392,8 @@
                         <outlet property="countLabel" destination="gHo-Al-ybN" id="uyl-8V-6nB"/>
                         <outlet property="layerHidden" destination="Gnt-ba-dip" id="piE-gt-hd3"/>
                         <outlet property="overlayView" destination="OAu-bL-yXD" id="8s9-Lc-Qku"/>
-                        <outlet property="swipeRecognizer" destination="owi-Bg-SbD" id="nli-BK-Nmg"/>
+                        <outlet property="swipeRecognizerLeft" destination="owi-Bg-SbD" id="r3i-Dk-Dt0"/>
+                        <outlet property="swipeRecognizerRight" destination="DzG-Ns-3ba" id="U70-AH-gWH"/>
                         <outlet property="tapView" destination="NRB-18-3Eh" id="0FR-Aw-CmG"/>
                         <outlet property="titleLabel" destination="4ry-Rz-p9T" id="hQw-xF-a4g"/>
                         <outlet property="underlayView" destination="qx9-GF-wUk" id="O7v-rE-wfH"/>
@@ -404,9 +406,14 @@
                         <action selector="tapView:" destination="LzM-zu-zYZ" id="Qm7-RP-G2x"/>
                     </connections>
                 </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="owi-Bg-SbD">
+                <swipeGestureRecognizer direction="left" id="owi-Bg-SbD" userLabel="Swipe Gesture Recognizer Left">
                     <connections>
-                        <action selector="swipeAction:" destination="LzM-zu-zYZ" id="5jN-zB-lTD"/>
+                        <action selector="swipeRecognizerL:" destination="LzM-zu-zYZ" id="Gc9-ks-Jrp"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="DzG-Ns-3ba" userLabel="Swipe Gesture Recognizer Right">
+                    <connections>
+                        <action selector="swipeRecognizerR:" destination="LzM-zu-zYZ" id="4qf-x0-nwl"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -642,17 +649,17 @@
     </scenes>
     <resources>
         <image name="bareun_icon3" width="720" height="720"/>
-        <image name="character" catalog="system" width="32" height="32"/>
-        <image name="checkmark" catalog="system" width="32" height="32"/>
-        <image name="chevron.backward" catalog="system" width="32" height="32"/>
-        <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
-        <image name="clear" catalog="system" width="32" height="32"/>
-        <image name="eye" catalog="system" width="32" height="32"/>
-        <image name="gearshape" catalog="system" width="32" height="32"/>
-        <image name="house" catalog="system" width="32" height="32"/>
-        <image name="info.circle" catalog="system" width="32" height="32"/>
-        <image name="pencil" catalog="system" width="32" height="32"/>
-        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
+        <image name="character" catalog="system" width="128" height="128"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
