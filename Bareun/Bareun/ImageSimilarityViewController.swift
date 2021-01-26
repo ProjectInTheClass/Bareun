@@ -50,7 +50,7 @@ class ImageSimilarityViewController: UIViewController {
         
         var sharedObject = [Any]()
         sharedObject.append(image)
-        sharedObject.append("hello \(ad)")
+        sharedObject.append("hello \nhttps://www.naver.com")
 
         let vc = UIActivityViewController(activityItems: sharedObject, applicationActivities: nil)
         vc.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
