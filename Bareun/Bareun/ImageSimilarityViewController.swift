@@ -21,13 +21,10 @@ class ImageSimilarityViewController: UIViewController {
     @IBOutlet weak var scoreTextLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
     
+    var confettiView = SwiftConfettiView()
 
     @IBOutlet var SimilarityView: UIView!
 
-
-
-    
-    
     func getFPO(from image: UIImage) -> VNFeaturePrintObservation? {
         let requestHandler = VNImageRequestHandler(cgImage: image.cgImage!, options: [:])
         let request = VNGenerateImageFeaturePrintRequest()
@@ -42,6 +39,8 @@ class ImageSimilarityViewController: UIViewController {
     
     @IBAction func compare(_ sender: Any) {
         
+        confettiView.stopConfetti()
+
 //        guard let originalFPO = getFPO(from: original.image!) else { return }
 //        guard let compareFPO = getFPO(from: compare.image!) else { return }
 //
@@ -106,7 +105,7 @@ class ImageSimilarityViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let confettiView = SwiftConfettiView(frame:self.view.bounds)
+        confettiView = SwiftConfettiView(frame:self.compare.bounds)
     
         
         // Set colors (default colors are red, green and blue)
@@ -117,12 +116,14 @@ class ImageSimilarityViewController: UIViewController {
                                UIColor(red:0.58, green:0.39, blue:0.55, alpha:1.0)]
         
         // Set intensity (from 0 - 1, default intensity is 0.5)
-        confettiView.intensity = 0.5
+        confettiView.intensity = 0.4
         
         // Set type
         confettiView.type = .diamond
         self.view.addSubview(confettiView)
         confettiView.startConfetti()
+        
+
         
         
         scoreTextLabel.font = UIFont(name: "NanumMyeongjo", size: 18)
