@@ -446,39 +446,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 글씨는" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKf-3V-jXG">
-                                <rect key="frame" x="280" y="50" width="144.5" height="28"/>
-                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="24"/>
+                                <rect key="frame" x="271" y="50" width="162.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="27"/>
                                 <color key="textColor" red="0.28627450980392155" green="0.28627450980392155" blue="0.28627450980392155" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fqw-kE-2wR">
-                                <rect key="frame" x="122" y="123" width="460" height="200"/>
+                                <rect key="frame" x="122" y="121.5" width="460" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="0NK-bp-ReZ"/>
                                     <constraint firstAttribute="width" constant="460" id="cjF-IQ-DE8"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5fs-1m-9QN">
-                                <rect key="frame" x="122" y="589" width="460" height="200"/>
+                                <rect key="frame" x="122" y="564" width="460" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Hsh-Lz-v8q"/>
                                     <constraint firstAttribute="width" constant="460" id="rTC-th-Sxa"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shD-oE-tRz">
-                                <rect key="frame" x="316.5" y="814" width="71" height="36"/>
+                                <rect key="frame" x="316.5" y="804" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvz-Tu-dIX">
-                                <rect key="frame" x="313.5" y="903" width="77" height="36"/>
-                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpB-5k-Ou3">
+                                <rect key="frame" x="154" y="898" width="96" height="41"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="25"/>
                                 <state key="normal" title="검사하기">
                                     <color key="titleColor" red="0.2862788141" green="0.28626674410000003" blue="0.28627493980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="compare:" destination="f0P-PT-Drv" eventType="touchUpInside" id="gaq-p8-wDM"/>
+                                    <action selector="compare:" destination="f0P-PT-Drv" eventType="touchUpInside" id="5r1-mv-dPr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyv-I7-SuS">
@@ -489,29 +489,42 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPE-0G-53w">
-                                <rect key="frame" x="328" y="858" width="48" height="24"/>
+                                <rect key="frame" x="328" y="848" width="48" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvz-Tu-dIX">
+                                <rect key="frame" x="454" y="898" width="96" height="41"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="25"/>
+                                <state key="normal" title="공유하기">
+                                    <color key="titleColor" red="0.2862788141" green="0.28626674410000003" blue="0.28627493980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="compare:" destination="f0P-PT-Drv" eventType="touchUpInside" id="gaq-p8-wDM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WON-ko-Axo"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WON-ko-Axo" firstAttribute="trailing" secondItem="Wyv-I7-SuS" secondAttribute="trailing" constant="15" id="1ub-Jg-PuY"/>
                             <constraint firstItem="LPE-0G-53w" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="32h-eL-V0U"/>
-                            <constraint firstItem="shD-oE-tRz" firstAttribute="top" secondItem="5fs-1m-9QN" secondAttribute="bottom" constant="25" id="71p-ES-VQJ"/>
+                            <constraint firstItem="shD-oE-tRz" firstAttribute="top" secondItem="5fs-1m-9QN" secondAttribute="bottom" constant="40" id="71p-ES-VQJ"/>
+                            <constraint firstItem="ZpB-5k-Ou3" firstAttribute="top" secondItem="LPE-0G-53w" secondAttribute="bottom" constant="26" id="IVX-31-4cK"/>
                             <constraint firstItem="Wyv-I7-SuS" firstAttribute="top" secondItem="WON-ko-Axo" secondAttribute="top" constant="15" id="JVb-Qb-qnY"/>
                             <constraint firstItem="Fqw-kE-2wR" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="Kef-Cb-jHo"/>
                             <constraint firstAttribute="bottomMargin" secondItem="gvz-Tu-dIX" secondAttribute="bottom" constant="45" id="QUR-LN-Zva"/>
+                            <constraint firstItem="WON-ko-Axo" firstAttribute="bottom" secondItem="ZpB-5k-Ou3" secondAttribute="bottom" constant="45" id="TMj-Ww-hN1"/>
                             <constraint firstItem="SKf-3V-jXG" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="XCy-wZ-5bf"/>
                             <constraint firstItem="LPE-0G-53w" firstAttribute="top" secondItem="shD-oE-tRz" secondAttribute="bottom" constant="8" symbolic="YES" id="a1P-ZS-mGN"/>
                             <constraint firstItem="SKf-3V-jXG" firstAttribute="top" secondItem="WON-ko-Axo" secondAttribute="top" constant="50" id="bVa-YH-znt"/>
                             <constraint firstItem="5fs-1m-9QN" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="ba0-p6-PY0"/>
                             <constraint firstItem="shD-oE-tRz" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="cWX-8v-tOj"/>
-                            <constraint firstItem="Fqw-kE-2wR" firstAttribute="top" secondItem="SKf-3V-jXG" secondAttribute="bottom" constant="45" id="dHS-oS-JU6"/>
-                            <constraint firstItem="gvz-Tu-dIX" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="uQP-El-Int"/>
-                            <constraint firstItem="gvz-Tu-dIX" firstAttribute="top" secondItem="LPE-0G-53w" secondAttribute="bottom" constant="21" id="vvp-IO-r6z"/>
+                            <constraint firstItem="Fqw-kE-2wR" firstAttribute="top" secondItem="SKf-3V-jXG" secondAttribute="bottom" constant="40" id="dHS-oS-JU6"/>
+                            <constraint firstItem="gvz-Tu-dIX" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" constant="150" id="nwM-7j-8Ar"/>
+                            <constraint firstItem="ZpB-5k-Ou3" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" constant="-150" id="sg4-hy-LiE"/>
+                            <constraint firstItem="gvz-Tu-dIX" firstAttribute="top" secondItem="LPE-0G-53w" secondAttribute="bottom" constant="26" id="vvp-IO-r6z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x9q-MM-Peb"/>
@@ -521,6 +534,7 @@
                         <outlet property="original" destination="Fqw-kE-2wR" id="mHK-LD-8NS"/>
                         <outlet property="scoreLabel" destination="shD-oE-tRz" id="Dtw-Gw-4cg"/>
                         <outlet property="scoreTextLabel" destination="LPE-0G-53w" id="aed-5G-ieB"/>
+                        <outlet property="shareButton" destination="gvz-Tu-dIX" id="q2I-Nm-Xa7"/>
                         <outlet property="testButton" destination="gvz-Tu-dIX" id="lrU-4K-hk6"/>
                     </connections>
                 </viewController>

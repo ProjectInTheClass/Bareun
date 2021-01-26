@@ -20,6 +20,7 @@ class ImageSimilarityViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var scoreTextLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
     var confettiView = SwiftConfettiView()
     var confettiView2 = SwiftConfettiView()
@@ -39,7 +40,7 @@ class ImageSimilarityViewController: UIViewController {
     }
     
     @IBAction func compare(_ sender: Any) {
-        
+        testButton.isEnabled = false
 //        confettiView.stopConfetti()
 
 //        guard let originalFPO = getFPO(from: original.image!) else { return }
@@ -87,8 +88,10 @@ class ImageSimilarityViewController: UIViewController {
         default:
             scoreLabel.text = "default"
         }
-        scoreLabel.isHidden = false
         
+        shareButton.isEnabled = true
+        scoreLabel.isHidden = false
+        scoreTextLabel.isHidden = false
     }
     
     func getSmallestScore(original: UIImage, compare: UIImage) -> Float{
@@ -166,9 +169,10 @@ class ImageSimilarityViewController: UIViewController {
 //        newImage = newImage?.maskWithColors(color: textColor)
         original.image = modelImage
         compare.image = newImage
-        scoreLabel.isHidden = true
         
- 
+        shareButton.isEnabled = false
+        scoreLabel.isHidden = true
+        scoreTextLabel.isHidden = true
     }
 }
 
