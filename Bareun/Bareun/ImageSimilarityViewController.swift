@@ -17,6 +17,7 @@ class ImageSimilarityViewController: UIViewController {
     @IBOutlet weak var original: UIImageView!
     @IBOutlet weak var compare: UIImageView!
     var newImage: UIImage?
+    var sharedImage: UIImage?
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var scoreTextLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
@@ -25,8 +26,46 @@ class ImageSimilarityViewController: UIViewController {
     var confettiView = SwiftConfettiView()
     var confettiView2 = SwiftConfettiView()
 
+    
+    
     @IBOutlet var SimilarityView: UIView!
 
+    
+    @IBAction func unwindToShare(_ unwindSegue: UIStoryboardSegue){
+        performSegue(withIdentifier: "unwindToshare", sender: self)
+        print("unwindToshare")
+        
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "unwindToshare" {
+            let dvc = segue.destination as! DetailViewController
+            sharedImage = SimilarityView.transfromToImage()!
+            dvc.SendedImage = sharedImage
+            print("prepare in ImageSimilarity")
+            
+//            canvasView.zoomScale = 1.0
+//            underlayView.isHidden = true
+//            overlayView.isHidden = true
+//            EnglishMeaningLabel.isHidden = true
+//
+//            UIGraphicsBeginImageContextWithOptions(self.canvasView.bounds.size, false, UIScreen.main.scale)
+//            self.canvasView.drawHierarchy(in: self.canvasView.bounds, afterScreenUpdates: true)
+//
+//
+//            var compareImage = UIGraphicsGetImageFromCurrentImageContext()
+//
+////            compareImage = UIImage.cropToBounds(image: compareImage, width: compareImage?.size.width, height: (compareImage?.size.height)!/2)
+//            compareImage = compareImage?.cropToRect(rect: CGRect.init(25.0,13.0,(compareImage?.size.width)!-25.0,(compareImage?.size.height)!/1.75))
+//
+//            dvc.newImage = compareImage
+//            underlayView.isHidden = false
+//            overlayView.isHidden = false
+//            EnglishMeaningLabel.isHidden = false
+        }
+    }
+    
     func getFPO(from image: UIImage) -> VNFeaturePrintObservation? {
         let requestHandler = VNImageRequestHandler(cgImage: image.cgImage!, options: [:])
         let request = VNGenerateImageFeaturePrintRequest()
@@ -212,5 +251,19 @@ extension UIImage {
         }
         
         return returnImage
+    }
+}
+
+extension UIView {
+    func transfromToImage() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0.0)
+        defer {
+            UIGraphicsEndImageContext()
+        }
+        if let context = UIGraphicsGetCurrentContext() {
+            layer.render(in: context)
+            return UIGraphicsGetImageFromCurrentImageContext()
+        }
+        return nil
     }
 }
