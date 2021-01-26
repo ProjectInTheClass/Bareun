@@ -22,19 +22,24 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     @IBOutlet var tapView: UITapGestureRecognizer!
     // 탭 -> 펜슬킷 내려가기
-    @IBAction func tapView(_ sender: UIGestureRecognizer) {
-        print("touched")
+//    @IBAction func tapView(_ sender: UIGestureRecognizer) {
+//        print("touched")
+//        toolPicker.setVisible(false, forFirstResponder: canvasView)
+//    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         toolPicker.setVisible(false, forFirstResponder: canvasView)
+        return true
     }
     
-    //-> swipe하면 다음 페이지
+    //-> swipe하면 다음 페이지, 이전 페이지
     @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
     @IBAction func swipeAction(_ sender: Any) {
         if canvasView.zoomScale == 1.0 {
             if swipeRecognizer.direction ==  .left {
-
                 goToNextPage(self)
-
+            } else if swipeRecognizer.direction == .right {
+                goToPreviousPage(self)
             }
         }
     }
@@ -74,9 +79,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         //Gesture
         swipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
         
-        let tapGesture = UISwipeGestureRecognizer(target: self, action: #selector(DetailViewController.responds(to:)))
-        self.view.addGestureRecognizer(swipeRecognizer)
+        let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer()
+        tapGesture.delegate = self
         
+        self.view.addGestureRecognizer(swipeRecognizer)
         self.view.addGestureRecognizer(tapGesture)
         //
         var textImage = self.textImage
