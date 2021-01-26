@@ -47,24 +47,29 @@ class ImageSimilarityViewController: UIViewController {
         print(value)
         switch comparedScore {
         case 0 ... (blankScore + value):
+            let random = Int.random(in: 0...(score1.count - 1))
             scoreLabel.text = "⭐️"
-            scoreTextLabel.text = score1[0]
+            scoreTextLabel.text = score1[random]
 
         case (blankScore + value) ... (blankScore + 2 * value):
+            let random = Int.random(in: 0...(score2.count - 1))
             scoreLabel.text = "⭐️⭐️"
-            scoreTextLabel.text = score2[0]
+            scoreTextLabel.text = score2[random]
 
         case (blankScore + 2 * value) ... (blankScore + 3.4 * value):
+            let random = Int.random(in: 0...(score3.count - 1))
             scoreLabel.text = "⭐️⭐️⭐️"
-            scoreTextLabel.text = score3[0]
+            scoreTextLabel.text = score3[random]
 
         case (blankScore + 3.4 * value) ... (blankScore + 4 * value):
+            let random = Int.random(in: 0...(score4.count - 1))
             scoreLabel.text = "⭐️⭐️⭐️⭐️"
-            scoreTextLabel.text = score4[0]
+            scoreTextLabel.text = score4[random]
             
         case (blankScore + 4 * value) ... 100:
+            let random = Int.random(in: 0...(score5.count - 1))
             scoreLabel.text = "⭐️⭐️⭐️⭐️⭐️"
-            scoreTextLabel.text = score5[0]
+            scoreTextLabel.text = score5[random]
 
         default:
             scoreLabel.text = "default"

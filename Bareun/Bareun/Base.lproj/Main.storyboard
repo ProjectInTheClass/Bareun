@@ -484,7 +484,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPE-0G-53w">
                                 <rect key="frame" x="328" y="858" width="48" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -641,17 +641,17 @@
     </scenes>
     <resources>
         <image name="bareun_icon3" width="720" height="720"/>
-        <image name="character" catalog="system" width="128" height="128"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
-        <image name="clear" catalog="system" width="128" height="114"/>
-        <image name="eye" catalog="system" width="128" height="81"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="house" catalog="system" width="128" height="106"/>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="character" catalog="system" width="32" height="32"/>
+        <image name="checkmark" catalog="system" width="32" height="32"/>
+        <image name="chevron.backward" catalog="system" width="32" height="32"/>
+        <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
+        <image name="clear" catalog="system" width="32" height="32"/>
+        <image name="eye" catalog="system" width="32" height="32"/>
+        <image name="gearshape" catalog="system" width="32" height="32"/>
+        <image name="house" catalog="system" width="32" height="32"/>
+        <image name="info.circle" catalog="system" width="32" height="32"/>
+        <image name="pencil" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
