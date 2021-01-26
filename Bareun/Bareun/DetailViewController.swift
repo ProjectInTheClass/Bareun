@@ -75,6 +75,8 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         //Gesture
         if swipeRecognizer.direction == .left {
             swipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
+        } else {
+            swipeRecognizer.direction = UISwipeGestureRecognizer.Direction.right
         }
         
         let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer()
