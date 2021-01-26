@@ -33,7 +33,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     @IBAction func swipeAction(_ sender: Any) {
         if canvasView.zoomScale == 1.0 {
             if swipeRecognizer.direction ==  .left {
-                goToNextPage(canvasView)
+                goToNextPage(canvasView as Any)
             }
         }
     }

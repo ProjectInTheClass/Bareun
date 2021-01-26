@@ -509,6 +509,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="x9q-MM-Peb"/>
                     <connections>
+                        <outlet property="SimilarityView" destination="Bo8-jn-g1U" id="d3I-FM-E2N"/>
                         <outlet property="compare" destination="5fs-1m-9QN" id="ZQx-0P-cpN"/>
                         <outlet property="original" destination="Fqw-kE-2wR" id="mHK-LD-8NS"/>
                         <outlet property="scoreLabel" destination="shD-oE-tRz" id="Dtw-Gw-4cg"/>

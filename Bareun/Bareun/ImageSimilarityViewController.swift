@@ -7,15 +7,26 @@
 
 import UIKit
 import Vision
+import SwiftConfettiView
+
+
 
 class ImageSimilarityViewController: UIViewController {
 
+    
     @IBOutlet weak var original: UIImageView!
     @IBOutlet weak var compare: UIImageView!
     var newImage: UIImage?
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var scoreTextLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
+    
+
+    @IBOutlet var SimilarityView: UIView!
+
+
+
+    
     
     func getFPO(from image: UIImage) -> VNFeaturePrintObservation? {
         let requestHandler = VNImageRequestHandler(cgImage: image.cgImage!, options: [:])
@@ -89,6 +100,26 @@ class ImageSimilarityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let confettiView = SwiftConfettiView(frame:self.view.bounds)
+    
+        
+        // Set colors (default colors are red, green and blue)
+        confettiView.colors = [UIColor(red:0.95, green:0.40, blue:0.27, alpha:1.0),
+                               UIColor(red:1.00, green:0.78, blue:0.36, alpha:1.0),
+                               UIColor(red:0.48, green:0.78, blue:0.64, alpha:1.0),
+                               UIColor(red:0.30, green:0.76, blue:0.85, alpha:1.0),
+                               UIColor(red:0.58, green:0.39, blue:0.55, alpha:1.0)]
+        
+        // Set intensity (from 0 - 1, default intensity is 0.5)
+        confettiView.intensity = 0.5
+        
+        // Set type
+        confettiView.type = .diamond
+        self.view.addSubview(confettiView)
+        confettiView.startConfetti()
+        
+        
         scoreTextLabel.font = UIFont(name: "NanumMyeongjo", size: 18)
         
         var modelImage: UIImage = UIImage(named:Shared.shared.CurTextImage ?? "c1_01_mj")!
@@ -118,6 +149,8 @@ class ImageSimilarityViewController: UIViewController {
         original.image = modelImage
         compare.image = newImage
         scoreLabel.isHidden = true
+        
+ 
     }
 }
 
