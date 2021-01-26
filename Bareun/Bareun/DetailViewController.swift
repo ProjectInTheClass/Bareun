@@ -20,19 +20,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     @IBOutlet weak var underlayView : UIImageView!
     @IBOutlet weak var overlayView: UIImageView!
     
-    var SendedImage: UIImage?
-    
-    @IBAction func unwindToshare(_ unwindSegue: UIStoryboardSegue) {
-        
-        print("simil to detail")
-        sample.image = SendedImage
-        let vc = UIActivityViewController(activityItems: [SendedImage!], applicationActivities: nil)
-            vc.excludedActivityTypes = [.saveToCameraRoll] //
-            present(vc, animated: true)
-            
-    }
-    @IBOutlet weak var sample: UIImageView!
-    
     @IBOutlet var tapView: UITapGestureRecognizer!
     // 탭 -> 펜슬킷 내려가기
     
@@ -258,8 +245,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 //        print(self.canvasView.frame)
 //        print("============================")
     }
-    
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popover" {

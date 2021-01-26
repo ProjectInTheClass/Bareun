@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="1366" height="127"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="바른" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJR-hq-G7U">
-                                                <rect key="frame" x="646.5" y="37.5" width="73" height="52"/>
+                                                <rect key="frame" x="643" y="37.5" width="80" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="AFI-CW-Hlx"/>
                                                 </constraints>
@@ -52,7 +52,7 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bareun_icon3" translatesAutoresizingMaskIntoConstraints="NO" id="Kdv-cx-DPd">
-                                                <rect key="frame" x="719.5" y="31" width="65" height="65"/>
+                                                <rect key="frame" x="723" y="31" width="65" height="65"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="65" id="FGV-XB-Yjm" userLabel="height = 62"/>
                                                     <constraint firstAttribute="width" constant="65" id="NHl-V8-Wj4" userLabel="width = 68"/>
@@ -90,7 +90,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ii1-OM-Azy">
-                                                            <rect key="frame" x="646.5" y="122.5" width="73.5" height="35"/>
+                                                            <rect key="frame" x="647" y="122.5" width="72" height="35"/>
                                                             <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="30"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -217,7 +217,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="1366" height="127"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ry-Rz-p9T">
-                                                <rect key="frame" x="647" y="46" width="72" height="35"/>
+                                                <rect key="frame" x="646.5" y="46" width="73.5" height="35"/>
                                                 <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="30"/>
                                                 <color key="textColor" red="0.28627450980392155" green="0.28627450980392155" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -251,7 +251,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="Simil_Button_Clicked:" destination="LzM-zu-zYZ" eventType="touchUpInside" id="VtZ-cM-rrQ"/>
-                                                    <segue destination="f0P-PT-Drv" kind="modal" identifier="testImage" id="Kmv-hq-d3Q"/>
+                                                    <segue destination="f0P-PT-Drv" kind="show" identifier="testImage" id="Kmv-hq-d3Q"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -292,10 +292,6 @@
                                                 <color key="textColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTG-22-oBK">
-                                                <rect key="frame" x="543" y="329" width="240" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                         </subviews>
                                         <viewLayoutGuide key="contentLayoutGuide" id="1fK-7c-GmC"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="J29-mU-soK"/>
@@ -396,7 +392,6 @@
                         <outlet property="countLabel" destination="gHo-Al-ybN" id="uyl-8V-6nB"/>
                         <outlet property="layerHidden" destination="Gnt-ba-dip" id="piE-gt-hd3"/>
                         <outlet property="overlayView" destination="OAu-bL-yXD" id="8s9-Lc-Qku"/>
-                        <outlet property="sample" destination="UTG-22-oBK" id="0TV-Dc-8aA"/>
                         <outlet property="swipeRecognizerLeft" destination="owi-Bg-SbD" id="r3i-Dk-Dt0"/>
                         <outlet property="swipeRecognizerRight" destination="DzG-Ns-3ba" id="U70-AH-gWH"/>
                         <outlet property="tapView" destination="NRB-18-3Eh" id="0FR-Aw-CmG"/>
@@ -447,37 +442,37 @@
             <objects>
                 <viewController id="f0P-PT-Drv" customClass="ImageSimilarityViewController" customModule="Bareun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bo8-jn-g1U">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 글씨는" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKf-3V-jXG">
-                                <rect key="frame" x="278" y="50" width="148" height="31.5"/>
-                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="27"/>
+                                <rect key="frame" x="593" y="100" width="180.5" height="35"/>
+                                <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="30"/>
                                 <color key="textColor" red="0.28627450980392155" green="0.28627450980392155" blue="0.28627450980392155" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fqw-kE-2wR">
-                                <rect key="frame" x="122" y="121.5" width="460" height="200"/>
+                                <rect key="frame" x="188" y="270" width="460" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="0NK-bp-ReZ"/>
                                     <constraint firstAttribute="width" constant="460" id="cjF-IQ-DE8"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5fs-1m-9QN">
-                                <rect key="frame" x="122" y="563" width="460" height="200"/>
+                                <rect key="frame" x="718" y="270" width="460" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Hsh-Lz-v8q"/>
                                     <constraint firstAttribute="width" constant="460" id="rTC-th-Sxa"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shD-oE-tRz">
-                                <rect key="frame" x="316.5" y="803" width="71" height="36"/>
+                                <rect key="frame" x="647.5" y="748" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpB-5k-Ou3">
-                                <rect key="frame" x="158.5" y="897" width="87" height="42"/>
+                                <rect key="frame" x="485" y="888" width="96" height="41"/>
                                 <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="25"/>
                                 <state key="normal" title="검사하기">
                                     <color key="titleColor" red="0.2862788141" green="0.28626674410000003" blue="0.28627493980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -487,50 +482,50 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyv-I7-SuS">
-                                <rect key="frame" x="659" y="15" width="30" height="30"/>
+                                <rect key="frame" x="1321" y="65" width="30" height="30"/>
                                 <state key="normal" title="닫기"/>
                                 <connections>
                                     <segue destination="Xj0-Z7-cEQ" kind="unwind" unwindAction="unwindFromImageSimilWithSegue:" id="5NN-mY-2Vv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPE-0G-53w">
-                                <rect key="frame" x="328" y="847" width="48" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvz-Tu-dIX">
-                                <rect key="frame" x="458.5" y="897" width="87" height="42"/>
+                                <rect key="frame" x="785" y="888" width="96" height="41"/>
                                 <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="25"/>
                                 <state key="normal" title="공유하기">
                                     <color key="titleColor" red="0.2862788141" green="0.28626674410000003" blue="0.28627493980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="compare:" destination="f0P-PT-Drv" eventType="touchUpInside" id="gaq-p8-wDM"/>
-                                    <action selector="unwindToShare:" destination="f0P-PT-Drv" eventType="touchUpInside" id="CnP-EB-MaS"/>
+                                    <action selector="share:" destination="f0P-PT-Drv" eventType="touchUpInside" id="4iM-dy-heX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPE-0G-53w">
+                                <rect key="frame" x="659" y="804" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WON-ko-Axo"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WON-ko-Axo" firstAttribute="trailing" secondItem="Wyv-I7-SuS" secondAttribute="trailing" constant="15" id="1ub-Jg-PuY"/>
                             <constraint firstItem="LPE-0G-53w" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="32h-eL-V0U"/>
-                            <constraint firstItem="shD-oE-tRz" firstAttribute="top" secondItem="5fs-1m-9QN" secondAttribute="bottom" constant="40" id="71p-ES-VQJ"/>
-                            <constraint firstItem="ZpB-5k-Ou3" firstAttribute="top" secondItem="LPE-0G-53w" secondAttribute="bottom" constant="26" id="IVX-31-4cK"/>
+                            <constraint firstItem="gvz-Tu-dIX" firstAttribute="top" secondItem="LPE-0G-53w" secondAttribute="bottom" constant="60" id="IhA-GT-FmF"/>
                             <constraint firstItem="Wyv-I7-SuS" firstAttribute="top" secondItem="WON-ko-Axo" secondAttribute="top" constant="15" id="JVb-Qb-qnY"/>
-                            <constraint firstItem="Fqw-kE-2wR" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="Kef-Cb-jHo"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="gvz-Tu-dIX" secondAttribute="bottom" constant="45" id="QUR-LN-Zva"/>
-                            <constraint firstItem="WON-ko-Axo" firstAttribute="bottom" secondItem="ZpB-5k-Ou3" secondAttribute="bottom" constant="45" id="TMj-Ww-hN1"/>
+                            <constraint firstItem="ZpB-5k-Ou3" firstAttribute="top" secondItem="LPE-0G-53w" secondAttribute="bottom" constant="60" id="Pz2-jh-7ti"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="gvz-Tu-dIX" secondAttribute="bottom" constant="75" id="QUR-LN-Zva"/>
+                            <constraint firstItem="WON-ko-Axo" firstAttribute="bottom" secondItem="ZpB-5k-Ou3" secondAttribute="bottom" constant="75" id="TMj-Ww-hN1"/>
                             <constraint firstItem="SKf-3V-jXG" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="XCy-wZ-5bf"/>
-                            <constraint firstItem="LPE-0G-53w" firstAttribute="top" secondItem="shD-oE-tRz" secondAttribute="bottom" constant="8" symbolic="YES" id="a1P-ZS-mGN"/>
+                            <constraint firstItem="5fs-1m-9QN" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" constant="265" id="ZdP-9O-G9f"/>
                             <constraint firstItem="SKf-3V-jXG" firstAttribute="top" secondItem="WON-ko-Axo" secondAttribute="top" constant="50" id="bVa-YH-znt"/>
-                            <constraint firstItem="5fs-1m-9QN" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="ba0-p6-PY0"/>
                             <constraint firstItem="shD-oE-tRz" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" id="cWX-8v-tOj"/>
-                            <constraint firstItem="Fqw-kE-2wR" firstAttribute="top" secondItem="SKf-3V-jXG" secondAttribute="bottom" constant="40" id="dHS-oS-JU6"/>
+                            <constraint firstItem="Fqw-kE-2wR" firstAttribute="top" secondItem="SKf-3V-jXG" secondAttribute="bottom" constant="135" id="dHS-oS-JU6"/>
+                            <constraint firstItem="5fs-1m-9QN" firstAttribute="top" secondItem="SKf-3V-jXG" secondAttribute="bottom" constant="135" id="lBd-Vt-L0S"/>
                             <constraint firstItem="gvz-Tu-dIX" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" constant="150" id="nwM-7j-8Ar"/>
+                            <constraint firstItem="Fqw-kE-2wR" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" constant="-265" id="rji-I4-ksW"/>
                             <constraint firstItem="ZpB-5k-Ou3" firstAttribute="centerX" secondItem="Bo8-jn-g1U" secondAttribute="centerX" constant="-150" id="sg4-hy-LiE"/>
-                            <constraint firstItem="gvz-Tu-dIX" firstAttribute="top" secondItem="LPE-0G-53w" secondAttribute="bottom" constant="26" id="vvp-IO-r6z"/>
+                            <constraint firstItem="LPE-0G-53w" firstAttribute="top" secondItem="shD-oE-tRz" secondAttribute="bottom" constant="20" id="suK-UW-gym"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x9q-MM-Peb"/>
@@ -542,7 +537,6 @@
                         <outlet property="scoreTextLabel" destination="LPE-0G-53w" id="aed-5G-ieB"/>
                         <outlet property="shareButton" destination="gvz-Tu-dIX" id="q2I-Nm-Xa7"/>
                         <outlet property="testButton" destination="gvz-Tu-dIX" id="lrU-4K-hk6"/>
-                        <segue destination="Xj0-Z7-cEQ" kind="unwind" identifier="unwindToshare" unwindAction="unwindToshare:" id="nfe-28-wBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAs-m2-A28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -620,7 +614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXO-WL-xW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2280.9663250366029" y="571.875"/>
+            <point key="canvasLocation" x="2298" y="623"/>
         </scene>
         <!--Font License View Controller-->
         <scene sceneID="dL0-VY-AAO">
@@ -670,17 +664,17 @@
     </scenes>
     <resources>
         <image name="bareun_icon3" width="720" height="720"/>
-        <image name="character" catalog="system" width="128" height="128"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
-        <image name="clear" catalog="system" width="128" height="114"/>
-        <image name="eye" catalog="system" width="128" height="81"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="house" catalog="system" width="128" height="106"/>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="character" catalog="system" width="32" height="32"/>
+        <image name="checkmark" catalog="system" width="32" height="32"/>
+        <image name="chevron.backward" catalog="system" width="32" height="32"/>
+        <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
+        <image name="clear" catalog="system" width="32" height="32"/>
+        <image name="eye" catalog="system" width="32" height="32"/>
+        <image name="gearshape" catalog="system" width="32" height="32"/>
+        <image name="house" catalog="system" width="32" height="32"/>
+        <image name="info.circle" catalog="system" width="32" height="32"/>
+        <image name="pencil" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

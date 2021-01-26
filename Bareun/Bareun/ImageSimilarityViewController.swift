@@ -17,7 +17,7 @@ class ImageSimilarityViewController: UIViewController {
     @IBOutlet weak var original: UIImageView!
     @IBOutlet weak var compare: UIImageView!
     var newImage: UIImage?
-    var sharedImage: UIImage?
+//    var sharedImage: UIImage?
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var scoreTextLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
@@ -25,46 +25,10 @@ class ImageSimilarityViewController: UIViewController {
     
     var confettiView = SwiftConfettiView()
     var confettiView2 = SwiftConfettiView()
-
-    
     
     @IBOutlet var SimilarityView: UIView!
-
     
-    @IBAction func unwindToShare(_ unwindSegue: UIStoryboardSegue){
-        performSegue(withIdentifier: "unwindToshare", sender: self)
-        print("unwindToshare")
-        
-
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "unwindToshare" {
-            let dvc = segue.destination as! DetailViewController
-            sharedImage = SimilarityView.transfromToImage()!
-            dvc.SendedImage = sharedImage
-            print("prepare in ImageSimilarity")
-            
-//            canvasView.zoomScale = 1.0
-//            underlayView.isHidden = true
-//            overlayView.isHidden = true
-//            EnglishMeaningLabel.isHidden = true
-//
-//            UIGraphicsBeginImageContextWithOptions(self.canvasView.bounds.size, false, UIScreen.main.scale)
-//            self.canvasView.drawHierarchy(in: self.canvasView.bounds, afterScreenUpdates: true)
-//
-//
-//            var compareImage = UIGraphicsGetImageFromCurrentImageContext()
-//
-////            compareImage = UIImage.cropToBounds(image: compareImage, width: compareImage?.size.width, height: (compareImage?.size.height)!/2)
-//            compareImage = compareImage?.cropToRect(rect: CGRect.init(25.0,13.0,(compareImage?.size.width)!-25.0,(compareImage?.size.height)!/1.75))
-//
-//            dvc.newImage = compareImage
-//            underlayView.isHidden = false
-//            overlayView.isHidden = false
-//            EnglishMeaningLabel.isHidden = false
-        }
-    }
+    var SendImage: UIImage?
     
     func getFPO(from image: UIImage) -> VNFeaturePrintObservation? {
         let requestHandler = VNImageRequestHandler(cgImage: image.cgImage!, options: [:])
@@ -76,6 +40,18 @@ class ImageSimilarityViewController: UIViewController {
             
             return nil
         }
+    }
+    
+    @IBAction func share(_ sender: Any) {
+        guard let image = SimilarityView.transfromToImage() else { return }
+
+        let vc = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        vc.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+        vc.popoverPresentationController?.permittedArrowDirections = []
+
+        vc.popoverPresentationController?.sourceView = self.view
+        vc.excludedActivityTypes = [.saveToCameraRoll] //
+        self.present(vc, animated: true)
     }
     
     @IBAction func compare(_ sender: Any) {
