@@ -22,7 +22,7 @@ class ImageSimilarityViewController: UIViewController {
     @IBOutlet weak var scoreTextLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
-    let ad = URL(string: "https://naver.com")
+
     var confettiView = SwiftConfettiView()
     var confettiView2 = SwiftConfettiView()
     
@@ -45,7 +45,8 @@ class ImageSimilarityViewController: UIViewController {
     }
     
     @IBAction func share(_ sender: Any) {
-        guard let image = SimilarityView.transfromToImage() else { return }
+        guard var image = SimilarityView.transfromToImage() else { return }
+        image = (image.cropToRect(rect: CGRect.init(0,(image.size.height)/13.4,(image.size.width),(image.size.height)/1.3)))!
 
         
         var sharedObject = [Any]()
@@ -84,9 +85,7 @@ class ImageSimilarityViewController: UIViewController {
             let random = Int.random(in: 0...(score1.count - 1))
             scoreLabel.text = "⭐️"
             scoreTextLabel.text = score1[random]
-            confettiView.startConfetti()
-            confettiView2.startConfetti()
-
+            
         case (blankScore + value) ... (blankScore + 2 * value):
             let random = Int.random(in: 0...(score2.count - 1))
             scoreLabel.text = "⭐️⭐️"
@@ -97,15 +96,18 @@ class ImageSimilarityViewController: UIViewController {
             scoreLabel.text = "⭐️⭐️⭐️"
             scoreTextLabel.text = score3[random]
 
-        case (blankScore + 3.4 * value) ... (blankScore + 4 * value):
+        case (blankScore + 3.4 * value) ... (blankScore + 4.2 * value):
             let random = Int.random(in: 0...(score4.count - 1))
             scoreLabel.text = "⭐️⭐️⭐️⭐️"
             scoreTextLabel.text = score4[random]
             
-        case (blankScore + 4 * value) ... 100:
+        case (blankScore + 4.2 * value) ... 100:
             let random = Int.random(in: 0...(score5.count - 1))
             scoreLabel.text = "⭐️⭐️⭐️⭐️⭐️"
             scoreTextLabel.text = score5[random]
+            confettiView.startConfetti()
+            confettiView2.startConfetti()
+
 
         default:
             scoreLabel.text = "default"
@@ -114,6 +116,7 @@ class ImageSimilarityViewController: UIViewController {
         shareButton.isEnabled = true
         scoreLabel.isHidden = false
         scoreTextLabel.isHidden = false
+        
     }
     
     func getSmallestScore(original: UIImage, compare: UIImage) -> Float{
@@ -136,7 +139,7 @@ class ImageSimilarityViewController: UIViewController {
         SimilarityView.backgroundColor = customColor
         
         confettiView = SwiftConfettiView(frame:self.compare.bounds)
-        confettiView2 = SwiftConfettiView(frame:self.compare.bounds)
+        confettiView2 = SwiftConfettiView(frame:self.original.bounds)
         
         // Set colors (default colors are red, green and blue)
         confettiView.colors = [UIColor(red:0.95, green:0.40, blue:0.27, alpha:1.0),
@@ -151,8 +154,8 @@ class ImageSimilarityViewController: UIViewController {
                                UIColor(red:0.30, green:0.76, blue:0.85, alpha:1.0),
                                UIColor(red:0.58, green:0.39, blue:0.55, alpha:1.0)]
         // Set intensity (from 0 - 1, default intensity is 0.5)
-        confettiView.intensity = 0.4
-        confettiView2.intensity = 0.4
+        confettiView.intensity = 0.7
+        confettiView2.intensity = 0.7
         
         // Set type
         confettiView.type = .confetti
