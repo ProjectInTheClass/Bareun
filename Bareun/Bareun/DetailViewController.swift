@@ -30,15 +30,15 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     //-> swipe하면 다음 페이지, 이전 페이지
     @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
-//    @IBAction func swipeAction(_ sender: Any) {
-//        if canvasView.zoomScale == 1.0 {
-//            if swipeRecognizer.direction ==  .left {
-//                goToNextPage(self)
-//            } else if swipeRecognizer.direction == .right {
-//                goToPreviousPage(self)
-//            }
-//        }
-//    }
+    @IBAction func swipeAction(_ sender: Any) {
+        if canvasView.zoomScale == 1.0 {
+            if swipeRecognizer.direction ==  .left {
+                goToNextPage(self)
+            } else if swipeRecognizer.direction == .right {
+                goToPreviousPage(self)
+            }
+        }
+    }
     
     var menu:MenuItem? = nil
   
@@ -73,13 +73,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         
         super.viewDidLoad()
         //Gesture
-        if canvasView.zoomScale == 1.0 {
-            if swipeRecognizer.direction ==  .left {
-                swipeRecognizer.direction = .left
-                goToNextPage(self)
-            } else if swipeRecognizer.direction == .right {
-                goToPreviousPage(self)
-            }
+        if swipeRecognizer.direction == .left {
+            swipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
+        } else {
+            swipeRecognizer.direction = UISwipeGestureRecognizer.Direction.right
         }
         
         let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer()
