@@ -188,6 +188,12 @@ var category4_dd:[String] = [
     "c4_11_dd.png", "c4_12_dd.png", "c4_13_dd.png", "c4_14_dd.png", "c4_15_dd.png",
     "c4_16_dd.png", "c4_17_dd.png", "c4_18_dd.png", "c4_19_dd.png", "c4_20_dd.png"
 ]
+var category4_gb:[String] = [
+    "c4_01_gb.png", "c4_02_gb.png", "c4_03_gb.png", "c4_04_gb.png", "c4_05_gb.png",
+    "c4_06_gb.png", "c4_07_gb.png", "c4_08_gb.png", "c4_09_gb.png", "c4_10_gb.png",
+    "c4_11_gb.png", "c4_12_gb.png", "c4_13_gb.png", "c4_14_gb.png", "c4_15_gb.png",
+    "c4_16_gb.png", "c4_17_gb.png", "c4_18_gb.png", "c4_19_gb.png", "c4_20_gb.png"
+]
 
 // 영어 뜻
 
