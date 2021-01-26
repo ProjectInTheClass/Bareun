@@ -10,7 +10,7 @@ import PencilKit
 import PhotosUI
 
 
-class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver, UIScrollViewDelegate {
+class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver, UIScrollViewDelegate,UIGestureRecognizerDelegate {
 
     @IBOutlet weak var EnglishMeaningLabel: UILabel!
     @IBOutlet weak var canvasView: PKCanvasView!
@@ -20,20 +20,21 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     @IBOutlet weak var underlayView : UIImageView!
     @IBOutlet weak var overlayView: UIImageView!
     
-    
     @IBOutlet var tapView: UITapGestureRecognizer!
     // 탭 -> 펜슬킷 내려가기
     @IBAction func tapView(_ sender: UIGestureRecognizer) {
         print("touched")
-        self.view.endEditing(true)
+        toolPicker.setVisible(false, forFirstResponder: canvasView)
     }
     
-    
+    //-> swipe하면 다음 페이지
     @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
     @IBAction func swipeAction(_ sender: Any) {
         if canvasView.zoomScale == 1.0 {
             if swipeRecognizer.direction ==  .left {
-                goToNextPage(canvasView as Any)
+
+                goToNextPage(self)
+
             }
         }
     }
@@ -70,8 +71,14 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         assert(self.underlayView.superview == self.canvasView)
         
         super.viewDidLoad()
-        swipeRecognizer.direction = .left
+        //Gesture
+        swipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
         
+        let tapGesture = UISwipeGestureRecognizer(target: self, action: #selector(DetailViewController.responds(to:)))
+        self.view.addGestureRecognizer(swipeRecognizer)
+        
+        self.view.addGestureRecognizer(tapGesture)
+        //
         var textImage = self.textImage
         var backgroundImage = self.backgroundImage
         self.canvasView.translatesAutoresizingMaskIntoConstraints = false
@@ -217,7 +224,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.overlayView.frame.size = paperSize
         self.canvasView.contentSize = paperSize
         
-        self.EnglishMeaningLabel.frame.origin = CGPoint(30, paperSize.height * 0.215)
+        self.EnglishMeaningLabel.frame.origin = CGPoint(30, self.canvasView.frame.size.height * 0.215)
         
         if (titleLabel.text != "알아두면 좋은 영어 문장" || canvasView.zoomScale != 1.0 ){
             EnglishMeaningLabel.isHidden = true
@@ -235,7 +242,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popover" {
-            toolPicker.setVisible(false, forFirstResponder: canvasView)
+            if toolPicker.isVisible {
+                toolPicker.setVisible(false, forFirstResponder: canvasView)
+            }
             
             if let vc = segue.destination as? PopOverViewController {
                 vc.onChange = { font in
@@ -357,10 +366,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     @IBAction func toolIsHidden(_ sender: Any) {
         if toolPicker.isVisible {
-                toolPicker.setVisible(false, forFirstResponder: canvasView)
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
             } else {
-                toolPicker.setVisible(true, forFirstResponder: canvasView)
-            }
+            toolPicker.setVisible(true, forFirstResponder: canvasView)
+        }
         
     }
 
@@ -383,7 +392,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             EnglishMeaningLabel.text = ""
         }
         overlayView.image = textImage
-        toolPicker.setVisible(false, forFirstResponder: canvasView)
+        if toolPicker.isVisible {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+        }
         if (titleLabel.text == "알아두면 좋은 영어 문장" || canvasView.zoomScale != 1.0 ){
             EnglishMeaningLabel.isHidden = true
         } else{
@@ -410,7 +421,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
             EnglishMeaningLabel.text = ""
         }
         overlayView.image = textImage
-        toolPicker.setVisible(false, forFirstResponder: canvasView)
+        if toolPicker.isVisible {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+        }
         if (titleLabel.text != "알아두면 좋은 영어 문장" || canvasView.zoomScale != 1.0 ){
             EnglishMeaningLabel.isHidden = true
         } else{
@@ -422,9 +435,11 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     @IBAction func isLayerHidden(_ sender: Any) {
         if overlayView.isHidden {
             overlayView.isHidden = false
+            EnglishMeaningLabel.isHidden = false
             layerHidden.image = UIImage(systemName: "eye")
         } else {
             overlayView.isHidden = true
+            EnglishMeaningLabel.isHidden = true
             layerHidden.image = UIImage(systemName: "eye.slash")
         }
 
@@ -432,10 +447,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
 
     @IBAction func canvasClear(_ sender: Any) {
-        
-        toolPicker.setVisible(false, forFirstResponder: canvasView)
-        
-        
+        if toolPicker.isVisible {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+        }
         canvasView.drawing = PKDrawing()
     }
     /*
@@ -451,15 +465,16 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     @IBAction func Simil_Button_Clicked(_ sender: Any) {
         
         canvasView.zoomScale = 1.0
-        toolPicker.setVisible(false, forFirstResponder: canvasView)
-        
+        if toolPicker.isVisible {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+        }
     }
 
     
     @IBAction func saveDrawingToCameraRoll(_ sender: Any) {
-        
-      
-        toolPicker.setVisible(false, forFirstResponder: canvasView)
+        if toolPicker.isVisible {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
+        }
         sleep(1/2)
         canvasView.zoomScale = 1.0
         overlayView.isHidden = true
