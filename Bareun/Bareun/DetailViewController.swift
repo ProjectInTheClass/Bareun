@@ -10,7 +10,7 @@ import PencilKit
 import PhotosUI
 
 
-class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver, UIScrollViewDelegate {
+class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver, UIScrollViewDelegate,UIGestureRecognizerDelegate {
 
     @IBOutlet weak var EnglishMeaningLabel: UILabel!
     @IBOutlet weak var canvasView: PKCanvasView!
