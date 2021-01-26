@@ -24,15 +24,15 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     // 탭 -> 펜슬킷 내려가기
     @IBAction func tapView(_ sender: UIGestureRecognizer) {
         print("touched")
-        self.view.endEditing(true)
+        toolPicker.setVisible(false, forFirstResponder: canvasView)
     }
     
-    
+    //-> swipe하면 다음 페이지
     @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
     @IBAction func swipeAction(_ sender: Any) {
         if canvasView.zoomScale == 1.0 {
             if swipeRecognizer.direction ==  .left {
-                goToNextPage(canvasView)
+                goToNextPage(self)
             }
         }
     }
@@ -70,10 +70,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         
         super.viewDidLoad()
         //Gesture
-        swipeRecognizer.direction = .left
+        swipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
         
-        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
-        tapGesture.delegate = self
+        let tapGesture = UISwipeGestureRecognizer(target: self, action: #selector(DetailViewController.responds(to:)))
+        self.view.addGestureRecognizer(swipeRecognizer)
         
         self.view.addGestureRecognizer(tapGesture)
         //
