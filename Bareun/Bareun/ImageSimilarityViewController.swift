@@ -22,7 +22,7 @@ class ImageSimilarityViewController: UIViewController {
     @IBOutlet weak var scoreTextLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
-    
+    let ad = URL(string: "https://naver.com")
     var confettiView = SwiftConfettiView()
     var confettiView2 = SwiftConfettiView()
     
@@ -47,7 +47,12 @@ class ImageSimilarityViewController: UIViewController {
     @IBAction func share(_ sender: Any) {
         guard let image = SimilarityView.transfromToImage() else { return }
 
-        let vc = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        
+        var sharedObject = [Any]()
+        sharedObject.append(image)
+        sharedObject.append("hello \(ad)")
+
+        let vc = UIActivityViewController(activityItems: sharedObject, applicationActivities: nil)
         vc.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
         vc.popoverPresentationController?.permittedArrowDirections = []
 
