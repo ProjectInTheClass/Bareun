@@ -70,8 +70,14 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         assert(self.underlayView.superview == self.canvasView)
         
         super.viewDidLoad()
+        //Gesture
         swipeRecognizer.direction = .left
         
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
+        tapGesture.delegate = self
+        
+        self.view.addGestureRecognizer(tapGesture)
+        //
         var textImage = self.textImage
         var backgroundImage = self.backgroundImage
         self.canvasView.translatesAutoresizingMaskIntoConstraints = false
