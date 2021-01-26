@@ -22,10 +22,6 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
     
     @IBOutlet var tapView: UITapGestureRecognizer!
     // 탭 -> 펜슬킷 내려가기
-//    @IBAction func tapView(_ sender: UIGestureRecognizer) {
-//        print("touched")
-//        toolPicker.setVisible(false, forFirstResponder: canvasView)
-//    }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         toolPicker.setVisible(false, forFirstResponder: canvasView)
@@ -77,7 +73,9 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         
         super.viewDidLoad()
         //Gesture
-        swipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
+        if swipeRecognizer.direction == .left {
+            swipeRecognizer.direction = UISwipeGestureRecognizer.Direction.left
+        }
         
         let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer()
         tapGesture.delegate = self
