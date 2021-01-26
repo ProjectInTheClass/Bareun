@@ -22,7 +22,7 @@ class ImageSimilarityViewController: UIViewController {
     @IBOutlet weak var scoreTextLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
-    let ad = URL(string: "https://naver.com")
+
     var confettiView = SwiftConfettiView()
     var confettiView2 = SwiftConfettiView()
     
