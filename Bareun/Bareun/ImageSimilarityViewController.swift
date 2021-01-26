@@ -28,6 +28,8 @@ class ImageSimilarityViewController: UIViewController {
     
     @IBOutlet var SimilarityView: UIView!
     
+    let customColor : UIColor = UIColor(displayP3Red: 252/255, green: 251/255, blue: 244/255, alpha: 1.0)
+    
     var SendImage: UIImage?
     
     func getFPO(from image: UIImage) -> VNFeaturePrintObservation? {
@@ -125,6 +127,8 @@ class ImageSimilarityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        SimilarityView.backgroundColor = customColor
         
         confettiView = SwiftConfettiView(frame:self.compare.bounds)
         confettiView2 = SwiftConfettiView(frame:self.compare.bounds)
