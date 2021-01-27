@@ -79,7 +79,7 @@ extension EmailViewController: UITableViewDelegate, UITableViewDataSource {
                 let composeVC = MFMailComposeViewController()
                 composeVC.mailComposeDelegate = self
 
-                composeVC.setToRecipients(["Bareun@naver.com"])
+                composeVC.setToRecipients(["bareunhandwriting@gmail.com"])
                 composeVC.setSubject("Message Subject")
                 composeVC.setMessageBody("Message content", isHTML: false)
 
