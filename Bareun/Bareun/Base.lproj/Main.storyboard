@@ -217,7 +217,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="1366" height="127"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ry-Rz-p9T">
-                                                <rect key="frame" x="646.5" y="46" width="73.5" height="35"/>
+                                                <rect key="frame" x="647" y="46" width="72" height="35"/>
                                                 <fontDescription key="fontDescription" name="NanumMyeongjo" family="NanumMyeongjo" pointSize="30"/>
                                                 <color key="textColor" red="0.28627450980392155" green="0.28627450980392155" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -495,7 +495,6 @@
                                     <color key="titleColor" red="0.2862788141" green="0.28626674410000003" blue="0.28627493980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="compare:" destination="f0P-PT-Drv" eventType="touchUpInside" id="gaq-p8-wDM"/>
                                     <action selector="share:" destination="f0P-PT-Drv" eventType="touchUpInside" id="4iM-dy-heX"/>
                                 </connections>
                             </button>
