@@ -51,7 +51,7 @@ class ImageSimilarityViewController: UIViewController {
         
         var sharedObject = [Any]()
         sharedObject.append(image)
-        sharedObject.append("hello \nhttps://www.naver.com")
+        sharedObject.append("")
 
         let vc = UIActivityViewController(activityItems: sharedObject, applicationActivities: nil)
         vc.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
@@ -96,12 +96,12 @@ class ImageSimilarityViewController: UIViewController {
             scoreLabel.text = "⭐️⭐️⭐️"
             scoreTextLabel.text = score3[random]
 
-        case (blankScore + 3.4 * value) ... (blankScore + 4.2 * value):
+        case (blankScore + 3.4 * value) ... (blankScore + 4.1 * value):
             let random = Int.random(in: 0...(score4.count - 1))
             scoreLabel.text = "⭐️⭐️⭐️⭐️"
             scoreTextLabel.text = score4[random]
             
-        case (blankScore + 4.2 * value) ... 100:
+        case (blankScore + 4.1 * value) ... 100:
             let random = Int.random(in: 0...(score5.count - 1))
             scoreLabel.text = "⭐️⭐️⭐️⭐️⭐️"
             scoreTextLabel.text = score5[random]
