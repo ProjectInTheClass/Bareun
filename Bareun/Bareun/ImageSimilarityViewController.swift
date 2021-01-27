@@ -51,7 +51,8 @@ class ImageSimilarityViewController: UIViewController {
         
         var sharedObject = [Any]()
         sharedObject.append(image)
-        sharedObject.append("")
+        let random = Int.random(in: 0...(sharedText.count - 1))
+        sharedObject.append(sharedText[random] + "\n\n🖋바른 하러가기")
 
         let vc = UIActivityViewController(activityItems: sharedObject, applicationActivities: nil)
         vc.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
