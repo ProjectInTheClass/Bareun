@@ -17,7 +17,7 @@ class ImageSimilarityViewController: UIViewController {
     @IBOutlet weak var original: UIImageView!
     @IBOutlet weak var compare: UIImageView!
     var newImage: UIImage?
-//    var sharedImage: UIImage?
+
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var scoreTextLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
@@ -58,23 +58,17 @@ class ImageSimilarityViewController: UIViewController {
         vc.popoverPresentationController?.permittedArrowDirections = []
 
         vc.popoverPresentationController?.sourceView = self.view
-//        vc.excludedActivityTypes = [.saveToCameraRoll, .airDrop] //
+//        vc.excludedActivityTypes = [.airDrop] //
         self.present(vc, animated: true)
     }
     
     @IBAction func compare(_ sender: Any) {
         testButton.isEnabled = false
-//        confettiView.stopConfetti()
 
-//        guard let originalFPO = getFPO(from: original.image!) else { return }
-//        guard let compareFPO = getFPO(from: compare.image!) else { return }
-//
-//        var distance = Float(0)
-//        try? compareFPO.computeDistance(&distance, to: originalFPO)
         let comparedScore:Float = getSmallestScore(original: original.image!, compare: compare.image!)
         print("실제 정확도 \(comparedScore)")
         let blankScore:Float = getSmallestScore(original: original.image!, compare: UIImage(named:"blank")!)
-//        scoreLabel.text = "\(round( comparedScore * 100) / 100) 점 입니다."
+
         print("최소 점수 \(blankScore)")
         
         // 유사도 new 공식
@@ -172,7 +166,7 @@ class ImageSimilarityViewController: UIViewController {
         
         var modelImage: UIImage = UIImage(named:Shared.shared.CurTextImage ?? "c1_01_mj")!
         modelImage = modelImage.cropToRect(rect: CGRect.init(25.0, 13.0,(modelImage.size.width)-25.0,(modelImage.size.height)/1.75))!
-//        newImage = TransperentImageToWhite(image: newImage!)
+
         guard let currentCGImage = newImage?.cgImage else { return }
         let currentCIImage = CIImage(cgImage: currentCGImage)
 
@@ -190,10 +184,10 @@ class ImageSimilarityViewController: UIViewController {
         if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
             let processedImage = UIImage(cgImage: cgimg)
             newImage = processedImage
-//            print(processedImage.size)
+
         }
         newImage = newImage?.maskWithColors(color: textColor)
-//        newImage = newImage?.maskWithColors(color: textColor)
+
         original.image = modelImage
         compare.image = newImage
         
