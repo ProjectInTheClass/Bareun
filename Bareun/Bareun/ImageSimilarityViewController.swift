@@ -58,7 +58,7 @@ class ImageSimilarityViewController: UIViewController {
         vc.popoverPresentationController?.permittedArrowDirections = []
 
         vc.popoverPresentationController?.sourceView = self.view
-        vc.excludedActivityTypes = [.saveToCameraRoll] //
+//        vc.excludedActivityTypes = [.saveToCameraRoll, .airDrop] //
         self.present(vc, animated: true)
     }
     
