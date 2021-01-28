@@ -129,32 +129,32 @@ var category3_bp:[String] = [
 var category3_pinyon:[String] = [
     "01_pinyon.png", "02_pinyon.png", "03_pinyon.png", "04_pinyon.png", "05_pinyon.png",
     "06_pinyon.png", "07_pinyon.png", "08_pinyon.png", "09_pinyon.png", "10_pinyon.png",
-    "11_pinyon.png", "12_pinyon.png", "13_pinyon.png"
+    "11_pinyon.png", "12_pinyon.png", "13_pinyon.png", "14_pinyon.png", "15_pinyon.png"
 ]
 var category3_allan:[String] = [
     "01_allan.png", "02_allan.png", "03_allan.png", "04_allan.png", "05_allan.png",
     "06_allan.png", "07_allan.png", "08_allan.png", "09_allan.png", "10_allan.png",
-    "11_allan.png", "12_allan.png", "13_allan.png"
+    "11_allan.png", "12_allan.png", "13_allan.png", "14_allan.png", "15_allan.png"
 ]
 var category3_shadow:[String] = [
     "01_shadow.png", "02_shadow.png", "03_shadow.png", "04_shadow.png", "05_shadow.png",
     "06_shadow.png", "07_shadow.png", "08_shadow.png", "09_shadow.png", "10_shadow.png",
-    "11_shadow.png", "12_shadow.png", "13_shadow.png"
+    "11_shadow.png", "12_shadow.png", "13_shadow.png", "14_shadow.png", "15_shadow.png"
 ]
 var category3_kalam:[String] = [
     "01_kalam.png", "02_kalam.png", "03_kalam.png", "04_kalam.png", "05_kalam.png",
     "06_kalam.png", "07_kalam.png", "08_kalam.png", "09_kalam.png", "10_kalam.png",
-    "11_kalam.png", "12_kalam.png", "13_kalam.png"
+    "11_kalam.png", "12_kalam.png", "13_kalam.png", "14_kalam.png", "15_kalam.png"
 ]
 var category3_sacra:[String] = [
     "01_sacra.png", "02_sacra.png", "03_sacra.png", "04_sacra.png", "05_sacra.png",
     "06_sacra.png", "07_sacra.png", "08_sacra.png", "09_sacra.png", "10_sacra.png",
-    "11_sacra.png", "12_sacra.png", "13_sacra.png"
+    "11_sacra.png", "12_sacra.png", "13_sacra.png", "14_sacra.png", "15_sacra.png"
 ]
 var category3_petit:[String] = [
     "01_petit.png", "02_petit.png", "03_petit.png", "04_petit.png", "05_petit.png",
     "06_petit.png", "07_petit.png", "08_petit.png", "09_petit.png", "10_petit.png",
-    "11_petit.png", "12_petit.png", "13_petit.png"
+    "11_petit.png", "12_petit.png", "13_petit.png", "14_petit.png", "15_petit.png"
 ]
 
 // category4
@@ -202,7 +202,7 @@ var EnglishMeaning:[String] = [
     "우리랑 2차가서 또 한잔할래?", "조용히 좀 해주시겠어요?", "엘레베이터가 고장 났어요. 계단을 이용하셔야 해요.",
     "넌 사랑받기 위해 태어난 사람이야.", "힘든 상황이 올 땐 날 믿고 의지해도 좋아", "투덜대지 말고 해야 할 일이나 끝내.",
     "너와 함께한 모든 날이 즐거웠어.", "진정한 사랑은 사람들의 최선의 모습을 끌어내 주지", "너무 바빠서 손이 열 개라도 모자라.",
-    "강하게 나가자. 물러서지 말자."
+    "강하게 나가자. 물러서지 말자.", "겉모습만 보고 판단하지마.", "알아봐줘서 고마워. 너 눈썰미 좋다."
 ]
 
 
