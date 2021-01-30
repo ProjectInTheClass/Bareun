@@ -91,11 +91,6 @@ class PopOverViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
  
-//    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-//        if identifier == "license" {
-//            print("performSegue")
-//        }
-//    }
 
 }
 

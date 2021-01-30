@@ -96,7 +96,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.canvasView.delegate = self
         self.canvasView.maximumZoomScale = 3.0
         self.canvasView.minimumZoomScale = 1.0
-//        self.canvasView.zoomScale = 0.3
+
         self.canvasView.isOpaque = false
         self.canvasView.backgroundColor = .clear
         self.canvasView.contentOffset = CGPoint.zero
@@ -105,18 +105,10 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         self.canvasView.showsHorizontalScrollIndicator = false
         self.canvasView.showsVerticalScrollIndicator = false
         
-//        print("First Scene")
-//        print(self.underlayView.frame)
-//        print(self.overlayView.frame)
-//        print(self.canvasView.contentSize)
-//        print(self.canvasView.frame)
-//        print("============================")
-        
+
         self.underlayView.contentMode = .scaleToFill
         self.underlayView.frame = CGRect(origin: CGPoint.zero, size: canvasView.frame.size)
         
-//        self.underlayView.layer.borderColor = UIColor.orange.cgColor
-//        self.underlayView.layer.borderWidth = 1.0
 
         self.overlayView.contentMode = .scaleToFill
         self.overlayView.frame = CGRect(origin: CGPoint.zero, size: canvasView.frame.size)
@@ -155,12 +147,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         } else{
             EnglishMeaningLabel.isHidden = false
         }
-//        canvasView.delegate = self
-//        canvasView.drawing = drawing
-//
-//        canvasView.alwaysBounceVertical = true
-//        canvasView.drawingPolicy = .anyInput
-//
+
         if #available(iOS 14.0, *) {
             toolPicker = PKToolPicker()
         } else {
@@ -359,19 +346,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
         }
     }
     
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        switch scrollView {
-//        case canvasView:
-//            print(Self.self, #function)
-//        default:
-//            break
-//        }
-//    }
-    
-//    override var prefersHomeIndicatorAutoHidden: Bool {
-//        return true
-//    }
-    
+
   
     
     @IBAction func toolIsHidden(_ sender: Any) {
