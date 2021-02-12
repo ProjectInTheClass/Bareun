@@ -21,7 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>NSPhotoLibraryUsageDescription</string>
+	<string>스크린샷 저장을 위해 접근 권한을 필요로 합니다.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>NanumMyeongjo.ttf</string>
