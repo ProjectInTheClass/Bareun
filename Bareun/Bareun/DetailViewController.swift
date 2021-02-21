@@ -94,7 +94,7 @@ class DetailViewController: UIViewController, PKCanvasViewDelegate, PKToolPicker
 //        self.canvasView.layer.borderColor = UIColor.red.cgColor
 //        self.canvasView.layer.borderWidth = 2.0
         self.canvasView.delegate = self
-        self.canvasView.maximumZoomScale = 3.0
+        self.canvasView.maximumZoomScale = 3.5
         self.canvasView.minimumZoomScale = 1.0
 
         self.canvasView.isOpaque = false
