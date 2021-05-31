@@ -45,6 +45,7 @@
 		9A01042B25AEBEE800699704 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01042A25AEBEE800699704 /* EmailViewController.swift */; };
 		9A4D3CC125BAB8C60066C33A /* 나눔손글씨 유니 띵땅띵땅.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A4D3CC025BAB8C60066C33A /* 나눔손글씨 유니 띵땅띵땅.ttf */; };
 		9A4D3CC425BAB8CE0066C33A /* 나눔손글씨 느릿느릿체.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A4D3CC325BAB8CE0066C33A /* 나눔손글씨 느릿느릿체.ttf */; };
+		D8BB613B26649E93009DE0B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8BB613A26649E93009DE0B9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		9A01042A25AEBEE800699704 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		9A4D3CC025BAB8C60066C33A /* 나눔손글씨 유니 띵땅띵땅.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 유니 띵땅띵땅.ttf"; sourceTree = "<group>"; };
 		9A4D3CC325BAB8CE0066C33A /* 나눔손글씨 느릿느릿체.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 느릿느릿체.ttf"; sourceTree = "<group>"; };
+		D8BB613A26649E93009DE0B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		3963E54825A3081C0028F8B8 /* Bareun */ = {
 			isa = PBXGroup;
 			children = (
+				D8BB613A26649E93009DE0B9 /* GoogleService-Info.plist */,
 				3903E46125BC8B15002F4780 /* License Files */,
 				3903E46025BC8AF7002F4780 /* FontFiles */,
 				3963E54925A3081C0028F8B8 /* AppDelegate.swift */,
@@ -272,6 +275,7 @@
 				3903E47725BDC8CD002F4780 /* OFL-Oneprettynight.txt in Resources */,
 				393C789525B216AF00131BCE /* OFL-Pinyon.txt in Resources */,
 				9A4D3CC425BAB8CE0066C33A /* 나눔손글씨 느릿느릿체.ttf in Resources */,
+				D8BB613B26649E93009DE0B9 /* GoogleService-Info.plist in Resources */,
 				3903E44F25BC4EE8002F4780 /* OFL-sacra.txt in Resources */,
 				39C14D6F25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf in Resources */,
 				3963E55325A3081E0028F8B8 /* Assets.xcassets in Resources */,
