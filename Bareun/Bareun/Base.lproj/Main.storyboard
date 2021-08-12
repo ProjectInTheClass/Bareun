@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yy3-OU-BSb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yy3-OU-BSb">
     <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -76,7 +76,7 @@
                                         <color key="sectionIndexBackgroundColor" red="0.9882352941176471" green="0.98431372549019602" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CustomItem" rowHeight="280" id="6af-51-dYy" customClass="CustomItem" customModule="Bareun" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="1366" height="280"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="1366" height="280"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6af-51-dYy" id="08M-hH-9nP">
                                                     <rect key="frame" x="0.0" y="0.0" width="1366" height="280"/>
@@ -174,7 +174,7 @@
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" id="ebh-p3-tWV">
-                                        <rect key="frame" x="16" y="55.5" width="632" height="43.5"/>
+                                        <rect key="frame" x="16" y="49.5" width="632" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ebh-p3-tWV" id="hJx-9F-N71">
                                             <rect key="frame" x="0.0" y="0.0" width="632" height="43.5"/>
@@ -559,7 +559,7 @@
                                 <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FontCell" rowHeight="60" id="lyr-UA-iJS" customClass="FontSelectView" customModule="Bareun" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lyr-UA-iJS" id="mgS-Vz-5aT">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
@@ -663,17 +663,17 @@
     </scenes>
     <resources>
         <image name="bareun_icon3" width="720" height="720"/>
-        <image name="character" catalog="system" width="32" height="32"/>
-        <image name="checkmark" catalog="system" width="32" height="32"/>
-        <image name="chevron.backward" catalog="system" width="32" height="32"/>
-        <image name="chevron.compact.right" catalog="system" width="32" height="32"/>
-        <image name="clear" catalog="system" width="32" height="32"/>
-        <image name="eye" catalog="system" width="32" height="32"/>
-        <image name="gearshape" catalog="system" width="32" height="32"/>
-        <image name="house" catalog="system" width="32" height="32"/>
-        <image name="info.circle" catalog="system" width="32" height="32"/>
-        <image name="pencil" catalog="system" width="32" height="32"/>
-        <image name="square.and.arrow.down" catalog="system" width="32" height="32"/>
+        <image name="character" catalog="system" width="128" height="128"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

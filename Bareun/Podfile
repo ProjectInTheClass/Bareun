@@ -6,4 +6,6 @@ target 'Bareun' do
   use_frameworks!
  pod 'SwiftConfettiView'
   # Pods for Bareun
+ pod 'Firebase/Storage'
+ pod 'Firebase/Analytics'
 end

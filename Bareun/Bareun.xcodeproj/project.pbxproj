@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AF2ABA826C4F23200A8B0CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AF2ABA726C4F23200A8B0CD /* GoogleService-Info.plist */; };
 		2E215445D8A81D2ED115A783 /* Pods_Bareun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C94A38A795BC4E5FDBAC7CD /* Pods_Bareun.framework */; };
 		3903E44C25BC4EC8002F4780 /* OFL-kalam.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3903E44B25BC4EC8002F4780 /* OFL-kalam.txt */; };
 		3903E44F25BC4EE8002F4780 /* OFL-sacra.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3903E44E25BC4EE8002F4780 /* OFL-sacra.txt */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AF2ABA726C4F23200A8B0CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C94A38A795BC4E5FDBAC7CD /* Pods_Bareun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bareun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3903E44B25BC4EC8002F4780 /* OFL-kalam.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-kalam.txt"; sourceTree = "<group>"; };
 		3903E44E25BC4EE8002F4780 /* OFL-sacra.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-sacra.txt"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				3963E55425A3081E0028F8B8 /* LaunchScreen.storyboard */,
 				3963E55725A3081E0028F8B8 /* Info.plist */,
 				9A01042A25AEBEE800699704 /* EmailViewController.swift */,
+				0AF2ABA726C4F23200A8B0CD /* GoogleService-Info.plist */,
 			);
 			path = Bareun;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				3903E47725BDC8CD002F4780 /* OFL-Oneprettynight.txt in Resources */,
 				393C789525B216AF00131BCE /* OFL-Pinyon.txt in Resources */,
 				9A4D3CC425BAB8CE0066C33A /* 나눔손글씨 느릿느릿체.ttf in Resources */,
+				0AF2ABA826C4F23200A8B0CD /* GoogleService-Info.plist in Resources */,
 				3903E44F25BC4EE8002F4780 /* OFL-sacra.txt in Resources */,
 				39C14D6F25ADEFA0008E03E3 /* ShadowsIntoLightTwo-Regular.ttf in Resources */,
 				3963E55325A3081E0028F8B8 /* Assets.xcassets in Resources */,
