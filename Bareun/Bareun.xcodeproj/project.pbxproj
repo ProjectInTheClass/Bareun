@@ -49,7 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0AF2ABA726C4F23200A8B0CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0AF2ABA726C4F23200A8B0CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C94A38A795BC4E5FDBAC7CD /* Pods_Bareun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bareun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3903E44B25BC4EC8002F4780 /* OFL-kalam.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-kalam.txt"; sourceTree = "<group>"; };
 		3903E44E25BC4EE8002F4780 /* OFL-sacra.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OFL-sacra.txt"; sourceTree = "<group>"; };
